@@ -1,0 +1,341 @@
+
+FUNCTION 0x21950c _ZN10httpServer20SetDeviceInfoHandler10handlePostEP11CivetServerP13mg_connection size 708
+0021950c  push     {r4, r5, r6, r7, r8, lr}       
+00219510  sub      sp, sp, #0xb8                  
+00219514  ldr      r5, [pc, #0x284]               0x296d70 __stack_chk_guard
+00219518  mov      r7, r0                         
+0021951c  mov      r0, r2                         
+00219520  mov      r6, r2                         
+00219524  ldr      r3, [r5]                       
+00219528  str      r3, [sp, #0xb4]                
+0021952c  bl       #0x233728                      mg_get_request_info
+00219530  add      r3, sp, #0x44                  
+00219534  add      r2, sp, #0x5c                  
+00219538  str      r3, [sp, #0x3c]                
+0021953c  mov      r4, r0                         
+00219540  ldr      r0, [pc, #0x25c]               0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+00219544  mov      r3, #0                         
+00219548  strd     r2, r3, [sp, #0x54]            
+0021954c  str      r3, [sp, #0x40]                
+00219550  strb     r3, [sp, #0x44]                
+00219554  strb     r3, [sp, #0x5c]                
+00219558  bl       #0x88d10                       __xpg_basename@plt
+0021955c  ldr      r3, [pc, #0x244]               0x267c36 '=========================================='
+00219560  movw     r1, #0x20b                     
+00219564  ldr      r2, [pc, #0x240]               0x26717f 'handlePost'
+00219568  bl       #0xb3968                       C_LJQ_LOG2
+0021956c  ldr      r0, [pc, #0x230]               0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+00219570  bl       #0x88d10                       __xpg_basename@plt
+00219574  ldr      r3, [r4, #8]                   
+00219578  movw     r1, #0x20d                     
+0021957c  ldr      r2, [pc, #0x228]               0x26717f 'handlePost'
+00219580  str      r3, [sp]                       
+00219584  ldr      r3, [pc, #0x224]               0x2679fa 'url: %s'
+00219588  bl       #0xb3968                       C_LJQ_LOG2
+0021958c  ldr      r0, [pc, #0x210]               0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+00219590  bl       #0x88d10                       __xpg_basename@plt
+00219594  ldr      r3, [r4, #0x10]                
+00219598  movw     r1, #0x20e                     
+0021959c  ldr      r2, [pc, #0x208]               0x26717f 'handlePost'
+002195a0  str      r3, [sp]                       
+002195a4  ldr      r3, [pc, #0x208]               0x267a02 'query_string: %s'
+002195a8  bl       #0xb3968                       C_LJQ_LOG2
+002195ac  ldr      r1, [r4, #0x10]                
+002195b0  add      r0, sp, #0x54                  
+002195b4  bl       #0x87cb4                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEPKc@plt
+002195b8  ldr      r1, [pc, #0x1f8]               0x253a8c 
+002195bc  mvn      r2, #0                         
+002195c0  add      r0, sp, #0x54                  
+002195c4  bl       #0x87c3c                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12find_last_ofEPKcj@plt
+002195c8  mov      r3, r0                         
+002195cc  mov      r2, #0xd                       
+002195d0  add      r1, sp, #0x54                  
+002195d4  add      r0, sp, #0x6c                  
+002195d8  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+002195dc  ldr      r0, [sp, #0x6c]                
+002195e0  bl       #0x87f00                       atoi@plt
+002195e4  ldr      r1, [pc, #0x1d0]               0x26c04d 
+002195e8  mvn      r2, #0                         
+002195ec  mov      r4, r0                         
+002195f0  add      r0, sp, #0x54                  
+002195f4  bl       #0x87c3c                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12find_last_ofEPKcj@plt
+002195f8  add      r2, r0, #1                     
+002195fc  mvn      r3, #0                         
+00219600  add      r1, sp, #0x54                  
+00219604  add      r0, sp, #0x84                  
+00219608  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+0021960c  ldr      r0, [sp, #0x84]                
+00219610  bl       #0x87f00                       atoi@plt
+00219614  ldr      r7, [r7, #8]                   
+00219618  mov      r8, r0                         
+0021961c  add      r1, sp, #0x84                  
+00219620  add      r0, sp, #0x9c                  
+00219624  bl       #0x885c0                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_@plt
+00219628  add      r3, sp, #0x9c                  
+0021962c  mov      r2, r8                         
+00219630  mov      r1, r4                         
+00219634  mov      r0, r7                         
+00219638  bl       #0x218ee4                      _ZN10httpServer19HandleSetIotCtrlCmdEiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+0021963c  mov      r7, r0                         
+00219640  add      r0, sp, #0x9c                  
+00219644  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219648  ldr      r0, [pc, #0x154]               0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+0021964c  bl       #0x88d10                       __xpg_basename@plt
+00219650  ldr      r3, [pc, #0x168]               0x267c61 '111111111111111111111111111111111111'
+00219654  movw     r1, #0x21a                     
+00219658  ldr      r2, [pc, #0x14c]               0x26717f 'handlePost'
+0021965c  bl       #0xb3968                       C_LJQ_LOG2
+00219660  ldr      r1, [pc, #0x15c]               0x267c86 'HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n'
+00219664  mov      r0, r6                         
+00219668  bl       #0x234e8c                      mg_printf
+0021966c  mov      r1, #0                         
+00219670  add      r0, sp, #8                     
+00219674  bl       #0x87b04                       _ZN4Json5ValueC1ENS_9ValueTypeE@plt
+00219678  ldr      r1, [pc, #0x148]               0x267878 'Cmd'
+0021967c  add      r0, sp, #8                     
+00219680  bl       #0x8904c                       _ZN4Json5ValueixEPKc@plt
+00219684  mov      r8, r0                         
+00219688  mov      r1, r4                         
+0021968c  add      r0, sp, #0x20                  
+00219690  bl       #0x88320                       _ZN4Json5ValueC1Ei@plt
+00219694  add      r1, sp, #0x20                  
+00219698  mov      r0, r8                         
+0021969c  bl       #0x87144                       _ZN4Json5ValueaSES0_@plt
+002196a0  add      r0, sp, #0x20                  
+002196a4  bl       #0x8730c                       _ZN4Json5ValueD1Ev@plt
+002196a8  ldr      r1, [pc, #0x11c]               0x267ccd 'Value'
+002196ac  add      r0, sp, #8                     
+002196b0  bl       #0x8904c                       _ZN4Json5ValueixEPKc@plt
+002196b4  mov      r4, r0                         
+002196b8  mov      r1, r7                         
+002196bc  add      r0, sp, #0x20                  
+002196c0  bl       #0x88320                       _ZN4Json5ValueC1Ei@plt
+002196c4  add      r1, sp, #0x20                  
+002196c8  mov      r0, r4                         
+002196cc  bl       #0x87144                       _ZN4Json5ValueaSES0_@plt
+002196d0  add      r0, sp, #0x20                  
+002196d4  bl       #0x8730c                       _ZN4Json5ValueD1Ev@plt
+002196d8  add      r1, sp, #8                     
+002196dc  add      r0, sp, #0x9c                  
+002196e0  bl       #0x87054                       _ZNK4Json5Value14toStyledStringB5cxx11Ev@plt
+002196e4  ldr      r1, [sp, #0x9c]                
+002196e8  mov      r0, r6                         
+002196ec  bl       #0x234e8c                      mg_printf
+002196f0  add      r0, sp, #0x9c                  
+002196f4  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002196f8  add      r0, sp, #8                     
+002196fc  bl       #0x8730c                       _ZN4Json5ValueD1Ev@plt
+00219700  add      r0, sp, #0x84                  
+00219704  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219708  add      r0, sp, #0x6c                  
+0021970c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219710  add      r0, sp, #0x54                  
+00219714  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219718  add      r0, sp, #0x3c                  
+0021971c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219720  ldr      r2, [sp, #0xb4]                
+00219724  mov      r0, #1                         
+00219728  ldr      r3, [r5]                       
+0021972c  cmp      r2, r3                         
+00219730  beq      #0x219798                      
+00219734  bl       #0x874e0                       __stack_chk_fail@plt
+00219738  add      r0, sp, #0x9c                  
+0021973c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219740  add      r0, sp, #0x84                  
+00219744  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219748  add      r0, sp, #0x6c                  
+0021974c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219750  add      r0, sp, #0x54                  
+00219754  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219758  add      r0, sp, #0x3c                  
+0021975c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219760  bl       #0x880d4                       __cxa_end_cleanup@plt
+00219764  add      r0, sp, #0x20                  
+00219768  bl       #0x8730c                       _ZN4Json5ValueD1Ev@plt
+0021976c  add      r0, sp, #8                     
+00219770  bl       #0x8730c                       _ZN4Json5ValueD1Ev@plt
+00219774  b        #0x219740                      
+00219778  b        #0x219764                      
+0021977c  add      r0, sp, #0x9c                  
+00219780  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00219784  b        #0x21976c                      
+00219788  b        #0x21976c                      
+0021978c  b        #0x219740                      
+00219790  b        #0x219748                      
+00219794  b        #0x219750                      
+00219798  add      sp, sp, #0xb8                  
+0021979c  pop      {r4, r5, r6, r7, r8, pc}       
+002197a0  eoreq    r6, sb, r0, ror sp             
+002197a4  eoreq    r7, r6, r5, ror r2             
+002197a8  eoreq    r7, r6, r6, lsr ip             
+002197ac  eoreq    r7, r6, pc, ror r1             
+
+FUNCTION 0x9f9c4 _Z9qc_systemPKc size 244
+0009f9c4  ldr      r3, [pc, #0xd0]                0x296d70 __stack_chk_guard
+0009f9c8  cmp      r0, #0                         
+0009f9cc  push     {r4, r5, lr}                   
+0009f9d0  sub      sp, sp, #0x400                 
+0009f9d4  ldr      r2, [r3]                       
+0009f9d8  sub      sp, sp, #0xc                   
+0009f9dc  mov      r5, r3                         
+0009f9e0  str      r2, [sp, #0x404]               
+0009f9e4  bne      #0x9fa0c                       
+0009f9e8  ldr      r0, [pc, #0xb0]                0x247f68 'my_system cmd is NULL!'
+0009f9ec  bl       #0x87720                       puts@plt
+0009f9f0  mvn      r4, #0                         
+0009f9f4  ldr      r2, [sp, #0x404]               
+0009f9f8  mov      r0, r4                         
+0009f9fc  ldr      r3, [r5]                       
+0009fa00  cmp      r2, r3                         
+0009fa04  beq      #0x9fa90                       
+0009fa08  bl       #0x874e0                       __stack_chk_fail@plt
+0009fa0c  ldr      r1, [pc, #0x90]                0x253308 
+0009fa10  bl       #0x88860                       popen@plt
+0009fa14  subs     r4, r0, #0                     
+0009fa18  bne      #0x9fa40                       
+0009fa1c  ldr      r0, [pc, #0x84]                0x247f7f 'popen'
+0009fa20  bl       #0x88644                       perror@plt
+0009fa24  bl       #0x877e0                       __errno_location@plt
+0009fa28  ldr      r0, [r0]                       
+0009fa2c  bl       #0x87594                       strerror@plt
+0009fa30  mov      r1, r0                         
+0009fa34  ldr      r0, [pc, #0x70]                0x247f85 'popen error: %s/n'
+0009fa38  bl       #0x872b8                       printf@plt
+0009fa3c  b        #0x9f9f0                       
+0009fa40  mov      r2, r4                         
+0009fa44  mov      r1, #0x400                     
+0009fa48  add      r0, sp, #4                     
+0009fa4c  bl       #0x88f50                       fgets@plt
+0009fa50  cmp      r0, #0                         
+0009fa54  bne      #0x9fa40                       
+0009fa58  mov      r0, r4                         
+0009fa5c  bl       #0x86e8c                       pclose@plt
+0009fa60  cmn      r0, #1                         
+0009fa64  mov      r4, r0                         
+0009fa68  bne      #0x9fa78                       
+0009fa6c  ldr      r0, [pc, #0x3c]                0x247f97 'close popen file pointer fp error!'
+0009fa70  bl       #0x87720                       puts@plt
+0009fa74  b        #0x9f9f4                       
+0009fa78  cmp      r0, #0                         
+0009fa7c  beq      #0x9f9f4                       
+0009fa80  mov      r1, r0                         
+0009fa84  ldr      r0, [pc, #0x28]                0x247fba 'popen res is :%d\n'
+0009fa88  bl       #0x872b8                       printf@plt
+0009fa8c  b        #0x9f9f4                       
+0009fa90  add      sp, sp, #0x400                 
+0009fa94  add      sp, sp, #0xc                   
+0009fa98  pop      {r4, r5, pc}                   
+0009fa9c  eoreq    r6, sb, r0, ror sp             
+0009faa0  eoreq    r7, r4, r8, ror #30            
+0009faa4  eoreq    r3, r5, r8, lsl #6             
+0009faa8  eoreq    r7, r4, pc, ror pc             
+0009faac  eoreq    r7, r4, r5, lsl #31            
+0009fab0  mlaeq    r4, r7, pc, r7                 
+
+FUNCTION 0xa1090 _Z10getImgNamePc size 280
+000a1090  push     {r0, r1, r4, r5, r6, r7, r8, sb, sl, lr} 
+000a1094  mov      r7, r0                         
+000a1098  ldr      r0, [pc, #0xe8]                0x24857a '/mnt/sdcard'
+000a109c  bl       #0x872ac                       opendir@plt
+000a10a0  subs     r6, r0, #0                     
+000a10a4  beq      #0xa116c                       
+000a10a8  ldr      sb, [pc, #0xdc]                0x24e265 
+000a10ac  ldr      sl, [pc, #0xdc]                0x26d85d 
+000a10b0  ldr      r8, [pc, #0xdc]                0x26726b '.img'
+000a10b4  mov      r0, r6                         
+000a10b8  bl       #0x89010                       readdir64@plt
+000a10bc  subs     r5, r0, #0                     
+000a10c0  beq      #0xa117c                       
+000a10c4  add      r4, r5, #0x13                  
+000a10c8  mov      r1, sb                         
+000a10cc  mov      r0, r4                         
+000a10d0  bl       #0x88734                       strcmp@plt
+000a10d4  cmp      r0, #0                         
+000a10d8  beq      #0xa10b4                       
+000a10dc  mov      r1, sl                         
+000a10e0  mov      r0, r4                         
+000a10e4  bl       #0x88734                       strcmp@plt
+000a10e8  cmp      r0, #0                         
+000a10ec  beq      #0xa10b4                       
+000a10f0  ldrb     r3, [r5, #0x12]                
+000a10f4  tst      r3, #8                         
+000a10f8  beq      #0xa10b4                       
+000a10fc  mov      r1, #0x2e                      
+000a1100  mov      r0, r4                         
+000a1104  bl       #0x88f20                       strrchr@plt
+000a1108  subs     r3, r0, #0                     
+000a110c  beq      #0xa10b4                       
+000a1110  ldrb     r3, [r3, #4]                   
+000a1114  cmp      r3, #0                         
+000a1118  bne      #0xa10b4                       
+000a111c  mov      r2, #4                         
+000a1120  mov      r1, r8                         
+000a1124  bl       #0x87414                       strncmp@plt
+000a1128  subs     r5, r0, #0                     
+000a112c  bne      #0xa10b4                       
+000a1130  mov      r1, r4                         
+000a1134  mov      r0, r7                         
+000a1138  bl       #0x87e88                       strcpy@plt
+000a113c  ldr      r0, [pc, #0x54]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1140  bl       #0x88d10                       __xpg_basename@plt
+000a1144  str      r7, [sp]                       
+000a1148  mov      r1, #0x188                     
+000a114c  ldr      r3, [pc, #0x48]                0x248618 'imgname:%s\n'
+000a1150  ldr      r2, [pc, #0x48]                0x24844f 'getImgName'
+000a1154  bl       #0xb3968                       C_LJQ_LOG2
+000a1158  mov      r0, r6                         
+000a115c  bl       #0x8835c                       closedir@plt
+000a1160  mov      r0, r5                         
+000a1164  add      sp, sp, #8                     
+000a1168  pop      {r4, r5, r6, r7, r8, sb, sl, pc} 
+000a116c  ldr      r0, [pc, #0x30]                0x248586 'opendir error'
+000a1170  bl       #0x88644                       perror@plt
+000a1174  mvn      r5, #0                         
+000a1178  b        #0xa1160                       
+000a117c  mov      r0, r6                         
+000a1180  bl       #0x8835c                       closedir@plt
+000a1184  b        #0xa1174                       
+000a1188  eoreq    r8, r4, sl, ror r5             
+000a118c  eoreq    lr, r4, r5, ror #4             
+000a1190  eoreq    sp, r6, sp, asr r8             
+000a1194  eoreq    r7, r6, fp, ror #4             
+000a1198  mlaeq    r4, r4, r5, r8                 
+000a119c  eoreq    r8, r4, r8, lsl r6             
+000a11a0  eoreq    r8, r4, pc, asr #8             
+000a11a4  eoreq    r8, r4, r6, lsl #11            
+
+FUNCTION 0xa11cc _Z12check_sd_imgv size 136
+000a11cc  push     {r4, lr}                       
+000a11d0  sub      sp, sp, #0x108                 
+000a11d4  ldr      r4, [pc, #0x64]                0x296d70 __stack_chk_guard
+000a11d8  ldr      r0, [pc, #0x64]                0x24816a 'rm /mnt/sdcard/._*.img'
+000a11dc  ldr      r3, [r4]                       
+000a11e0  str      r3, [sp, #0x104]               
+000a11e4  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a11e8  mov      r2, #0x100                     
+000a11ec  mov      r1, #0                         
+000a11f0  add      r0, sp, #4                     
+000a11f4  bl       #0x88848                       memset@plt
+000a11f8  add      r0, sp, #4                     
+000a11fc  bl       #0xa1090                       _Z10getImgNamePc
+000a1200  cmp      r0, #0                         
+000a1204  beq      #0xa1224                       
+000a1208  ldr      r0, [pc, #0x38]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a120c  bl       #0x88d10                       __xpg_basename@plt
+000a1210  ldr      r3, [pc, #0x34]                0x247caa 'sdcard no found update*.img'
+000a1214  movw     r1, #0x1a1                     
+000a1218  ldr      r2, [pc, #0x30]                0x24845a 'check_sd_img'
+000a121c  bl       #0xb3968                       C_LJQ_LOG2
+000a1220  mvn      r0, #0                         
+000a1224  ldr      r2, [sp, #0x104]               
+000a1228  ldr      r3, [r4]                       
+000a122c  cmp      r2, r3                         
+000a1230  beq      #0xa1238                       
+000a1234  bl       #0x874e0                       __stack_chk_fail@plt
+000a1238  add      sp, sp, #0x108                 
+000a123c  pop      {r4, pc}                       
+000a1240  eoreq    r6, sb, r0, ror sp             
+000a1244  eoreq    r8, r4, sl, ror #2             
+000a1248  mlaeq    r4, r4, r5, r8                 
+000a124c  eoreq    r7, r4, sl, lsr #25            
+000a1250  eoreq    r8, r4, sl, asr r4             

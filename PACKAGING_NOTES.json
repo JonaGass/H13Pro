@@ -1,0 +1,10 @@
+{
+  "excluded": [
+    ".venv/",
+    "__pycache__/",
+    "old H13-Recherche.zip"
+  ],
+  "symlink_handling": "Recorded in FIRMWARE_SYMLINKS.json; not followed or recreated, for portable Windows extraction. Original UBI images are included.",
+  "special_files_omitted": [],
+  "cloud_source": "/workspace/h13-research"
+}

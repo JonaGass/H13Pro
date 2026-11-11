@@ -1,0 +1,102 @@
+
+FUNCTION 0xa1e34 _Z16sd_upgrade_startv size 476
+000a1e34  push     {r0, r1, r2, r4, r5, lr}       
+000a1e38  mov      r1, #0                         
+000a1e3c  ldr      r0, [pc, #0x170]               0x24857a '/mnt/sdcard'
+000a1e40  bl       #0x87ce4                       access@plt
+000a1e44  subs     r1, r0, #0                     
+000a1e48  beq      #0xa1e5c                       
+000a1e4c  mvn      r4, #0                         
+000a1e50  mov      r0, r4                         
+000a1e54  add      sp, sp, #0xc                   
+000a1e58  pop      {r4, r5, pc}                   
+000a1e5c  ldr      r0, [pc, #0x154]               0x248624 '/mnt/sdcard/userdata'
+000a1e60  bl       #0x87ce4                       access@plt
+000a1e64  subs     r4, r0, #0                     
+000a1e68  bne      #0xa1e4c                       
+000a1e6c  str      r4, [sp, #4]                   
+000a1e70  add      r0, sp, #4                     
+000a1e74  bl       #0xa0f04                       _Z11getUserNamePPKc
+000a1e78  ldr      r5, [sp, #4]                   
+000a1e7c  cmp      r5, #0                         
+000a1e80  bne      #0xa1e90                       
+000a1e84  ldr      r0, [pc, #0x130]               0x2490a2 'sdcard updata fail!!'
+000a1e88  bl       #0x87720                       puts@plt
+000a1e8c  b        #0xa1e4c                       
+000a1e90  ldr      r1, [pc, #0x128]               0x2484e0 '/dev/mtd9'
+000a1e94  mov      r2, #9                         
+000a1e98  mov      r0, r5                         
+000a1e9c  bl       #0x87414                       strncmp@plt
+000a1ea0  cmp      r0, #0                         
+000a1ea4  bne      #0xa1f20                       
+000a1ea8  ldr      r0, [pc, #0x114]               0x248fb6 'mount -o remount,rw /'
+000a1eac  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1eb0  movw     r0, #0x2710                    
+000a1eb4  bl       #0x89058                       usleep@plt
+000a1eb8  ldr      r0, [pc, #0x108]               0x2490b7 'cp /mnt/sdcard/userdata/  /tmp/ -fr'
+000a1ebc  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1ec0  bl       #0xa1618                       _Z13userdataCoverv
+000a1ec4  ldr      r0, [pc, #0x100]               0x248fcc 'mount -o remount,ro /'
+000a1ec8  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1ecc  movw     r0, #0x2710                    
+000a1ed0  bl       #0x89058                       usleep@plt
+000a1ed4  bl       #0xa1254                       _Z14ChangeEmmcLogov
+000a1ed8  bl       #0xa13c8                       _Z17ChangeSpinandLogov
+000a1edc  bl       #0x88d28                       sync@plt
+000a1ee0  ldr      r0, [pc, #0xe8]                0x249077 '/oem/machine_status'
+000a1ee4  mov      r1, #0                         
+000a1ee8  bl       #0x87ce4                       access@plt
+000a1eec  cmp      r0, #0                         
+000a1ef0  bne      #0xa1f04                       
+000a1ef4  ldr      r0, [pc, #0xd8]                0x24906c 'chmod 0777 /oem/machine_status'
+000a1ef8  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1efc  ldr      r0, [pc, #0xd4]                0x24908b 'rm /oem/machine_status'
+000a1f00  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1f04  ldr      r0, [pc, #0xd0]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1f08  bl       #0x88d10                       __xpg_basename@plt
+000a1f0c  ldr      r3, [pc, #0xcc]                0x249135 'sdcard updata success!!\n'
+000a1f10  movw     r1, #0x217                     
+000a1f14  ldr      r2, [pc, #0xc8]                0x2484c8 'sd_upgrade_start'
+000a1f18  bl       #0xb3968                       C_LJQ_LOG2
+000a1f1c  b        #0xa1e50                       
+000a1f20  ldr      r1, [pc, #0xc0]                0x248525 '/dev/mmcblk0p9'
+000a1f24  mov      r2, #0xe                       
+000a1f28  mov      r0, r5                         
+000a1f2c  bl       #0x87414                       strncmp@plt
+000a1f30  cmp      r0, #0                         
+000a1f34  bne      #0xa1ed4                       
+000a1f38  ldr      r0, [pc, #0xac]                0x2490db 'cp -rf /mnt/sdcard/userdata /oem'
+000a1f3c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1f40  ldr      r0, [pc, #0xa8]                0x248ffb '/oem/userdata'
+000a1f44  mov      r1, r4                         
+000a1f48  bl       #0x87ce4                       access@plt
+000a1f4c  cmp      r0, #0                         
+000a1f50  bne      #0xa1e4c                       
+000a1f54  ldr      r0, [pc, #0x98]                0x249009 'chmod  0666 /oem/userdata -R'
+000a1f58  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1f5c  ldr      r0, [pc, #0x94]                0x245120 '/oem/userdata/hardware.ini'
+000a1f60  mov      r1, r4                         
+000a1f64  bl       #0x87ce4                       access@plt
+000a1f68  cmp      r0, #0                         
+000a1f6c  bne      #0xa1f78                       
+000a1f70  ldr      r0, [pc, #0x84]                0x2490fc 'cp /oem/userdata/hardware.ini /oem/etc/rkadk/hardware.in'
+000a1f74  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1f78  ldr      r0, [pc, #0x80]                0x2463fc '/oem/userdata/menuconfig.ini'
+000a1f7c  mov      r1, #0                         
+000a1f80  bl       #0x87ce4                       access@plt
+000a1f84  cmp      r0, #0                         
+000a1f88  bne      #0xa1f94                       
+000a1f8c  ldr      r0, [pc, #0x70]                0x24885e 'rm /oem/etc/rkadk/usrmenuconfig.ini'
+000a1f90  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1f94  ldr      r0, [pc, #0x6c]                0x246360 '/oem/userdata/settingmenu.ini'
+000a1f98  mov      r1, #0                         
+000a1f9c  bl       #0x87ce4                       access@plt
+000a1fa0  cmp      r0, #0                         
+000a1fa4  bne      #0xa1ed4                       
+000a1fa8  ldr      r0, [pc, #0x5c]                0x2488fc 'rm /oem/etc/rkadk/usrsettingmenu.ini'
+000a1fac  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1fb0  b        #0xa1ed4                       
+000a1fb4  eoreq    r8, r4, sl, ror r5             
+000a1fb8  eoreq    r8, r4, r4, lsr #12            
+000a1fbc  eoreq    sb, r4, r2, lsr #1             
+000a1fc0  eoreq    r8, r4, r0, ror #9             

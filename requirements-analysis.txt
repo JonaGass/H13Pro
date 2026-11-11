@@ -1,0 +1,4 @@
+# Nur fuer erneute Offline-Binaeranalyse. Die Diagnose benoetigt diese Pakete nicht.
+capstone==5.0.9
+pyelftools==0.33
+ubi-reader==0.8.16

@@ -1,0 +1,2 @@
+kernel/drivers/input/touchscreen/gt9xx_qc/gt9xx.ko:
+kernel/drivers/input/fm/qn8027.ko:

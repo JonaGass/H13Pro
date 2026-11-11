@@ -1,0 +1,41 @@
+#!/bin/sh
+
+
+# Stop all init scripts in /etc/init.d
+# executing them in reversed numerical order.
+#
+for i in $(ls -r /etc/init.d/S??*) ;do
+
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+	 
+     [ "$i" = "/etc/init.d/S00appdriver" ] && continue 
+     [ "$i" = "/etc/init.d/S10udev" ] && continue
+     #[ "$i" = "/etc/init.d/S20urandom" ] && continue
+     [ "$i" = "/etc/init.d/S21mountall.sh" ] && continue
+     [ "$i" = "/etc/init.d/S22config_env" ] && continue
+     [ "$i" = "/etc/init.d/S30dbus" ] && continue
+     [ "$i" = "/etc/init.d/S40network" ] && continue
+     [ "$i" = "/etc/init.d/S50tb_usbdevice" ] && continue
+     [ "$i" = "/etc/init.d/S50usbdevice" ] && continue
+     [ "$i" = "/etc/init.d/S50fcgiwrap" ] && continue
+     [ "$i" = "/etc/init.d/S51n4" ] && continue
+     #[ "$i" = "/etc/init.d/S98_lunch_init" ] && continue 
+     [ "$i" = "/etc/init.d/S99_bootcontrol" ] && continue
+	 
+     case "$i" in
+	*.sh)
+	    # Source shell script for speed.
+	    (
+		trap - INT QUIT TSTP
+		set stop
+		. $i
+	    )
+	    ;;
+	*)
+	    # No sh extension, so fork subprocess.
+	    $i stop
+	    ;;
+    esac
+done
+

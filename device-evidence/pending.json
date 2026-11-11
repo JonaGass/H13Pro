@@ -1,0 +1,15 @@
+{
+  "firmware_as_reported": "R13.10.01.22_1.1.1026.0_2.77.3f_20231013.1841..",
+  "pending_http_request": "http://192.168.10.1:8082/api/getdeviceinfo?cmd=2002",
+  "pending_http_status": "Requested from user; no response received yet",
+  "usb_hardware_ids": null,
+  "adb_access": "not tested on the physical device",
+  "root_access": "not established",
+  "target_firmware_dump": "not obtained",
+  "target_cvr_app": "not obtained",
+  "target_logo_backup": "not obtained",
+  "hardware_revision": null,
+  "desired_logo_artwork": "not supplied",
+  "case_opened": false,
+  "target_flash_writes": "none performed or reported during this investigation"
+}

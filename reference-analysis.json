@@ -1,0 +1,192 @@
+{
+  "container": "RKFW",
+  "rkaf_offset": 283060,
+  "items": [
+    {
+      "name": "package-file",
+      "package_path": "package-file",
+      "bytes": 853,
+      "rkaf_offset": 2048,
+      "file_offset": 285108,
+      "flash_sector": 4294967295,
+      "sha256": "ca91c8020f452fc56e2d6f9258fc745ba919fae7d346360dd43d3cf894a4f40c"
+    },
+    {
+      "name": "bootloader",
+      "package_path": "Image/MiniLoaderAll.bin",
+      "bytes": 282958,
+      "rkaf_offset": 4096,
+      "file_offset": 287156,
+      "flash_sector": 4294967295,
+      "sha256": "3690049e4d15995e7d2e1e1e69444a8f2955a8992296c800ac69407711f16853"
+    },
+    {
+      "name": "parameter",
+      "package_path": "Image/parameter.txt",
+      "bytes": 598,
+      "rkaf_offset": 288768,
+      "file_offset": 571828,
+      "flash_sector": 0,
+      "sha256": "b67f4486851368baec3eeb55e1c72c1bded50df8a75b7e79e974e58d5d029f4b"
+    },
+    {
+      "name": "uboot",
+      "package_path": "Image/uboot.img",
+      "bytes": 4194304,
+      "rkaf_offset": 290816,
+      "file_offset": 573876,
+      "flash_sector": 8192,
+      "sha256": "f36bb842a2fd2327e8e894dfada3f8ae3d79278eaa8e5ebaca110a48d4ef1a45"
+    },
+    {
+      "name": "misc",
+      "package_path": "Image/misc.img",
+      "bytes": 49152,
+      "rkaf_offset": 4485120,
+      "file_offset": 4768180,
+      "flash_sector": 18432,
+      "sha256": "353a0f38d54b4d9a56e3d27e1cb84b72a1ce29d9ff0699ed67e9e0d62463ca45"
+    },
+    {
+      "name": "boot",
+      "package_path": "Image/boot.img",
+      "bytes": 7606272,
+      "rkaf_offset": 4534272,
+      "file_offset": 4817332,
+      "flash_sector": 39936,
+      "sha256": "a689c27b084d5beda8b44be0e06cca670f0207762ee1c4e02eb0340ec4e98ad9"
+    },
+    {
+      "name": "recovery",
+      "package_path": "Image/recovery.img",
+      "bytes": 15474176,
+      "rkaf_offset": 12140544,
+      "file_offset": 12423604,
+      "flash_sector": 60416,
+      "sha256": "ecc9b2a16f57b8e276a8bb1a0aaeea446c65f7ed4c291c165e5eaaba6b25d810"
+    },
+    {
+      "name": "rootfs",
+      "package_path": "Image/rootfs.img",
+      "bytes": 60030976,
+      "rkaf_offset": 27615232,
+      "file_offset": 27898292,
+      "flash_sector": 93184,
+      "sha256": "4a7d6b23a17a42d95d3a48544d3428055e505eff69f3054a42657b7e5a835e50"
+    },
+    {
+      "name": "oem",
+      "package_path": "Image/oem.img",
+      "bytes": 1966080,
+      "rkaf_offset": 87646208,
+      "file_offset": 87929268,
+      "flash_sector": 228352,
+      "sha256": "aa5de109242a0314c690e42dbafb87930d994d65c99b4ef6fcfb644bc12e1c14"
+    },
+    {
+      "name": "logo",
+      "package_path": "Image/logo.img",
+      "bytes": 48180,
+      "rkaf_offset": 89612288,
+      "file_offset": 89895348,
+      "flash_sector": 244736,
+      "sha256": "711d014fa3048b48b1c9645ccfc4d0286354f60572b118d44e1de8c3e3c17717",
+      "bmp": {
+        "format": "BMP",
+        "actual_bytes": 48180,
+        "declared_bytes": 48180,
+        "pixel_offset": 1162,
+        "dib_bytes": 124,
+        "width": 720,
+        "height": 112,
+        "planes": 1,
+        "bits_per_pixel": 8,
+        "compression": 1
+      }
+    },
+    {
+      "name": "userdata",
+      "package_path": "Image/userdata.img",
+      "bytes": 1966080,
+      "rkaf_offset": 89661440,
+      "file_offset": 89944500,
+      "flash_sector": 252928,
+      "sha256": "b0fe65db65ccb2a0fe72cd021daafce45264bd0028ce23f11c0a0e5115184fc5"
+    },
+    {
+      "name": "backup",
+      "package_path": "RESERVED",
+      "bytes": 0,
+      "rkaf_offset": 0,
+      "file_offset": 283060,
+      "flash_sector": 4294967295,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "parameter": "PARMJ\u0002\u0000\u0000FIRMWARE_VER: 8.1\r\nMACHINE_MODEL: RV1126\r\nMACHINE_ID: 007\r\nMANUFACTURER: RV1126\r\nMAGIC: 0x5041524B\r\nATAG: 0x00200800\r\nMACHINE: 0xffffffff\r\nCHECK_MASK: 0x80\r\nPWR_HLD: 0,0,A,0,1\r\nTYPE: GPT\r\nCMDLINE: mtdparts=rk29xxnand:0x00001000@0x00001000(vnvm),0x00002800@0x00002000(uboot),0x00000400@0x00004800(misc),0x00005000@0x00004C00(private),0x00005000@0x00009C00(boot),0x00008000@0x0000EC00(recovery),0x00021000@0x00016C00(rootfs),0x00004000@0x00037C00(oem),0x00002000@0x0003BC00(logo),0x00002000@0x0003DC00(userdata),-@0x0003FC00(media:grow)\r\nuuid:rootfs=614e0000-0000-4b53-8000-1d28000054a9\r\n����",
+  "partitions": [
+    {
+      "name": "vnvm",
+      "start_sector": 4096,
+      "sectors": 4096,
+      "bytes": 2097152
+    },
+    {
+      "name": "uboot",
+      "start_sector": 8192,
+      "sectors": 10240,
+      "bytes": 5242880
+    },
+    {
+      "name": "misc",
+      "start_sector": 18432,
+      "sectors": 1024,
+      "bytes": 524288
+    },
+    {
+      "name": "private",
+      "start_sector": 19456,
+      "sectors": 20480,
+      "bytes": 10485760
+    },
+    {
+      "name": "boot",
+      "start_sector": 39936,
+      "sectors": 20480,
+      "bytes": 10485760
+    },
+    {
+      "name": "recovery",
+      "start_sector": 60416,
+      "sectors": 32768,
+      "bytes": 16777216
+    },
+    {
+      "name": "rootfs",
+      "start_sector": 93184,
+      "sectors": 135168,
+      "bytes": 69206016
+    },
+    {
+      "name": "oem",
+      "start_sector": 228352,
+      "sectors": 16384,
+      "bytes": 8388608
+    },
+    {
+      "name": "logo",
+      "start_sector": 244736,
+      "sectors": 8192,
+      "bytes": 4194304
+    },
+    {
+      "name": "userdata",
+      "start_sector": 252928,
+      "sectors": 8192,
+      "bytes": 4194304
+    }
+  ],
+  "file": "/workspace/h13-research/sources/H70-R33-reference-only.img",
+  "sha256": "3f462bcce6370157050f07d362bba576d19e790283094d7cefcb304bc9b933f3",
+  "warning": "No authenticity, checksum, signature or device compatibility validation"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opencv_storage>
+    <cameraMatrix type_id="opencv-matrix">
+        <rows>3</rows>
+        <cols>3</cols>
+        <dt>f</dt>
+        <data>1110.706 0 960 0 1111.771 540 0 0 1</data>
+    </cameraMatrix>
+    <distCoeffs type_id="opencv-matrix">
+        <rows>0</rows>
+        <cols>0</cols>
+        <dt>f</dt>
+        <data></data>
+    </distCoeffs>
+    <imageSize>1920 1080</imageSize>
+    <alpha>1 1</alpha>
+    <cameraHeight>1200</cameraHeight>
+    <cameraPitch>0</cameraPitch>
+    <cameraYaw>0</cameraYaw>
+    <cameraRoll>0</cameraRoll>
+    <cameraToBumper>100</cameraToBumper>
+    <cameraToLeftWheel>850</cameraToLeftWheel>
+    <cameraToRightWheel>850</cameraToRightWheel>
+    <cameraToFrontAxle>0</cameraToFrontAxle>
+    <calibCameraHeight>-1.62353e-06</calibCameraHeight>
+    <calibBoardHeight>4.59107e-41</calibBoardHeight>
+    <calibDistance>1.83917e+25</calibDistance>
+    <status>OK</status>
+</opencv_storage>

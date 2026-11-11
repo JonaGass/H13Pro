@@ -1,0 +1,575 @@
+
+FUNCTION 0x89298 main size 2448
+00089298  ldr      r3, [pc, #0x8e8]               0x296d70 __stack_chk_guard
+0008929c  mov      r1, #1                         
+000892a0  push     {r4, r5, r6, lr}               
+000892a4  sub      sp, sp, #0x48                  
+000892a8  ldr      r3, [r3]                       
+000892ac  mov      r0, #0xd                       
+000892b0  ldr      r4, [pc, #0x8d4]               0x2999d8 
+000892b4  str      r3, [sp, #0x44]                
+000892b8  bl       #0x88020                       signal@plt
+000892bc  ldr      r1, [pc, #0x8cc]               0x8b8b8 _Z14signal_handleri
+000892c0  mov      r0, #0xb                       
+000892c4  bl       #0x88020                       signal@plt
+000892c8  ldr      r0, [pc, #0x8c4]               0x242015 '/usr/share/cvr_res/image/compatible720p'
+000892cc  mov      r1, #0                         
+000892d0  bl       #0x87ce4                       access@plt
+000892d4  cmp      r0, #0                         
+000892d8  bne      #0x89310                       
+000892dc  ldr      r0, [pc, #0x8b4]               0x24203d 'echo 0 > /sys/devices/platform/misc_gpio/back_cam_start'
+000892e0  bl       #0x9f9c4                       _Z9qc_systemPKc
+000892e4  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000892e8  mov      r3, #1                         
+000892ec  strb     r3, [r0, #0x129]               
+000892f0  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+000892f4  bl       #0x20e0b8                      _ZN12PowerManager14GetBackCamResoEv
+000892f8  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+000892fc  bl       #0x20dba8                      _ZN12PowerManager20GetBackCamResoluflagEv
+00089300  cmp      r0, #2                         
+00089304  bne      #0x893ec                       
+00089308  mov      r3, #1                         
+0008930c  str      r3, [r4, #0xc]                 
+00089310  ldr      r0, [pc, #0x884]               0x242075 '/usr/share/cvr_res/image/1080P60Fps'
+00089314  mov      r1, #0                         
+00089318  bl       #0x87ce4                       access@plt
+0008931c  subs     r5, r0, #0                     
+00089320  bne      #0x89498                       
+00089324  ldr      r0, [pc, #0x86c]               0x24203d 'echo 0 > /sys/devices/platform/misc_gpio/back_cam_start'
+00089328  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008932c  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+00089330  bl       #0x20e0b8                      _ZN12PowerManager14GetBackCamResoEv
+00089334  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089338  mov      r3, #1                         
+0008933c  strb     r3, [r0, #0x129]               
+00089340  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+00089344  bl       #0x20dba8                      _ZN12PowerManager20GetBackCamResoluflagEv
+00089348  cmp      r0, #5                         
+0008934c  beq      #0x89400                       
+00089350  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+00089354  bl       #0x20dba8                      _ZN12PowerManager20GetBackCamResoluflagEv
+00089358  cmp      r0, #3                         
+0008935c  bne      #0x89498                       
+00089360  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089364  bl       #0x988f0                       _ZN16SensorBConfigIni12GetSensorFpsEv
+00089368  cmp      r0, #0x1e                      
+0008936c  beq      #0x893e0                       
+00089370  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089374  bl       #0x9854c                       _ZN16SensorBConfigIni14OpenSensorFileEv
+00089378  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+0008937c  ldr      r3, [pc, #0x81c]               0x2505d6 
+00089380  ldr      r2, [pc, #0x81c]               0x24209c '1080'
+00089384  ldr      r1, [pc, #0x81c]               0x2420a1 '1920'
+00089388  bl       #0x98570                       _ZN16SensorBConfigIni22SetDefSensorResolutionEPKcS1_S1_
+0008938c  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089390  ldr      r3, [pc, #0x808]               0x2505d6 
+00089394  ldr      r2, [pc, #0x808]               0x24209c '1080'
+00089398  ldr      r1, [pc, #0x808]               0x2420a1 '1920'
+0008939c  bl       #0x98704                       _ZN16SensorBConfigIni22SetUsrSensorResolutionEPKcS1_S1_
+000893a0  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+000893a4  bl       #0x98844                       _ZN16SensorBConfigIni14SaveSensorFileEv
+000893a8  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+000893ac  bl       #0x97fc0                       _ZN16SensorAConfigIni14OpenSensorFileEv
+000893b0  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+000893b4  ldr      r3, [pc, #0x7e4]               0x2505d6 
+000893b8  ldr      r2, [pc, #0x7e4]               0x24209c '1080'
+000893bc  ldr      r1, [pc, #0x7e4]               0x2420a1 '1920'
+000893c0  bl       #0x97fe4                       _ZN16SensorAConfigIni22SetDefSensorResolutionEPKcS1_S1_
+000893c4  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+000893c8  ldr      r3, [pc, #0x7d0]               0x2505d6 
+000893cc  ldr      r2, [pc, #0x7d0]               0x24209c '1080'
+000893d0  ldr      r1, [pc, #0x7d0]               0x2420a1 '1920'
+000893d4  bl       #0x98178                       _ZN16SensorAConfigIni22SetUsrSensorResolutionEPKcS1_S1_
+000893d8  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+000893dc  bl       #0x982b8                       _ZN16SensorAConfigIni14SaveSensorFileEv
+000893e0  ldr      r0, [pc, #0x7c4]               0x2420bf 'touch /oem/compatible2k'
+000893e4  bl       #0x9f9c4                       _Z9qc_systemPKc
+000893e8  b        #0x89498                       
+000893ec  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+000893f0  bl       #0x20dba8                      _ZN12PowerManager20GetBackCamResoluflagEv
+000893f4  cmp      r0, #4                         
+000893f8  bne      #0x89310                       
+000893fc  b        #0x89308                       
+00089400  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089404  bl       #0x988f0                       _ZN16SensorBConfigIni12GetSensorFpsEv
+00089408  cmp      r0, #0x3c                      
+0008940c  beq      #0x89350                       
+00089410  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089414  bl       #0x9854c                       _ZN16SensorBConfigIni14OpenSensorFileEv
+00089418  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+0008941c  ldr      r3, [pc, #0x78c]               0x242099 
+00089420  ldr      r2, [pc, #0x77c]               0x24209c '1080'
+00089424  ldr      r1, [pc, #0x77c]               0x2420a1 '1920'
+00089428  bl       #0x98570                       _ZN16SensorBConfigIni22SetDefSensorResolutionEPKcS1_S1_
+0008942c  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089430  ldr      r3, [pc, #0x778]               0x242099 
+00089434  ldr      r2, [pc, #0x768]               0x24209c '1080'
+00089438  ldr      r1, [pc, #0x768]               0x2420a1 '1920'
+0008943c  bl       #0x98704                       _ZN16SensorBConfigIni22SetUsrSensorResolutionEPKcS1_S1_
+00089440  bl       #0x98508                       _ZN16SensorBConfigIni11GetInstanceEv
+00089444  bl       #0x98844                       _ZN16SensorBConfigIni14SaveSensorFileEv
+00089448  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+0008944c  bl       #0x97fc0                       _ZN16SensorAConfigIni14OpenSensorFileEv
+00089450  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+00089454  ldr      r3, [pc, #0x754]               0x242099 
+00089458  ldr      r2, [pc, #0x744]               0x24209c '1080'
+0008945c  ldr      r1, [pc, #0x744]               0x2420a1 '1920'
+00089460  bl       #0x97fe4                       _ZN16SensorAConfigIni22SetDefSensorResolutionEPKcS1_S1_
+00089464  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+00089468  ldr      r3, [pc, #0x740]               0x242099 
+0008946c  ldr      r2, [pc, #0x730]               0x24209c '1080'
+00089470  ldr      r1, [pc, #0x730]               0x2420a1 '1920'
+00089474  bl       #0x98178                       _ZN16SensorAConfigIni22SetUsrSensorResolutionEPKcS1_S1_
+00089478  bl       #0x97f7c                       _ZN16SensorAConfigIni11GetInstanceEv
+0008947c  bl       #0x982b8                       _ZN16SensorAConfigIni14SaveSensorFileEv
+00089480  ldr      r0, [pc, #0x72c]               0x2420c5 '/oem/compatible2k'
+00089484  mov      r1, r5                         
+00089488  bl       #0x87ce4                       access@plt
+0008948c  cmp      r0, #0                         
+00089490  ldreq    r0, [pc, #0x720]               0x2420a6 'rm /oem/compatible2k -fr'
+00089494  beq      #0x893e4                       
+00089498  ldr      r0, [pc, #0x71c]               0x2420d7 '/usr/share/cvr_res/image/2K30Fps'
+0008949c  mov      r1, #0                         
+000894a0  bl       #0x87ce4                       access@plt
+000894a4  cmp      r0, #0                         
+000894a8  bne      #0x894b4                       
+000894ac  ldr      r0, [pc, #0x6f8]               0x2420bf 'touch /oem/compatible2k'
+000894b0  bl       #0x9f9c4                       _Z9qc_systemPKc
+000894b4  mov      r3, #0                         
+000894b8  mov      r0, #8                         
+000894bc  str      r3, [sp, #4]                   
+000894c0  bl       #0x874ec                       _Znwj@plt
+000894c4  ldr      r3, [pc, #0x6f4]               0x24198c 
+000894c8  add      r1, sp, #8                     
+000894cc  str      r0, [sp, #8]                   
+000894d0  str      r3, [r0]                       
+000894d4  add      r0, sp, #4                     
+000894d8  ldr      r2, [pc, #0x6e4]               0x88b60 pthread_create@plt
+000894dc  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+000894e0  add      r0, sp, #8                     
+000894e4  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+000894e8  add      r0, sp, #4                     
+000894ec  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+000894f0  b        #0x89500                       
+000894f4  add      r0, sp, #8                     
+000894f8  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+000894fc  bl       #0x880d4                       __cxa_end_cleanup@plt
+00089500  add      r0, sp, #4                     
+00089504  bl       #0x8c304                       _ZNSt6threadD1Ev
+00089508  add      r0, sp, #8                     
+0008950c  bl       #0xa0be8                       _Z16get_display_infoP12display_info
+00089510  ldr      r3, [sp, #0x10]                
+00089514  mov      r1, #0                         
+00089518  ldr      r0, [pc, #0x6a8]               0x249077 '/oem/machine_status'
+0008951c  str      r3, [r4]                       
+00089520  bl       #0x87ce4                       access@plt
+00089524  subs     r5, r0, #0                     
+00089528  bne      #0x895f8                       
+0008952c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089530  mov      r6, r0                         
+00089534  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089538  bl       #0x99a30                       _ZN12SystemConfig17GetChipDetailTypeEv
+0008953c  mov      r1, r0                         
+00089540  mov      r0, r6                         
+00089544  bl       #0x99b8c                       _ZN12SystemConfig23CreatChipDetailTypeFileE11ChipVersion
+00089548  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008954c  mov      r6, r0                         
+00089550  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089554  bl       #0x99be8                       _ZN12SystemConfig26GetChipDetailTypeFileExsitEv
+00089558  mov      r1, r0                         
+0008955c  mov      r0, r6                         
+00089560  bl       #0x9a7c8                       _ZN12SystemConfig18SetChipTypeVersionE11ChipVersion
+00089564  bl       #0xa0f50                       _Z13checkUserdatav
+00089568  cmn      r0, #1                         
+0008956c  beq      #0x89614                       
+00089570  bl       #0x87384                       lv_init@plt
+00089574  ldr      r0, [r4]                       
+00089578  bl       #0x8f298                       lv_port_disp_init
+0008957c  ldr      r0, [r4]                       
+00089580  bl       #0x8f438                       lv_port_indev_init
+00089584  bl       #0x8bcec                       _Z8ShowInfov
+00089588  bl       #0x8b6f8                       
+0008958c  str      r5, [sp]                       
+00089590  mov      r0, #8                         
+00089594  bl       #0x874ec                       _Znwj@plt
+00089598  ldr      r3, [pc, #0x62c]               0x2419a0 
+0008959c  add      r1, sp, #4                     
+000895a0  str      r0, [sp, #4]                   
+000895a4  str      r3, [r0]                       
+000895a8  mov      r0, sp                         
+000895ac  ldr      r2, [pc, #0x610]               0x88b60 pthread_create@plt
+000895b0  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+000895b4  add      r0, sp, #4                     
+000895b8  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+000895bc  mov      r0, sp                         
+000895c0  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+000895c4  b        #0x895d0                       
+000895c8  add      r0, sp, #4                     
+000895cc  b        #0x894f8                       
+000895d0  mov      r0, sp                         
+000895d4  bl       #0x8c304                       _ZNSt6threadD1Ev
+000895d8  mov      r0, #5                         
+000895dc  bl       #0x87d68                       lv_tick_inc@plt
+000895e0  bl       #0xb0d10                       _ZN9LvglMutex4LockEv
+000895e4  bl       #0x8b6f8                       
+000895e8  bl       #0xb0d1c                       _ZN9LvglMutex6UnlockEv
+000895ec  movw     r0, #0x1388                    
+000895f0  bl       #0x89058                       usleep@plt
+000895f4  b        #0x895d8                       
+000895f8  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000895fc  mov      r5, r0                         
+00089600  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089604  bl       #0x99be8                       _ZN12SystemConfig26GetChipDetailTypeFileExsitEv
+00089608  mov      r1, r0                         
+0008960c  mov      r0, r5                         
+00089610  bl       #0x9a7c8                       _ZN12SystemConfig18SetChipTypeVersionE11ChipVersion
+00089614  bl       #0x8b914                       
+00089618  cmp      r0, #0                         
+0008961c  bne      #0x89668                       
+00089620  str      r0, [sp]                       
+00089624  mov      r0, #8                         
+00089628  bl       #0x874ec                       _Znwj@plt
+0008962c  ldr      r3, [pc, #0x59c]               0x2419b4 
+00089630  add      r1, sp, #4                     
+00089634  str      r0, [sp, #4]                   
+00089638  str      r3, [r0]                       
+0008963c  mov      r0, sp                         
+00089640  ldr      r2, [pc, #0x57c]               0x88b60 pthread_create@plt
+00089644  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+00089648  add      r0, sp, #4                     
+0008964c  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+00089650  mov      r0, sp                         
+00089654  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+00089658  b        #0x89660                       
+0008965c  b        #0x895c8                       
+00089660  mov      r0, sp                         
+00089664  bl       #0x8c304                       _ZNSt6threadD1Ev
+00089668  mov      r3, #0                         
+0008966c  mov      r0, #8                         
+00089670  str      r3, [sp]                       
+00089674  bl       #0x874ec                       _Znwj@plt
+00089678  ldr      r3, [pc, #0x554]               0x2419c8 
+0008967c  add      r1, sp, #4                     
+00089680  str      r0, [sp, #4]                   
+00089684  str      r3, [r0]                       
+00089688  mov      r0, sp                         
+0008968c  ldr      r2, [pc, #0x530]               0x88b60 pthread_create@plt
+00089690  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+00089694  add      r0, sp, #4                     
+00089698  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+0008969c  mov      r0, sp                         
+000896a0  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+000896a4  b        #0x896ac                       
+000896a8  b        #0x895c8                       
+000896ac  mov      r0, sp                         
+000896b0  bl       #0x8c304                       _ZNSt6threadD1Ev
+000896b4  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000896b8  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+000896bc  cmp      r0, #0                         
+000896c0  beq      #0x896c8                       
+000896c4  bl       #0x8c144                       _Z15MotoPureCarplayv
+000896c8  bl       #0x9e0f0                       _Z11cvr_vi_initv
+000896cc  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000896d0  bl       #0x9c50c                       _ZN12SystemConfig4InitEv
+000896d4  bl       #0x90b04                       _ZN12PhotoManager11GetInstanceEv
+000896d8  bl       #0x90b38                       _ZN12PhotoManager4InitEv
+000896dc  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000896e0  mov      r1, #0x28                      
+000896e4  bl       #0x9934c                       _ZN12SystemConfig15GetSystemConfigE16SYSTEM_CONFIG_ID
+000896e8  cmp      r0, #0                         
+000896ec  beq      #0x896f8                       
+000896f0  ldr      r0, [pc, #0x4e0]               0x2420f8 'amixer -c 0 cset numid=1 6 -q'
+000896f4  bl       #0x9f9c4                       _Z9qc_systemPKc
+000896f8  mov      r3, #0                         
+000896fc  mov      r0, #8                         
+00089700  str      r3, [sp]                       
+00089704  bl       #0x874ec                       _Znwj@plt
+00089708  ldr      r3, [pc, #0x4cc]               0x2419dc 
+0008970c  add      r1, sp, #4                     
+00089710  str      r0, [sp, #4]                   
+00089714  str      r3, [r0]                       
+00089718  mov      r0, sp                         
+0008971c  ldr      r2, [pc, #0x4a0]               0x88b60 pthread_create@plt
+00089720  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+00089724  add      r0, sp, #4                     
+00089728  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+0008972c  mov      r0, sp                         
+00089730  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+00089734  b        #0x8973c                       
+00089738  b        #0x895c8                       
+0008973c  mov      r0, sp                         
+00089740  bl       #0x8c304                       _ZNSt6threadD1Ev
+00089744  mov      r0, #0                         
+00089748  bl       #0x92c78                       _ZN9WavPlayer4InitEb
+0008974c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089750  mov      r1, #0x16                      
+00089754  bl       #0x9934c                       _ZN12SystemConfig15GetSystemConfigE16SYSTEM_CONFIG_ID
+00089758  cmp      r0, #0                         
+0008975c  beq      #0x897b8                       
+00089760  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089764  bl       #0x99e34                       _ZN12SystemConfig18GetParkmonitorFlagEv
+00089768  cmp      r0, #0                         
+0008976c  bne      #0x897b8                       
+00089770  str      r0, [sp]                       
+00089774  mov      r0, #8                         
+00089778  bl       #0x874ec                       _Znwj@plt
+0008977c  ldr      r3, [pc, #0x45c]               0x2419f0 
+00089780  add      r1, sp, #4                     
+00089784  str      r0, [sp, #4]                   
+00089788  str      r3, [r0]                       
+0008978c  mov      r0, sp                         
+00089790  ldr      r2, [pc, #0x42c]               0x88b60 pthread_create@plt
+00089794  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+00089798  add      r0, sp, #4                     
+0008979c  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+000897a0  mov      r0, sp                         
+000897a4  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+000897a8  b        #0x897b0                       
+000897ac  b        #0x895c8                       
+000897b0  mov      r0, sp                         
+000897b4  bl       #0x8c304                       _ZNSt6threadD1Ev
+000897b8  bl       #0xa79c8                       _Z17get_g_ui_rotationv
+000897bc  str      r0, [r4]                       
+000897c0  bl       #0x8b6a4                       
+000897c4  bl       #0x225530                      _Z9pcba_testv
+000897c8  cmp      r0, #0                         
+000897cc  bge      #0x897f0                       
+000897d0  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000897d4  bl       #0x9a938                       _ZN12SystemConfig13GetStartGuideEv
+000897d8  cmp      r0, #0                         
+000897dc  beq      #0x8985c                       
+000897e0  bl       #0x1c1960                      _ZN16StartGuideWindow11GetInstanceEv
+000897e4  bl       #0x1c432c                      _ZN16StartGuideWindow5CreatEv
+000897e8  mov      r3, #1                         
+000897ec  strb     r3, [r4, #8]                   
+000897f0  ldr      r0, [pc, #0x3ec]               0x242116 '/usr/share/cvr_res/image/Jwd_flag'
+000897f4  mov      r1, #0                         
+000897f8  bl       #0x87ce4                       access@plt
+000897fc  cmp      r0, #0                         
+00089800  bne      #0x89814                       
+00089804  bl       #0x8c010                       _Z11ShowlogoImgv
+00089808  ldr      r0, [r4, #4]                   
+0008980c  mov      r1, #0x7d0                     
+00089810  bl       #0x8bfc8                       _Z8auto_delP9_lv_obj_tj
+00089814  bl       #0x8b6f8                       
+00089818  ldrb     r3, [r4, #8]                   
+0008981c  cmp      r3, #0                         
+00089820  beq      #0x898c0                       
+00089824  bl       #0x8c388                       _ZN15AiStreamManager11GetInstanceEv
+00089828  bl       #0x95f70                       _ZN15AiStreamManager4InitEv
+0008982c  mov      r3, #0                         
+00089830  mov      r0, #8                         
+00089834  str      r3, [sp]                       
+00089838  bl       #0x874ec                       _Znwj@plt
+0008983c  ldr      r3, [pc, #0x3a4]               0x241a04 
+00089840  add      r1, sp, #4                     
+00089844  str      r0, [sp, #4]                   
+00089848  str      r3, [r0]                       
+0008984c  mov      r0, sp                         
+00089850  ldr      r2, [pc, #0x36c]               0x88b60 pthread_create@plt
+00089854  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+00089858  b        #0x898a0                       
+0008985c  bl       #0x8c548                       _ZN12PowerManager11GetInstanceEv
+00089860  bl       #0x20da80                      _ZN12PowerManager21GetBackcarVideoStatusEv
+00089864  cmp      r0, #0                         
+00089868  beq      #0x89880                       
+0008986c  bl       #0xb85a4                       _ZN20PreviewWindowFactory9GetWindowEv
+00089870  ldr      r3, [r0]                       
+00089874  ldr      r3, [r3, #4]                   
+00089878  blx      r3                             
+0008987c  b        #0x897e8                       
+00089880  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089884  bl       #0x9c3f4                       _ZN12SystemConfig10GetJQSFlagEv
+00089888  cmp      r0, #0                         
+0008988c  bne      #0x8986c                       
+00089890  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089894  bl       #0x9bf9c                       _ZN12SystemConfig15GetXYWindowTypeEv
+00089898  bl       #0xbac8c                       _ZN18StartWindowFactory9GetWindowEv
+0008989c  b        #0x89870                       
+000898a0  add      r0, sp, #4                     
+000898a4  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+000898a8  mov      r0, sp                         
+000898ac  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+000898b0  b        #0x898b8                       
+000898b4  b        #0x895c8                       
+000898b8  mov      r0, sp                         
+000898bc  bl       #0x8c304                       _ZNSt6threadD1Ev
+000898c0  bl       #0x20e61c                      _ZN14StorageManager4InitEv
+000898c4  bl       #0x8c4d8                       _ZN12EventManager11GetInstanceEv
+000898c8  bl       #0xb3e28                       _ZN12EventManager8RunEventEv
+000898cc  bl       #0x8c5b8                       _ZN9SingletonI10httpServerE11GetInstanceEv
+000898d0  bl       #0x216b58                      _ZN10httpServer5startEv
+000898d4  bl       #0x8c5b8                       _ZN9SingletonI10httpServerE11GetInstanceEv
+000898d8  bl       #0x21986c                      _ZN10httpServer4initEv
+000898dc  ldr      r1, [pc, #0x308]               0x271bb3 'all'
+000898e0  add      r0, sp, #0x1c                  
+000898e4  bl       #0x87e88                       strcpy@plt
+000898e8  mov      r3, #0                         
+000898ec  add      r0, sp, #0x14                  
+000898f0  str      r3, [sp, #0x18]                
+000898f4  bl       #0x88134                       RK_MPI_LOG_SetLevelConf@plt
+000898f8  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+000898fc  cmp      r0, #0xb                       
+00089900  beq      #0x89958                       
+00089904  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+00089908  cmp      r0, #0xc                       
+0008990c  beq      #0x89958                       
+00089910  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+00089914  cmp      r0, #0xd                       
+00089918  beq      #0x89958                       
+0008991c  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+00089920  cmp      r0, #0xe                       
+00089924  beq      #0x89958                       
+00089928  bl       #0x8c318                       _ZN10GpsManager11GetInstanceEv
+0008992c  ldr      r3, [r0]                       
+00089930  mov      r5, r0                         
+00089934  ldr      r1, [pc, #0x2b4]               0x242138 '/dev/ttyS4'
+00089938  add      r0, sp, #0x2c                  
+0008993c  ldr      r6, [r3]                       
+00089940  bl       #0x8b9b4                       
+00089944  mov      r2, #0x2580                    
+00089948  add      r1, sp, #0x2c                  
+0008994c  mov      r0, r5                         
+00089950  blx      r6                             
+00089954  b        #0x89a34                       
+00089958  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008995c  bl       #0x9c4c0                       _ZN12SystemConfig15GetBlueTpmsFlagEv
+00089960  cmp      r0, #0                         
+00089964  beq      #0x899ec                       
+00089968  ldr      r0, [pc, #0x284]               0x299bb8 _ZGVZN16BlueToothManager11GetInstanceEvE9oInstance
+0008996c  ldrb     r3, [r0]                       
+00089970  dmb      ish                            
+00089974  tst      r3, #1                         
+00089978  bne      #0x899a8                       
+0008997c  bl       #0x8826c                       __cxa_guard_acquire@plt
+00089980  cmp      r0, #0                         
+00089984  beq      #0x899a8                       
+00089988  ldr      r0, [pc, #0x268]               0x299bbc _ZZN16BlueToothManager11GetInstanceEvE9oInstance
+0008998c  bl       #0x20f050                      _ZN16BlueToothManagerC2Ev
+00089990  ldr      r0, [pc, #0x25c]               0x299bb8 _ZGVZN16BlueToothManager11GetInstanceEvE9oInstance
+00089994  bl       #0x89028                       __cxa_guard_release@plt
+00089998  ldr      r2, [pc, #0x25c]               0x297c68 
+0008999c  ldr      r1, [pc, #0x25c]               0x20eea8 _ZN16BlueToothManagerD2Ev
+000899a0  ldr      r0, [pc, #0x250]               0x299bbc _ZZN16BlueToothManager11GetInstanceEvE9oInstance
+000899a4  bl       #0x87bb8                       __aeabi_atexit@plt
+000899a8  ldr      r0, [pc, #0x248]               0x299bbc _ZZN16BlueToothManager11GetInstanceEvE9oInstance
+000899ac  bl       #0x20ef44                      _ZN16BlueToothManager13BlueTpmsStartEv
+000899b0  bl       #0x8c318                       _ZN10GpsManager11GetInstanceEv
+000899b4  ldr      r3, [r0]                       
+000899b8  mov      r5, r0                         
+000899bc  ldr      r1, [pc, #0x22c]               0x242138 '/dev/ttyS4'
+000899c0  add      r0, sp, #0x2c                  
+000899c4  ldr      r6, [r3]                       
+000899c8  bl       #0x8b9b4                       
+000899cc  ldr      r2, [pc, #0x230]               0x1c200 
+000899d0  add      r1, sp, #0x2c                  
+000899d4  mov      r0, r5                         
+000899d8  blx      r6                             
+000899dc  b        #0x89a34                       
+000899e0  ldr      r0, [pc, #0x20c]               0x299bb8 _ZGVZN16BlueToothManager11GetInstanceEvE9oInstance
+000899e4  bl       #0x87108                       __cxa_guard_abort@plt
+000899e8  b        #0x894fc                       
+000899ec  bl       #0x8c468                       _ZN11TpmsManager11GetInstanceEv
+000899f0  ldr      r3, [r0]                       
+000899f4  mov      r5, r0                         
+000899f8  ldr      r1, [pc, #0x208]               0x242143 '/dev/ttyS5'
+000899fc  add      r0, sp, #0x2c                  
+00089a00  ldr      r6, [r3]                       
+00089a04  bl       #0x8b9b4                       
+00089a08  mov      r2, #0x2580                    
+00089a0c  add      r1, sp, #0x2c                  
+00089a10  mov      r0, r5                         
+00089a14  blx      r6                             
+00089a18  add      r0, sp, #0x2c                  
+00089a1c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00089a20  bl       #0x8c468                       _ZN11TpmsManager11GetInstanceEv
+00089a24  ldr      r3, [r0]                       
+00089a28  ldr      r3, [r3, #4]                   
+00089a2c  blx      r3                             
+00089a30  b        #0x899b0                       
+00089a34  add      r0, sp, #0x2c                  
+00089a38  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00089a3c  bl       #0x8c318                       _ZN10GpsManager11GetInstanceEv
+00089a40  ldr      r3, [r0]                       
+00089a44  ldr      r3, [r3, #4]                   
+00089a48  blx      r3                             
+00089a4c  ldrb     r3, [r4, #8]                   
+00089a50  cmp      r3, #0                         
+00089a54  beq      #0x89b20                       
+00089a58  ldr      r0, [pc, #0x1ac]               0x269ab7 '/mnt/private/uuid'
+00089a5c  mov      r1, #0                         
+00089a60  bl       #0x87ce4                       access@plt
+00089a64  cmp      r0, #0                         
+00089a68  beq      #0x89a70                       
+00089a6c  bl       #0x21ce34                      _Z14GetWlanoHwaddrv
+00089a70  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00089a74  mov      r1, #6                         
+00089a78  bl       #0x9934c                       _ZN12SystemConfig15GetSystemConfigE16SYSTEM_CONFIG_ID
+00089a7c  cmp      r0, #0                         
+00089a80  beq      #0x89acc                       
+00089a84  ldr      r0, [pc, #0x184]               0x299ba0 _ZGVZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089a88  ldrb     r3, [r0]                       
+00089a8c  dmb      ish                            
+00089a90  tst      r3, #1                         
+00089a94  bne      #0x89ac4                       
+00089a98  bl       #0x8826c                       __cxa_guard_acquire@plt
+00089a9c  cmp      r0, #0                         
+00089aa0  beq      #0x89ac4                       
+00089aa4  ldr      r0, [pc, #0x168]               0x299ba4 _ZZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089aa8  bl       #0x969f8                       _ZN16YuvStreamManagerC2Ev
+00089aac  ldr      r0, [pc, #0x15c]               0x299ba0 _ZGVZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089ab0  bl       #0x89028                       __cxa_guard_release@plt
+00089ab4  ldr      r2, [pc, #0x140]               0x297c68 
+00089ab8  ldr      r1, [pc, #0x158]               0x96a18 _ZN16YuvStreamManagerD2Ev
+00089abc  ldr      r0, [pc, #0x150]               0x299ba4 _ZZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089ac0  bl       #0x87bb8                       __aeabi_atexit@plt
+00089ac4  ldr      r0, [pc, #0x148]               0x299ba4 _ZZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089ac8  bl       #0x96a34                       _ZN16YuvStreamManager4InitEv
+00089acc  ldr      r0, [pc, #0x148]               0x299b04 _ZGVZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089ad0  ldrb     r3, [r0]                       
+00089ad4  dmb      ish                            
+00089ad8  tst      r3, #1                         
+00089adc  bne      #0x89b18                       
+00089ae0  bl       #0x8826c                       __cxa_guard_acquire@plt
+00089ae4  cmp      r0, #0                         
+00089ae8  beq      #0x89b18                       
+00089aec  ldr      r0, [pc, #0x12c]               0x299b08 _ZZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089af0  bl       #0xa60c4                       _ZN15RkNfAdasManagerC1Ev
+00089af4  b        #0x89b00                       
+00089af8  ldr      r0, [pc, #0x110]               0x299ba0 _ZGVZN16YuvStreamManager11GetInstanceEvE9oInstance
+00089afc  b        #0x899e4                       
+00089b00  ldr      r0, [pc, #0x114]               0x299b04 _ZGVZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089b04  bl       #0x89028                       __cxa_guard_release@plt
+00089b08  ldr      r2, [pc, #0xec]                0x297c68 
+00089b0c  ldr      r1, [pc, #0x110]               0xa5bc4 _ZN15RkNfAdasManagerD2Ev
+00089b10  ldr      r0, [pc, #0x108]               0x299b08 _ZZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089b14  bl       #0x87bb8                       __aeabi_atexit@plt
+00089b18  ldr      r0, [pc, #0x100]               0x299b08 _ZZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089b1c  bl       #0xa60f0                       _ZN15RkNfAdasManager4InitEv
+00089b20  bl       #0x97a1c                       _Z9SetFmGainv
+00089b24  mov      r0, #5                         
+00089b28  bl       #0x87d68                       lv_tick_inc@plt
+00089b2c  bl       #0xb0d10                       _ZN9LvglMutex4LockEv
+00089b30  bl       #0x8b6f8                       
+00089b34  bl       #0xb0d1c                       _ZN9LvglMutex6UnlockEv
+00089b38  movw     r0, #0x1388                    
+00089b3c  bl       #0x89058                       usleep@plt
+00089b40  b        #0x89b24                       
+00089b44  ldr      r0, [pc, #0xd0]                0x299b04 _ZGVZN15RkNfAdasManager11GetInstanceEvE9oInstance
+00089b48  b        #0x899e4                       
+00089b4c  add      r0, sp, #4                     
+00089b50  bl       #0x8c304                       _ZNSt6threadD1Ev
+00089b54  b        #0x894fc                       
+00089b58  mov      r0, sp                         
+00089b5c  b        #0x89b50                       
+00089b60  b        #0x89b58                       
+00089b64  b        #0x89b58                       
+00089b68  b        #0x89b58                       
+00089b6c  b        #0x89b58                       
+00089b70  b        #0x89b58                       
+00089b74  add      r0, sp, #0x2c                  
+00089b78  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00089b7c  b        #0x894fc                       
+00089b80  b        #0x89b74                       
+00089b84  b        #0x89b74                       
+00089b88  eoreq    r6, sb, r0, ror sp             

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "package-file",
+    "path": "package-file",
+    "offset": 2048,
+    "flash_sector": 4294967295,
+    "size": 853,
+    "magic": "23204e414d45090952656c6174697665",
+    "sha256": "ca91c8020f452fc56e2d6f9258fc745ba919fae7d346360dd43d3cf894a4f40c"
+  },
+  {
+    "name": "bootloader",
+    "path": "Image/MiniLoaderAll.bin",
+    "offset": 4096,
+    "flash_sector": 4294967295,
+    "size": 282958,
+    "magic": "424f4f5466000501000000000001e907",
+    "sha256": "3690049e4d15995e7d2e1e1e69444a8f2955a8992296c800ac69407711f16853"
+  },
+  {
+    "name": "parameter",
+    "path": "Image/parameter.txt",
+    "offset": 288768,
+    "flash_sector": 0,
+    "size": 598,
+    "magic": "5041524d4a0200004649524d57415245",
+    "sha256": "b67f4486851368baec3eeb55e1c72c1bded50df8a75b7e79e974e58d5d029f4b"
+  },
+  {
+    "name": "uboot",
+    "path": "Image/uboot.img",
+    "offset": 290816,
+    "flash_sector": 8192,
+    "size": 4194304,
+    "magic": "d00dfeed000008000000004800000544",
+    "sha256": "f36bb842a2fd2327e8e894dfada3f8ae3d79278eaa8e5ebaca110a48d4ef1a45"
+  },
+  {
+    "name": "misc",
+    "path": "Image/misc.img",
+    "offset": 4485120,
+    "flash_sector": 18432,
+    "size": 49152,
+    "magic": "00000000000000000000000000000000",
+    "sha256": "353a0f38d54b4d9a56e3d27e1cb84b72a1ce29d9ff0699ed67e9e0d62463ca45"
+  },
+  {
+    "name": "boot",
+    "path": "Image/boot.img",
+    "offset": 4534272,
+    "flash_sector": 39936,
+    "size": 7606272,
+    "magic": "d00dfeed000006000000004800000428",
+    "sha256": "a689c27b084d5beda8b44be0e06cca670f0207762ee1c4e02eb0340ec4e98ad9"
+  },
+  {
+    "name": "recovery",
+    "path": "Image/recovery.img",
+    "offset": 12140544,
+    "flash_sector": 60416,
+    "size": 15474176,
+    "magic": "d00dfeed000008000000004800000520",
+    "sha256": "ecc9b2a16f57b8e276a8bb1a0aaeea446c65f7ed4c291c165e5eaaba6b25d810"
+  },
+  {
+    "name": "rootfs",
+    "path": "Image/rootfs.img",
+    "offset": 27615232,
+    "flash_sector": 93184,
+    "size": 60030976,
+    "magic": "55424923010000000000000000000000",
+    "sha256": "4a7d6b23a17a42d95d3a48544d3428055e505eff69f3054a42657b7e5a835e50"
+  },
+  {
+    "name": "oem",
+    "path": "Image/oem.img",
+    "offset": 87646208,
+    "flash_sector": 228352,
+    "size": 1966080,
+    "magic": "55424923010000000000000000000000",
+    "sha256": "aa5de109242a0314c690e42dbafb87930d994d65c99b4ef6fcfb644bc12e1c14"
+  },
+  {
+    "name": "logo",
+    "path": "Image/logo.img",
+    "offset": 89612288,
+    "flash_sector": 244736,
+    "size": 48180,
+    "magic": "424d34bc0000000000008a0400007c00",
+    "sha256": "711d014fa3048b48b1c9645ccfc4d0286354f60572b118d44e1de8c3e3c17717"
+  },
+  {
+    "name": "userdata",
+    "path": "Image/userdata.img",
+    "offset": 89661440,
+    "flash_sector": 252928,
+    "size": 1966080,
+    "magic": "55424923010000000000000000000000",
+    "sha256": "b0fe65db65ccb2a0fe72cd021daafce45264bd0028ce23f11c0a0e5115184fc5"
+  }
+]

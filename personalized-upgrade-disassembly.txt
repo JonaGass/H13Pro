@@ -1,0 +1,182 @@
+
+FUNCTION 0x1ec918 _ZN19LylinkSettingWindow14SDUpgradeEventEP11_lv_event_t size 324
+001ec918  push     {r4, r5, lr}                   
+001ec91c  sub      sp, sp, #0x21c                 
+001ec920  ldr      r4, [pc, #0x114]               0x296d70 __stack_chk_guard
+001ec924  ldr      r3, [r4]                       
+001ec928  str      r3, [sp, #0x214]               
+001ec92c  bl       #0x8781c                       lv_event_get_code@plt
+001ec930  cmp      r0, #7                         
+001ec934  bne      #0x1eca14                      
+001ec938  ldr      r0, [pc, #0x100]               0x2606f9 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/ui/SettingWindow/LylinkSettingWindow.cpp'
+001ec93c  bl       #0x88d10                       __xpg_basename@plt
+001ec940  ldr      r2, [pc, #0xfc]                0x260528 'eEvent'
+001ec944  movw     r1, #0x140a                    
+001ec948  add      r3, r2, #7                     
+001ec94c  sub      r2, r2, #8                     
+001ec950  str      r3, [sp]                       
+001ec954  ldr      r3, [pc, #0xec]                0x24de9e '%s Clicked\n'
+001ec958  bl       #0xb3968                       C_LJQ_LOG2
+001ec95c  mov      r3, #0                         
+001ec960  mov      r0, #8                         
+001ec964  str      r3, [sp, #0xc]                 
+001ec968  bl       #0x874ec                       _Znwj@plt
+001ec96c  ldr      r3, [pc, #0xd8]                0x25f4c0 
+001ec970  add      r1, sp, #0x10                  
+001ec974  str      r0, [sp, #0x10]                
+001ec978  str      r3, [r0]                       
+001ec97c  add      r0, sp, #0xc                   
+001ec980  ldr      r2, [pc, #0xc8]                0x88b60 pthread_create@plt
+001ec984  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+001ec988  add      r0, sp, #0x10                  
+001ec98c  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+001ec990  add      r0, sp, #0xc                   
+001ec994  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+001ec998  b        #0x1ec9a8                      
+001ec99c  add      r0, sp, #0x10                  
+001ec9a0  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+001ec9a4  bl       #0x880d4                       __cxa_end_cleanup@plt
+001ec9a8  add      r0, sp, #0xc                   
+001ec9ac  add      r5, sp, #0x114                 
+001ec9b0  bl       #0x8c304                       _ZNSt6threadD1Ev
+001ec9b4  mov      r2, #0xff                      
+001ec9b8  mov      r1, #0                         
+001ec9bc  add      r0, sp, #0x14                  
+001ec9c0  bl       #0x88848                       memset@plt
+001ec9c4  mov      r2, #0xff                      
+001ec9c8  mov      r1, #0                         
+001ec9cc  mov      r0, r5                         
+001ec9d0  bl       #0x88848                       memset@plt
+001ec9d4  mov      r0, #0x17                      
+001ec9d8  bl       #0xa09a0                       _ZN4Font6GetStrEi
+001ec9dc  mov      r2, #2                         
+001ec9e0  add      r1, sp, #0x14                  
+001ec9e4  bl       #0x89184                       _lv_bidi_process@plt
+001ec9e8  mov      r0, #0x68                      
+001ec9ec  bl       #0xa09a0                       _ZN4Font6GetStrEi
+001ec9f0  mov      r2, #2                         
+001ec9f4  mov      r1, r5                         
+001ec9f8  bl       #0x89184                       _lv_bidi_process@plt
+001ec9fc  bl       #0xb5570                       _ZN6Prompt11GetInstanceEv
+001eca00  str      r5, [sp]                       
+001eca04  add      r3, sp, #0x14                  
+001eca08  ldr      r2, [pc, #0x44]                0x1dd034 _ZN19LylinkSettingWindow17SetSDUpgradeEventEP11_lv_event_t
+001eca0c  ldr      r1, [pc, #0x44]                0x1ed340 _ZN19LylinkSettingWindow19CloseSDUpgradeEventEP11_lv_event_t
+001eca10  bl       #0x20c8f4                      _ZN6Prompt13ShowDialogBoxEPFvP11_lv_event_tES3_PKcS5_
+001eca14  ldr      r2, [sp, #0x214]               
+001eca18  ldr      r3, [r4]                       
+001eca1c  cmp      r2, r3                         
+001eca20  beq      #0x1eca34                      
+001eca24  bl       #0x874e0                       __stack_chk_fail@plt
+001eca28  add      r0, sp, #0xc                   
+001eca2c  bl       #0x8c304                       _ZNSt6threadD1Ev
+001eca30  b        #0x1ec9a4                      
+001eca34  add      sp, sp, #0x21c                 
+001eca38  pop      {r4, r5, pc}                   
+001eca3c  eoreq    r6, sb, r0, ror sp             
+
+FUNCTION 0x206058 _ZN16NewSettingWindow14SDUpgradeEventEP11_lv_event_t size 260
+00206058  push     {r4, lr}                       
+0020605c  sub      sp, sp, #0x210                 
+00206060  ldr      r4, [pc, #0xe0]                0x296d70 __stack_chk_guard
+00206064  ldr      r3, [r4]                       
+00206068  str      r3, [sp, #0x20c]               
+0020606c  bl       #0x8781c                       lv_event_get_code@plt
+00206070  cmp      r0, #7                         
+00206074  bne      #0x206120                      
+00206078  ldr      r1, [pc, #0xcc]                0x2646e8 'SDUpgradeEvent'
+0020607c  ldr      r0, [pc, #0xcc]                0x24de9e '%s Clicked\n'
+00206080  bl       #0x872b8                       printf@plt
+00206084  mov      r3, #0                         
+00206088  mov      r0, #8                         
+0020608c  str      r3, [sp, #4]                   
+00206090  bl       #0x874ec                       _Znwj@plt
+00206094  ldr      r3, [pc, #0xb8]                0x263d14 
+00206098  add      r1, sp, #8                     
+0020609c  str      r0, [sp, #8]                   
+002060a0  str      r3, [r0]                       
+002060a4  add      r0, sp, #4                     
+002060a8  ldr      r2, [pc, #0xa8]                0x88b60 pthread_create@plt
+002060ac  bl       #0x88050                       _ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE@plt
+002060b0  add      r0, sp, #8                     
+002060b4  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+002060b8  add      r0, sp, #4                     
+002060bc  bl       #0x87d5c                       _ZNSt6thread6detachEv@plt
+002060c0  b        #0x2060d0                      
+002060c4  add      r0, sp, #8                     
+002060c8  bl       #0x8c618                       _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
+002060cc  bl       #0x880d4                       __cxa_end_cleanup@plt
+002060d0  add      r0, sp, #4                     
+002060d4  bl       #0x8c304                       _ZNSt6threadD1Ev
+002060d8  mov      r2, #0xff                      
+002060dc  mov      r1, #0                         
+002060e0  add      r0, sp, #0xc                   
+002060e4  bl       #0x88848                       memset@plt
+002060e8  mov      r2, #0xff                      
+002060ec  mov      r1, #0                         
+002060f0  add      r0, sp, #0x10c                 
+002060f4  bl       #0x88848                       memset@plt
+002060f8  mov      r0, #0x17                      
+002060fc  bl       #0xa09a0                       _ZN4Font6GetStrEi
+00206100  mov      r2, #2                         
+00206104  add      r1, sp, #0xc                   
+00206108  bl       #0x89184                       _lv_bidi_process@plt
+0020610c  mov      r0, #0x68                      
+00206110  bl       #0xa09a0                       _ZN4Font6GetStrEi
+00206114  mov      r2, #2                         
+00206118  add      r1, sp, #0x10c                 
+0020611c  bl       #0x89184                       _lv_bidi_process@plt
+00206120  ldr      r2, [sp, #0x20c]               
+00206124  ldr      r3, [r4]                       
+00206128  cmp      r2, r3                         
+0020612c  beq      #0x206140                      
+00206130  bl       #0x874e0                       __stack_chk_fail@plt
+00206134  add      r0, sp, #4                     
+00206138  bl       #0x8c304                       _ZNSt6threadD1Ev
+0020613c  b        #0x2060cc                      
+00206140  add      sp, sp, #0x210                 
+00206144  pop      {r4, pc}                       
+00206148  eoreq    r6, sb, r0, ror sp             
+0020614c  eoreq    r4, r6, r8, ror #13            
+00206150  mlaeq    r4, lr, lr, sp                 
+00206154  eoreq    r3, r6, r4, lsl sp             
+00206158  andeq    r8, r8, r0, ror #22            
+
+FUNCTION 0x1e04b0 _ZN19LylinkSettingWindow13IconSDUpgradeEv size 148
+001e04b0  push     {r4, r5, r6, lr}               
+001e04b4  sub      sp, sp, #0x108                 
+001e04b8  ldr      r3, [pc, #0x7c]                0x296d70 __stack_chk_guard
+001e04bc  ldr      r6, [r0, #0x2d8]               
+001e04c0  ldr      r2, [r3]                       
+001e04c4  mov      r4, r3                         
+001e04c8  cmp      r6, #0                         
+001e04cc  str      r2, [sp, #0x104]               
+001e04d0  beq      #0x1e0520                      
+001e04d4  mov      r5, r0                         
+001e04d8  mov      r2, #0xff                      
+001e04dc  mov      r1, #0                         
+001e04e0  add      r0, sp, #4                     
+001e04e4  bl       #0x88848                       memset@plt
+001e04e8  ldr      r1, [r5, #0x6a0]               
+001e04ec  mov      r0, r6                         
+001e04f0  bl       #0x888c0                       lv_img_set_src@plt
+001e04f4  mov      r0, #0x17                      
+001e04f8  bl       #0xa09a0                       _ZN4Font6GetStrEi
+001e04fc  mov      r2, #2                         
+001e0500  add      r1, sp, #4                     
+001e0504  bl       #0x89184                       _lv_bidi_process@plt
+001e0508  ldr      r1, [pc, #0x30]                0x25aa33 
+001e050c  add      r2, sp, #4                     
+001e0510  ldr      r0, [r5, #0x2dc]               
+001e0514  bl       #0x87534                       lv_label_set_text_fmt@plt
+001e0518  mov      r3, #0                         
+001e051c  str      r3, [r5, #0x2d8]               
+001e0520  ldr      r2, [sp, #0x104]               
+001e0524  ldr      r3, [r4]                       
+001e0528  cmp      r2, r3                         
+001e052c  beq      #0x1e0534                      
+001e0530  bl       #0x874e0                       __stack_chk_fail@plt
+001e0534  add      sp, sp, #0x108                 
+001e0538  pop      {r4, r5, r6, pc}               
+001e053c  eoreq    r6, sb, r0, ror sp             
+001e0540  eoreq    sl, r5, r3, lsr sl             

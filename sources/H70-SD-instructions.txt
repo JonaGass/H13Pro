@@ -1,0 +1,32 @@
+SD 卡升级说明（emmc）
+Please refer to the video tutorial in 《SD upgrade-emmc.mp4》
+Preparation
+(1) Prepare a card reader, a Windows computer, and an SD card (for the SD card, it is recommended to use a 32GB one. Tests have shown that using a 64GB or 16GB SD card may result in unsuccessful card preparation and even damage the card).
+（2）RK card flashing tool
+（3）Software to be upgraded shall be named starting with "update". The following software names are provided for reference.
+Note: It is recommended to use the latest provided software.。
+（4）The provided SDDiskTool_v1.69 is in English by default. If you need to switch it to Chinese, follow the steps below:Step 1: Navigate to the unzipped folder "SDDiskTool_v1.69" of 《SDDiskTool_v1.69.zip》.
+Step 2: Open config.ini with Notepad, modify the content to set "Selected=1", then save and exit. See the figure below.
+Create the upgrade card.
+First step: Unzip SDDiskTool_v1.69.zip, enter the SDDiskTool_v1.69 directory, and open the card flashing tool.
+The display interface of the tool is as follows.
+、
+Second step: Insert the SD card into the card reader, then plug the card reader into the computer. After connection, the tool will automatically select and display the disk device.
+Third step: Keep the function mode as default (Upgrade Firmware). (PCBA Test and SD Boot do not need to be used.)
+Fourth step: Click "Firmware" in the tool, then locate the firmware to be upgraded.
+update_R8.22.00.10_1.1.70_V2.05.3f_********.****.img and select the firmware
+Fifth step: Click "Start Creation" and wait for the card flashing process to complete. (Note: If card flashing fails, click "Start Creation" several more times or restore the disk. If it still doesn't work, please replace the SD card!!!)
+Sixth step: Check the display of the memory card after the card flashing process is completed.
+Upgrade Steps
+(1) With the device powered off, insert the prepared memory card, then turn on the power.(2) After the device enters the upgrade mode, wait for 3-4 minutes. Once the "Upgrade Successful" message is displayed, you can remove the memory card. See the figure below:
+（3）The device will restart automatically after the memory card is removed. This indicates the completion of the upgrade.
+Steps to Restore the SD Card
+After the card is created as a bootable/upgrade card, the memory card cannot be used normally and needs to be restored using the card flashing tool.
+(1) Reconnect the upgrade card to the computer, then reopen the card flashing tool SD_Firmware_Tool.exe.
+(2) Click the "Restore" button at the bottom.
+（3）After the restoration is completed, connect the memory card to a powered-on device and format it, then it can be used normally.
+    
+Common Issues
+Card Flashing Tool Runtime ErrorPrompt: Loading config file failed!① No permission to access the tool's storage path.② Error caused by failed unzipping or running the tool without unzipping first.③ Firewall or antivirus software preventing the card flashing tool from running.
+SD-Tool Runs Normally, But Card Flashing FailsPrompt: Ejecting media failed!① Error caused by running the file directly from the SD card.② Using a 64GB or 128GB memory card (success is possible but not guaranteed).③ Firewall, PC manager, or antivirus software causing card flashing failure.④ Failure to clear memory card data, or residual data from a previous failed card flashing attempt.
+Prompt: Restoring MBR failed!① Memory card recognition error. (Typically, the memory card needs to be replaced in this case.))

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "H70-R33-reference-only.img",
+    "bytes": 91910616,
+    "sha256": "3f462bcce6370157050f07d362bba576d19e790283094d7cefcb304bc9b933f3"
+  },
+  {
+    "file": "H70-SD-instructions.docx",
+    "bytes": 516040,
+    "sha256": "7b4bcac92b015000f8458d43bda285a0e7f2ff93369a4a7dca863df6d5009163"
+  },
+  {
+    "file": "SDDiskTool_v1.73.zip",
+    "bytes": 517589,
+    "sha256": "6364d7665a18b9b6d68ad3697641f29346e8b592da455dfc30d884682b43d1c0"
+  },
+  {
+    "file": "h10pro-sd-1.png",
+    "bytes": 10756,
+    "sha256": "cb38fd40bb9cfd38f2ac98c20590107079d22160ed8d748e47821488641fa265"
+  }
+]

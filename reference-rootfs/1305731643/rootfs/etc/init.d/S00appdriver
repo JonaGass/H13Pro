@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# Load app driver modules....
+#
+
+MODULES_DIR="/lib/modules"
+
+start() {
+    printf "Load driver modules\n"
+    insmod $MODULES_DIR/4.19.111/kernel/drivers/input/touchscreen/gt9xx_qc/gt9xx.ko
+	insmod $MODULES_DIR/4.19.111/kernel/drivers/input/fm/qn8027.ko
+}
+
+stop() {
+    printf "Unload driver modules\n"
+#    rmmod $MODULES_DIR/4.19.111/kernel/drivers/input/touchscreen/gt9xx_qc/gt9xx.ko
+#	rmmod $MODULES_DIR/da380.ko
+
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

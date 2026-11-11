@@ -1,0 +1,61 @@
+
+FUNCTION 0x1dd034 _ZN19LylinkSettingWindow17SetSDUpgradeEventEP11_lv_event_t size 128
+001dd034  push     {r0, r1, r2, lr}               
+001dd038  bl       #0x8781c                       lv_event_get_code@plt
+001dd03c  cmp      r0, #7                         
+001dd040  bne      #0x1dd09c                      
+001dd044  ldr      r0, [pc, #0x58]                0x2606f9 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/ui/SettingWindow/LylinkSettingWindow.cpp'
+001dd048  bl       #0x88d10                       __xpg_basename@plt
+001dd04c  ldr      r2, [pc, #0x54]                0x25f6bc 'SetSDUpgradeEvent'
+001dd050  movw     r1, #0x1746                    
+001dd054  ldr      r3, [pc, #0x50]                0x24de9e '%s Clicked\n'
+001dd058  str      r2, [sp]                       
+001dd05c  sub      r2, r2, #0x12                  
+001dd060  bl       #0xb3968                       C_LJQ_LOG2
+001dd064  bl       #0xa1e34                       _Z16sd_upgrade_startv
+001dd068  cmp      r0, #0                         
+001dd06c  bne      #0x1dd08c                      
+001dd070  bl       #0xb5570                       _ZN6Prompt11GetInstanceEv
+001dd074  bl       #0x20cffc                      _ZN6Prompt15DeleteDialogBoxEv
+001dd078  bl       #0x9fcf4                       _Z12device_resetv
+001dd07c  ldr      r0, [pc, #0x2c]                0x24785f 'reboot'
+001dd080  add      sp, sp, #0xc                   
+001dd084  pop      {lr}                           
+001dd088  b        #0x9f9c4                       _Z9qc_systemPKc
+001dd08c  bl       #0xb5570                       _ZN6Prompt11GetInstanceEv
+001dd090  add      sp, sp, #0xc                   
+001dd094  pop      {lr}                           
+001dd098  b        #0x20cffc                      _ZN6Prompt15DeleteDialogBoxEv
+001dd09c  add      sp, sp, #0xc                   
+001dd0a0  pop      {pc}                           
+
+FUNCTION 0x1f03f8 _ZN17MotoSettingWindow17SetSDUpgradeEventEP11_lv_event_t size 128
+001f03f8  push     {r0, r1, r2, lr}               
+001f03fc  bl       #0x8781c                       lv_event_get_code@plt
+001f0400  cmp      r0, #7                         
+001f0404  bne      #0x1f0460                      
+001f0408  ldr      r0, [pc, #0x58]                0x263734 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/ui/SettingWindow/MotoSettingWindow.cpp'
+001f040c  bl       #0x88d10                       __xpg_basename@plt
+001f0410  ldr      r2, [pc, #0x54]                0x262ab2 'SetSDUpgradeEvent'
+001f0414  movw     r1, #0xe33                     
+001f0418  ldr      r3, [pc, #0x50]                0x24de9e '%s Clicked\n'
+001f041c  str      r2, [sp]                       
+001f0420  sub      r2, r2, #0x12                  
+001f0424  bl       #0xb3968                       C_LJQ_LOG2
+001f0428  bl       #0xa1e34                       _Z16sd_upgrade_startv
+001f042c  cmp      r0, #0                         
+001f0430  bne      #0x1f0450                      
+001f0434  bl       #0xb5570                       _ZN6Prompt11GetInstanceEv
+001f0438  bl       #0x20cffc                      _ZN6Prompt15DeleteDialogBoxEv
+001f043c  bl       #0x9fcf4                       _Z12device_resetv
+001f0440  ldr      r0, [pc, #0x2c]                0x24785f 'reboot'
+001f0444  add      sp, sp, #0xc                   
+001f0448  pop      {lr}                           
+001f044c  b        #0x9f9c4                       _Z9qc_systemPKc
+001f0450  bl       #0xb5570                       _ZN6Prompt11GetInstanceEv
+001f0454  add      sp, sp, #0xc                   
+001f0458  pop      {lr}                           
+001f045c  b        #0x20cffc                      _ZN6Prompt15DeleteDialogBoxEv
+001f0460  add      sp, sp, #0xc                   
+001f0464  pop      {pc}                           
+001f0468  eoreq    r3, r6, r4, lsr r7             

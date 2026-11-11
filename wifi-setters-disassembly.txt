@@ -1,0 +1,188 @@
+
+FUNCTION 0xa0420 _Z20SetdevWifiBtPasswordNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE size 372
+000a0420  push     {r4, r5, lr}                   
+000a0424  sub      sp, sp, #0xd4                  
+000a0428  ldr      r5, [pc, #0x154]               0x296d70 __stack_chk_guard
+000a042c  mov      r4, r0                         
+000a0430  add      r0, sp, #4                     
+000a0434  ldr      r3, [r5]                       
+000a0438  str      r3, [sp, #0xcc]                
+000a043c  bl       #0x9f6ec                       _Z18GetHostapdPasswordB5cxx11v
+000a0440  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a0444  ldr      r1, [r4]                       
+000a0448  bl       #0x9d7cc                       _ZN12WifiBtConfig17SetWifiBtPasswordEPc
+000a044c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000a0450  ldr      r1, [r4]                       
+000a0454  bl       #0x9a414                       _ZN12SystemConfig17SetWifiBtPasswordEPc
+000a0458  ldr      r1, [pc, #0x128]               0x247e7e 'wpa_passphrase='
+000a045c  add      r2, sp, #4                     
+000a0460  add      r0, sp, #0x1c                  
+000a0464  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+000a0468  add      r1, sp, #0x1c                  
+000a046c  add      r0, sp, #4                     
+000a0470  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+000a0474  add      r0, sp, #0x1c                  
+000a0478  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a047c  ldr      r1, [pc, #0x104]               0x247e7e 'wpa_passphrase='
+000a0480  mov      r2, r4                         
+000a0484  add      r0, sp, #0x34                  
+000a0488  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+000a048c  add      r1, sp, #0x34                  
+000a0490  mov      r0, r4                         
+000a0494  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+000a0498  add      r0, sp, #0x34                  
+000a049c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a04a0  ldr      r3, [r4]                       
+000a04a4  add      r0, sp, #0x4c                  
+000a04a8  ldr      r2, [sp, #4]                   
+000a04ac  ldr      r1, [pc, #0xd8]                0x2481cd 'sed -i "s/%s/%s/" /oem/etc/rkadk/hostapd.conf'
+000a04b0  bl       #0x88590                       sprintf@plt
+000a04b4  add      r0, sp, #0x4c                  
+000a04b8  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a04bc  ldr      r3, [r4]                       
+000a04c0  add      r0, sp, #0x4c                  
+000a04c4  ldr      r2, [sp, #4]                   
+000a04c8  ldr      r1, [pc, #0xc0]                0x2481fb 'sed -i "s/%s/%s/" /oem/etc/rkadk/hostapd-airplay.conf'
+000a04cc  bl       #0x88590                       sprintf@plt
+000a04d0  add      r0, sp, #0x4c                  
+000a04d4  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a04d8  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000a04dc  bl       #0x99334                       _ZN12SystemConfig4SaveEv
+000a04e0  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a04e4  bl       #0x9d768                       _ZN12WifiBtConfig4SaveEv
+000a04e8  bl       #0x88d28                       sync@plt
+000a04ec  bl       #0x8c3f8                       _ZN6Lylink11GetInstanceEv
+000a04f0  mov      r4, r0                         
+000a04f4  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a04f8  bl       #0x9d780                       _ZN12WifiBtConfig13GetWifiBtNameEv
+000a04fc  mov      r1, r0                         
+000a0500  add      r0, sp, #0x1c                  
+000a0504  bl       #0x9e390                       
+000a0508  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a050c  bl       #0x9d7b4                       _ZN12WifiBtConfig17GetWifiBtPasswordEv
+000a0510  mov      r1, r0                         
+000a0514  add      r0, sp, #0x34                  
+000a0518  bl       #0x9e390                       
+000a051c  add      r2, sp, #0x34                  
+000a0520  add      r1, sp, #0x1c                  
+000a0524  mov      r0, r4                         
+000a0528  bl       #0x211d64                      _ZN6Lylink12SendWifiInfoENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_
+000a052c  add      r0, sp, #0x34                  
+000a0530  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0534  add      r0, sp, #0x1c                  
+000a0538  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a053c  add      r0, sp, #4                     
+000a0540  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0544  ldr      r2, [sp, #0xcc]                
+000a0548  ldr      r3, [r5]                       
+000a054c  cmp      r2, r3                         
+000a0550  beq      #0xa057c                       
+000a0554  bl       #0x874e0                       __stack_chk_fail@plt
+000a0558  add      r0, sp, #0x34                  
+000a055c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0560  add      r0, sp, #0x1c                  
+000a0564  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0568  add      r0, sp, #4                     
+000a056c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0570  bl       #0x880d4                       __cxa_end_cleanup@plt
+000a0574  b        #0xa0560                       
+000a0578  b        #0xa0568                       
+000a057c  add      sp, sp, #0xd4                  
+000a0580  pop      {r4, r5, pc}                   
+000a0584  eoreq    r6, sb, r0, ror sp             
+000a0588  eoreq    r7, r4, lr, ror lr             
+000a058c  eoreq    r8, r4, sp, asr #3             
+
+FUNCTION 0xa02ac _Z16SetdevWifiBtNameNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE size 372
+000a02ac  push     {r4, r5, lr}                   
+000a02b0  sub      sp, sp, #0xd4                  
+000a02b4  ldr      r5, [pc, #0x154]               0x296d70 __stack_chk_guard
+000a02b8  mov      r4, r0                         
+000a02bc  add      r0, sp, #4                     
+000a02c0  ldr      r3, [r5]                       
+000a02c4  str      r3, [sp, #0xcc]                
+000a02c8  bl       #0x9f5b4                       _Z14GetHostapdSsidB5cxx11v
+000a02cc  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a02d0  ldr      r1, [r4]                       
+000a02d4  bl       #0x9d798                       _ZN12WifiBtConfig13SetWifiBtNameEPc
+000a02d8  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000a02dc  ldr      r1, [r4]                       
+000a02e0  bl       #0x9a3e0                       _ZN12SystemConfig13SetWifiBtNameEPc
+000a02e4  ldr      r1, [pc, #0x128]               0x247e70 'ssid='
+000a02e8  add      r2, sp, #4                     
+000a02ec  add      r0, sp, #0x1c                  
+000a02f0  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+000a02f4  add      r1, sp, #0x1c                  
+000a02f8  add      r0, sp, #4                     
+000a02fc  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+000a0300  add      r0, sp, #0x1c                  
+000a0304  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a0308  ldr      r1, [pc, #0x104]               0x247e70 'ssid='
+000a030c  mov      r2, r4                         
+000a0310  add      r0, sp, #0x34                  
+000a0314  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+000a0318  add      r1, sp, #0x34                  
+000a031c  mov      r0, r4                         
+000a0320  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+000a0324  add      r0, sp, #0x34                  
+000a0328  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a032c  ldr      r3, [r4]                       
+000a0330  add      r0, sp, #0x4c                  
+000a0334  ldr      r2, [sp, #4]                   
+000a0338  ldr      r1, [pc, #0xd8]                0x2481cd 'sed -i "s/%s/%s/" /oem/etc/rkadk/hostapd.conf'
+000a033c  bl       #0x88590                       sprintf@plt
+000a0340  add      r0, sp, #0x4c                  
+000a0344  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a0348  ldr      r3, [r4]                       
+000a034c  add      r0, sp, #0x4c                  
+000a0350  ldr      r2, [sp, #4]                   
+000a0354  ldr      r1, [pc, #0xc0]                0x2481fb 'sed -i "s/%s/%s/" /oem/etc/rkadk/hostapd-airplay.conf'
+000a0358  bl       #0x88590                       sprintf@plt
+000a035c  add      r0, sp, #0x4c                  
+000a0360  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a0364  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a0368  bl       #0x9d768                       _ZN12WifiBtConfig4SaveEv
+000a036c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+000a0370  bl       #0x99334                       _ZN12SystemConfig4SaveEv
+000a0374  bl       #0x88d28                       sync@plt
+000a0378  bl       #0x8c3f8                       _ZN6Lylink11GetInstanceEv
+000a037c  mov      r4, r0                         
+000a0380  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a0384  bl       #0x9d780                       _ZN12WifiBtConfig13GetWifiBtNameEv
+000a0388  mov      r1, r0                         
+000a038c  add      r0, sp, #0x1c                  
+000a0390  bl       #0x9e390                       
+000a0394  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+000a0398  bl       #0x9d7b4                       _ZN12WifiBtConfig17GetWifiBtPasswordEv
+000a039c  mov      r1, r0                         
+000a03a0  add      r0, sp, #0x34                  
+000a03a4  bl       #0x9e390                       
+000a03a8  add      r2, sp, #0x34                  
+000a03ac  add      r1, sp, #0x1c                  
+000a03b0  mov      r0, r4                         
+000a03b4  bl       #0x211d64                      _ZN6Lylink12SendWifiInfoENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_
+000a03b8  add      r0, sp, #0x34                  
+000a03bc  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03c0  add      r0, sp, #0x1c                  
+000a03c4  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03c8  add      r0, sp, #4                     
+000a03cc  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03d0  ldr      r2, [sp, #0xcc]                
+000a03d4  ldr      r3, [r5]                       
+000a03d8  cmp      r2, r3                         
+000a03dc  beq      #0xa0408                       
+000a03e0  bl       #0x874e0                       __stack_chk_fail@plt
+000a03e4  add      r0, sp, #0x34                  
+000a03e8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03ec  add      r0, sp, #0x1c                  
+000a03f0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03f4  add      r0, sp, #4                     
+000a03f8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a03fc  bl       #0x880d4                       __cxa_end_cleanup@plt
+000a0400  b        #0xa03ec                       
+000a0404  b        #0xa03f4                       
+000a0408  add      sp, sp, #0xd4                  
+000a040c  pop      {r4, r5, pc}                   
+000a0410  eoreq    r6, sb, r0, ror sp             
+000a0414  eoreq    r7, r4, r0, ror lr             
+000a0418  eoreq    r8, r4, sp, asr #3             

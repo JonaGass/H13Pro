@@ -1,0 +1,430 @@
+
+FUNCTION 0xa1618 _Z13userdataCoverv size 1372
+000a1618  push     {r4, r5, r6, r7, lr}           
+000a161c  sub      sp, sp, #0x34c                 
+000a1620  ldr      r7, [pc, #0x4a0]               0x296d70 __stack_chk_guard
+000a1624  mov      r1, #0                         
+000a1628  ldr      r0, [pc, #0x49c]               0x2487aa '/tmp/userdata/version'
+000a162c  ldr      r3, [r7]                       
+000a1630  str      r3, [sp, #0x344]               
+000a1634  bl       #0x87ce4                       access@plt
+000a1638  cmp      r0, #0                         
+000a163c  bne      #0xa164c                       
+000a1640  ldr      r0, [pc, #0x488]               0x2487c0 'cp -f /tmp/userdata/version  /oem/etc/'
+000a1644  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1648  bl       #0x88d28                       sync@plt
+000a164c  ldr      r0, [pc, #0x480]               0x2487e7 '/tmp/userdata/menuconfig.ini'
+000a1650  mov      r1, #0                         
+000a1654  bl       #0x87ce4                       access@plt
+000a1658  subs     r4, r0, #0                     
+000a165c  bne      #0xa1690                       
+000a1660  ldr      r0, [pc, #0x470]               0x248804 'cp /tmp/userdata/menuconfig.ini  /oem/etc/rkadk/'
+000a1664  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1668  ldr      r0, [pc, #0x46c]               0x248835 'chmod 0644 /oem/etc/rkadk/menuconfig.ini'
+000a166c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1670  ldr      r0, [pc, #0x468]               0x248861 '/oem/etc/rkadk/usrmenuconfig.ini'
+000a1674  mov      r1, r4                         
+000a1678  bl       #0x87ce4                       access@plt
+000a167c  cmp      r0, #0                         
+000a1680  bne      #0xa168c                       
+000a1684  ldr      r0, [pc, #0x458]               0x24885e 'rm /oem/etc/rkadk/usrmenuconfig.ini'
+000a1688  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a168c  bl       #0x88d28                       sync@plt
+000a1690  ldr      r0, [pc, #0x450]               0x248882 '/tmp/userdata/settingmenu.ini'
+000a1694  mov      r1, #0                         
+000a1698  bl       #0x87ce4                       access@plt
+000a169c  subs     r4, r0, #0                     
+000a16a0  bne      #0xa16d4                       
+000a16a4  ldr      r0, [pc, #0x440]               0x2488a0 'cp /tmp/userdata/settingmenu.ini  /oem/etc/rkadk/'
+000a16a8  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a16ac  ldr      r0, [pc, #0x43c]               0x2488d2 'chmod 0644 /oem/etc/rkadk/settingmenu.ini'
+000a16b0  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a16b4  ldr      r0, [pc, #0x438]               0x248900 'oem/etc/rkadk/usrsettingmenu.ini'
+000a16b8  mov      r1, r4                         
+000a16bc  bl       #0x87ce4                       access@plt
+000a16c0  cmp      r0, #0                         
+000a16c4  bne      #0xa16d0                       
+000a16c8  ldr      r0, [pc, #0x428]               0x2488fc 'rm /oem/etc/rkadk/usrsettingmenu.ini'
+000a16cc  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a16d0  bl       #0x88d28                       sync@plt
+000a16d4  ldr      r0, [pc, #0x420]               0x248921 '/tmp/userdata/wifibt.ini'
+000a16d8  mov      r1, #0                         
+000a16dc  bl       #0x87ce4                       access@plt
+000a16e0  cmp      r0, #0                         
+000a16e4  bne      #0xa172c                       
+000a16e8  ldr      r0, [pc, #0x410]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a16ec  bl       #0x88d10                       __xpg_basename@plt
+000a16f0  ldr      r3, [pc, #0x40c]               0x24893a '----------------aaaa-------------'
+000a16f4  mov      r1, #0x30                      
+000a16f8  ldr      r2, [pc, #0x408]               0x24849d 'userdataCover'
+000a16fc  bl       #0xb3968                       C_LJQ_LOG2
+000a1700  ldr      r0, [pc, #0x404]               0x24895c 'cp /tmp/userdata/wifibt.ini  /oem/etc/rkadk/'
+000a1704  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1708  ldr      r0, [pc, #0x3f0]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a170c  bl       #0x88d10                       __xpg_basename@plt
+000a1710  ldr      r3, [pc, #0x3ec]               0x24893a '----------------aaaa-------------'
+000a1714  mov      r1, #0x32                      
+000a1718  ldr      r2, [pc, #0x3e8]               0x24849d 'userdataCover'
+000a171c  bl       #0xb3968                       C_LJQ_LOG2
+000a1720  ldr      r0, [pc, #0x3e8]               0x248989 'chmod 0644 /oem/etc/rkadk/wifibt.ini'
+000a1724  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1728  bl       #0x88d28                       sync@plt
+000a172c  mov      r2, #0x100                     
+000a1730  mov      r1, #0                         
+000a1734  add      r0, sp, #0x2c                  
+000a1738  bl       #0x88848                       memset@plt
+000a173c  mov      r2, #0x100                     
+000a1740  mov      r1, #0                         
+000a1744  add      r0, sp, #0x12c                 
+000a1748  bl       #0x88848                       memset@plt
+000a174c  ldr      r1, [pc, #0x3c0]               0x2458a4 '/oem/etc/version'
+000a1750  mov      r2, #8                         
+000a1754  add      r0, sp, #0x22c                 
+000a1758  bl       #0x88c44                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode@plt
+000a175c  ldr      r5, [sp, #0x2d0]               
+000a1760  add      r3, sp, #0x1c                  
+000a1764  str      r3, [sp, #0x14]                
+000a1768  mov      r3, #0                         
+000a176c  str      r3, [sp, #0x18]                
+000a1770  ands     r5, r5, #5                     
+000a1774  strb     r3, [sp, #0x1c]                
+000a1778  beq      #0xa17c0                       
+000a177c  ldr      r0, [pc, #0x37c]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1780  bl       #0x88d10                       __xpg_basename@plt
+000a1784  ldr      r3, [pc, #0x38c]               0x2458b5 'open mount.txt error\n'
+000a1788  mov      r1, #0x40                      
+000a178c  ldr      r2, [pc, #0x374]               0x24849d 'userdataCover'
+000a1790  bl       #0xb3968                       C_LJQ_LOG2
+000a1794  mvn      r5, #0                         
+000a1798  add      r0, sp, #0x14                  
+000a179c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a17a0  add      r0, sp, #0x22c                 
+000a17a4  bl       #0x87b58                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@plt
+000a17a8  ldr      r2, [sp, #0x344]               
+000a17ac  mov      r0, r5                         
+000a17b0  ldr      r3, [r7]                       
+000a17b4  cmp      r2, r3                         
+000a17b8  beq      #0xa1ac0                       
+000a17bc  bl       #0x874e0                       __stack_chk_fail@plt
+000a17c0  add      r1, sp, #0x14                  
+000a17c4  add      r0, sp, #0x22c                 
+000a17c8  bl       #0x87834                       _ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE@plt
+000a17cc  add      r0, sp, #0x22c                 
+000a17d0  bl       #0x88494                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEE5closeEv@plt
+000a17d4  ldr      r0, [sp, #0x14]                
+000a17d8  mov      r1, #0x56                      
+000a17dc  bl       #0x88f20                       strrchr@plt
+000a17e0  cmp      r0, #0                         
+000a17e4  beq      #0xa1840                       
+000a17e8  mov      r1, #0x2e                      
+000a17ec  bl       #0x8778c                       strchr@plt
+000a17f0  cmp      r0, #0                         
+000a17f4  beq      #0xa1858                       
+000a17f8  mov      r1, #0x2e                      
+000a17fc  add      r0, r0, #1                     
+000a1800  bl       #0x8778c                       strchr@plt
+000a1804  subs     r4, r0, #0                     
+000a1808  beq      #0xa1858                       
+000a180c  ldrb     r6, [r4, #1]                   
+000a1810  ldr      r0, [pc, #0x2e8]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1814  sub      r6, r6, #0x30                  
+000a1818  bl       #0x88d10                       __xpg_basename@plt
+000a181c  ldr      r2, [pc, #0x2f8]               0x2484ab 'userdataCover'
+000a1820  mov      r1, #0x58                      
+000a1824  str      r6, [sp, #8]                   
+000a1828  str      r2, [sp]                       
+000a182c  sub      r2, r2, #0xe                   
+000a1830  str      r1, [sp, #4]                   
+000a1834  ldr      r3, [pc, #0x2e4]               0x2489ae '%s:%d=========%d=======\n'
+000a1838  bl       #0xb3968                       C_LJQ_LOG2
+000a183c  b        #0xa1870                       
+000a1840  ldr      r0, [pc, #0x2b8]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1844  bl       #0x88d10                       __xpg_basename@plt
+000a1848  ldr      r3, [pc, #0x2d4]               0x24645b 'Unable to locate V'
+000a184c  mov      r1, #0x49                      
+000a1850  ldr      r2, [pc, #0x2b0]               0x24849d 'userdataCover'
+000a1854  b        #0xa1790                       
+000a1858  ldr      r0, [pc, #0x2a0]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a185c  bl       #0x88d10                       __xpg_basename@plt
+000a1860  ldr      r3, [pc, #0x2c0]               0x26b28b '==============='
+000a1864  mov      r1, #0x50                      
+000a1868  ldr      r2, [pc, #0x298]               0x24849d 'userdataCover'
+000a186c  b        #0xa1790                       
+000a1870  cmp      r6, #7                         
+000a1874  ldrls    pc, [pc, r6, lsl #2]           
+000a1878  b        #0xa1a80                       
+000a187c  muleq    sl, ip, r8                     
+000a1880  ldrdeq   r1, r2, [sl], -r4              
+000a1884  ldrdeq   r1, r2, [sl], -r4              
+000a1888  strdeq   r1, r2, [sl], -ip              
+000a188c  ldrdeq   r1, r2, [sl], -r4              
+000a1890  andeq    r1, sl, r0, lsl #19            
+000a1894  ldrdeq   r1, r2, [sl], -r4              
+000a1898  strdeq   r1, r2, [sl], -ip              
+000a189c  bl       #0xa1550                       _Z13GetFileStatusv
+000a18a0  ldrb     r2, [r4, #1]                   
+000a18a4  cmp      r0, #0                         
+000a18a8  add      r0, sp, #0x12c                 
+000a18ac  ldrne    r1, [pc, #0x278]               0x2489c7 'cp -fr /tmp/userdata/StartWindows-split/* /usr/share/cvr_res/image/%c/'
+000a18b0  ldreq    r1, [pc, #0x278]               0x248a0e 'cp  /tmp/userdata/StartWindows-split/*.png /usr/share/cvr_res/image/%c/StartWindows-0/'
+000a18b4  bl       #0x88590                       sprintf@plt
+000a18b8  ldrb     r2, [r4, #1]                   
+000a18bc  ldr      r1, [pc, #0x270]               0x248a65 'cp  /tmp/userdata/StartWindows-split/window_space.ini /usr/share/cvr_res/image/%c/'
+000a18c0  add      r0, sp, #0x2c                  
+000a18c4  bl       #0x88590                       sprintf@plt
+000a18c8  add      r0, sp, #0x12c                 
+000a18cc  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a18d0  b        #0xa1a78                       
+000a18d4  bl       #0xa1550                       _Z13GetFileStatusv
+000a18d8  ldrb     r2, [r4, #1]                   
+000a18dc  cmp      r0, #0                         
+000a18e0  add      r0, sp, #0x12c                 
+000a18e4  ldrne    r1, [pc, #0x24c]               0x248ab8 'cp -fr /tmp/userdata/StartWindows-full/* /usr/share/cvr_res/image/%c/'
+000a18e8  ldreq    r1, [pc, #0x24c]               0x248afe 'cp  /tmp/userdata/StartWindows-full/*.png /usr/share/cvr_res/image/%c/StartWindows-0/'
+000a18ec  bl       #0x88590                       sprintf@plt
+000a18f0  ldrb     r2, [r4, #1]                   
+000a18f4  ldr      r1, [pc, #0x244]               0x248b54 'cp  /tmp/userdata/StartWindows-full/window_space.ini /usr/share/cvr_res/image/%c/'
+000a18f8  b        #0xa18c0                       
+000a18fc  bl       #0xa1550                       _Z13GetFileStatusv
+000a1900  ldrb     r2, [r4, #1]                   
+000a1904  cmp      r0, #0                         
+000a1908  add      r0, sp, #0x12c                 
+000a190c  ldrne    r1, [pc, #0x218]               0x2489c7 'cp -fr /tmp/userdata/StartWindows-split/* /usr/share/cvr_res/image/%c/'
+000a1910  ldreq    r1, [pc, #0x218]               0x248a0e 'cp  /tmp/userdata/StartWindows-split/*.png /usr/share/cvr_res/image/%c/StartWindows-0/'
+000a1914  bl       #0x88590                       sprintf@plt
+000a1918  ldrb     r2, [r4, #1]                   
+000a191c  add      r0, sp, #0x2c                  
+000a1920  ldr      r1, [pc, #0x20c]               0x248a65 'cp  /tmp/userdata/StartWindows-split/window_space.ini /usr/share/cvr_res/image/%c/'
+000a1924  bl       #0x88590                       sprintf@plt
+000a1928  add      r0, sp, #0x12c                 
+000a192c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1930  add      r0, sp, #0x2c                  
+000a1934  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1938  mov      r2, #0x100                     
+000a193c  mov      r1, #0                         
+000a1940  add      r0, sp, #0x12c                 
+000a1944  bl       #0x88848                       memset@plt
+000a1948  mov      r1, #0                         
+000a194c  mov      r2, #0x100                     
+000a1950  add      r0, sp, #0x2c                  
+000a1954  bl       #0x88848                       memset@plt
+000a1958  bl       #0xa1550                       _Z13GetFileStatusv
+000a195c  cmp      r0, #0                         
+000a1960  add      r0, sp, #0x12c                 
+000a1964  ldrne    r1, [pc, #0x1d8]               0x248ba6 'cp -fr /tmp/userdata/StartWindows-full/* /usr/share/cvr_res/image/1/'
+000a1968  ldreq    r1, [pc, #0x1d8]               0x248beb 'cp  /tmp/userdata/StartWindows-full/*.png /usr/share/cvr_res/image/1/StartWindows-0/'
+000a196c  bl       #0x87e88                       strcpy@plt
+000a1970  ldr      r1, [pc, #0x1d4]               0x248c40 'cp  /tmp/userdata/StartWindows-full/window_space.ini /usr/share/cvr_res/image/1/'
+000a1974  add      r0, sp, #0x2c                  
+000a1978  bl       #0x87e88                       strcpy@plt
+000a197c  b        #0xa18c8                       
+000a1980  bl       #0xa1550                       _Z13GetFileStatusv
+000a1984  ldrb     r2, [r4, #1]                   
+000a1988  cmp      r0, #0                         
+000a198c  add      r0, sp, #0x12c                 
+000a1990  ldrne    r1, [pc, #0x194]               0x2489c7 'cp -fr /tmp/userdata/StartWindows-split/* /usr/share/cvr_res/image/%c/'
+000a1994  ldreq    r1, [pc, #0x194]               0x248a0e 'cp  /tmp/userdata/StartWindows-split/*.png /usr/share/cvr_res/image/%c/StartWindows-0/'
+000a1998  bl       #0x88590                       sprintf@plt
+000a199c  ldrb     r2, [r4, #1]                   
+000a19a0  add      r0, sp, #0x2c                  
+000a19a4  ldr      r1, [pc, #0x188]               0x248a65 'cp  /tmp/userdata/StartWindows-split/window_space.ini /usr/share/cvr_res/image/%c/'
+000a19a8  bl       #0x88590                       sprintf@plt
+000a19ac  add      r0, sp, #0x12c                 
+000a19b0  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a19b4  add      r0, sp, #0x2c                  
+000a19b8  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a19bc  mov      r2, #0x100                     
+000a19c0  mov      r1, #0                         
+000a19c4  add      r0, sp, #0x12c                 
+000a19c8  bl       #0x88848                       memset@plt
+000a19cc  mov      r1, #0                         
+000a19d0  mov      r2, #0x100                     
+000a19d4  add      r0, sp, #0x2c                  
+000a19d8  bl       #0x88848                       memset@plt
+000a19dc  bl       #0xa1550                       _Z13GetFileStatusv
+000a19e0  cmp      r0, #0                         
+000a19e4  add      r0, sp, #0x12c                 
+000a19e8  ldrne    r1, [pc, #0x160]               0x248c91 'cp -fr /tmp/userdata/StartWindows-full/* /usr/share/cvr_res/image/4/'
+000a19ec  ldreq    r1, [pc, #0x160]               0x248cd6 'cp  /tmp/userdata/StartWindows-full/*.png /usr/share/cvr_res/image/4/StartWindows-0/'
+000a19f0  bl       #0x87e88                       strcpy@plt
+000a19f4  ldr      r1, [pc, #0x15c]               0x248d2b 'cp  /tmp/userdata/StartWindows-full/window_space.ini /usr/share/cvr_res/image/4/'
+000a19f8  b        #0xa1974                       
+000a19fc  bl       #0xa1550                       _Z13GetFileStatusv
+000a1a00  ldrb     r2, [r4, #1]                   
+000a1a04  cmp      r0, #0                         
+000a1a08  add      r0, sp, #0x12c                 
+000a1a0c  ldrne    r1, [pc, #0x118]               0x2489c7 'cp -fr /tmp/userdata/StartWindows-split/* /usr/share/cvr_res/image/%c/'
+000a1a10  ldreq    r1, [pc, #0x118]               0x248a0e 'cp  /tmp/userdata/StartWindows-split/*.png /usr/share/cvr_res/image/%c/StartWindows-0/'
+000a1a14  bl       #0x88590                       sprintf@plt
+000a1a18  ldrb     r2, [r4, #1]                   
+000a1a1c  add      r0, sp, #0x2c                  
+000a1a20  ldr      r1, [pc, #0x10c]               0x248a65 'cp  /tmp/userdata/StartWindows-split/window_space.ini /usr/share/cvr_res/image/%c/'
+000a1a24  bl       #0x88590                       sprintf@plt
+000a1a28  add      r0, sp, #0x12c                 
+000a1a2c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1a30  add      r0, sp, #0x2c                  
+000a1a34  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1a38  mov      r2, #0x100                     
+000a1a3c  mov      r1, #0                         
+000a1a40  add      r0, sp, #0x12c                 
+000a1a44  bl       #0x88848                       memset@plt
+000a1a48  mov      r1, #0                         
+000a1a4c  mov      r2, #0x100                     
+000a1a50  add      r0, sp, #0x2c                  
+000a1a54  bl       #0x88848                       memset@plt
+000a1a58  bl       #0xa1550                       _Z13GetFileStatusv
+000a1a5c  cmp      r0, #0                         
+000a1a60  add      r0, sp, #0x12c                 
+000a1a64  ldrne    r1, [pc, #0xf0]                0x248d7c 'cp -fr /tmp/userdata/StartWindows-full/* /usr/share/cvr_res/image/6/'
+000a1a68  ldreq    r1, [pc, #0xf0]                0x248dc1 'cp  /tmp/userdata/StartWindows-full/*.png /usr/share/cvr_res/image/6/StartWindows-0/'
+000a1a6c  bl       #0x87e88                       strcpy@plt
+000a1a70  ldr      r1, [pc, #0xec]                0x248e16 'cp  /tmp/userdata/StartWindows-full/window_space.ini /usr/share/cvr_res/image/6/'
+000a1a74  b        #0xa1974                       
+000a1a78  add      r0, sp, #0x2c                  
+000a1a7c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1a80  ldr      r0, [pc, #0xe0]                0x248e67 'cp /tmp/userdata/image/*  /usr/share/cvr_res/image'
+000a1a84  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1a88  ldr      r0, [pc, #0xdc]                0x248e9a 'chmod 0444 /usr/share/cvr_res/image/ -R'
+000a1a8c  bl       #0x9f9c4                       _Z9qc_systemPKc
+000a1a90  bl       #0x88d28                       sync@plt
+000a1a94  ldr      r1, [pc, #0x80]                0x2484ab 'userdataCover'
+000a1a98  mov      r2, #0xbd                      
+000a1a9c  ldr      r0, [pc, #0xcc]                0x248ec2 '%s:%d================\n'
+000a1aa0  bl       #0x872b8                       printf@plt
+000a1aa4  bl       #0x88d28                       sync@plt
+000a1aa8  b        #0xa1798                       
+000a1aac  add      r0, sp, #0x14                  
+000a1ab0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000a1ab4  add      r0, sp, #0x22c                 
+000a1ab8  bl       #0x87b58                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@plt
+000a1abc  bl       #0x880d4                       __cxa_end_cleanup@plt
+000a1ac0  add      sp, sp, #0x34c                 
+000a1ac4  pop      {r4, r5, r6, r7, pc}           
+000a1ac8  eoreq    r6, sb, r0, ror sp             
+000a1acc  eoreq    r8, r4, sl, lsr #15            
+000a1ad0  eoreq    r8, r4, r0, asr #15            
+000a1ad4  eoreq    r8, r4, r7, ror #15            
+000a1ad8  eoreq    r8, r4, r4, lsl #16            
+000a1adc  eoreq    r8, r4, r5, lsr r8             
+000a1ae0  eoreq    r8, r4, r1, ror #16            
+000a1ae4  eoreq    r8, r4, lr, asr r8             
+000a1ae8  eoreq    r8, r4, r2, lsl #17            
+000a1aec  eoreq    r8, r4, r0, lsr #17            
+
+FUNCTION 0xa13c8 _Z17ChangeSpinandLogov size 84
+000a13c8  push     {r4, lr}                       
+000a13cc  mov      r1, #0                         
+000a13d0  ldr      r0, [pc, #0x30]                0x248639 '/mnt/sdcard/userdata/logo.bin'
+000a13d4  bl       #0x87ce4                       access@plt
+000a13d8  cmp      r0, #0                         
+000a13dc  beq      #0xa13fc                       
+000a13e0  ldr      r0, [pc, #0x24]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a13e4  bl       #0x88d10                       __xpg_basename@plt
+000a13e8  ldr      r3, [pc, #0x20]                0x248699 'file does not exist'
+000a13ec  movw     r1, #0x1d6                     
+000a13f0  ldr      r2, [pc, #0x1c]                0x248476 'ChangeSpinandLogo'
+000a13f4  pop      {r4, lr}                       
+000a13f8  b        #0xb3968                       C_LJQ_LOG2
+000a13fc  ldr      r0, [pc, #0x14]                0x2486ad 'flashcp /mnt/sdcard/userdata/logo.bin /dev/mtd8'
+000a1400  pop      {r4, lr}                       
+000a1404  b        #0x9f9c4                       _Z9qc_systemPKc
+000a1408  eoreq    r8, r4, sb, lsr r6             
+000a140c  mlaeq    r4, r4, r5, r8                 
+000a1410  mlaeq    r4, sb, r6, r8                 
+000a1414  eoreq    r8, r4, r6, ror r4             
+000a1418  eoreq    r8, r4, sp, lsr #13            
+
+FUNCTION 0xa1254 _Z14ChangeEmmcLogov size 372
+000a1254  push     {r0, r1, r2, r4, r5, r6, r7, lr} 
+000a1258  mov      r1, #2                         
+000a125c  ldr      r0, [pc, #0x144]               0x248639 '/mnt/sdcard/userdata/logo.bin'
+000a1260  bl       #0x891c0                       open64@plt
+000a1264  subs     r4, r0, #0                     
+000a1268  bge      #0xa128c                       
+000a126c  ldr      r0, [pc, #0x138]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1270  bl       #0x88d10                       __xpg_basename@plt
+000a1274  ldr      r3, [pc, #0x134]               0x248657 'open:\n'
+000a1278  mov      r1, #0x1ac                     
+000a127c  ldr      r2, [pc, #0x130]               0x248467 'ChangeEmmcLogo'
+000a1280  add      sp, sp, #0xc                   
+000a1284  pop      {r4, r5, r6, r7, lr}           
+000a1288  b        #0xb3968                       C_LJQ_LOG2
+000a128c  ldr      r0, [pc, #0x124]               0x24865e '/dev/mmcblk0p8'
+000a1290  mov      r1, #2                         
+000a1294  bl       #0x891c0                       open64@plt
+000a1298  subs     r5, r0, #0                     
+000a129c  bge      #0xa12c0                       
+000a12a0  ldr      r0, [pc, #0x104]               0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a12a4  bl       #0x88d10                       __xpg_basename@plt
+000a12a8  ldr      r3, [pc, #0x10c]               0x24866d 'open /dev/mmcblk0p8 failed:\n'
+000a12ac  movw     r1, #0x1b2                     
+000a12b0  ldr      r2, [pc, #0xfc]                0x248467 'ChangeEmmcLogo'
+000a12b4  bl       #0xb3968                       C_LJQ_LOG2
+000a12b8  mov      r0, r4                         
+000a12bc  b        #0xa12f4                       
+000a12c0  mov      r0, #0x200                     
+000a12c4  bl       #0x88140                       malloc@plt
+000a12c8  subs     r6, r0, #0                     
+000a12cc  bne      #0xa1300                       
+000a12d0  ldr      r0, [pc, #0xd4]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a12d4  bl       #0x88d10                       __xpg_basename@plt
+000a12d8  ldr      r3, [pc, #0xe0]                0x24868a 'malloc failed '
+000a12dc  movw     r1, #0x1ba                     
+000a12e0  ldr      r2, [pc, #0xcc]                0x248467 'ChangeEmmcLogo'
+000a12e4  bl       #0xb3968                       C_LJQ_LOG2
+000a12e8  mov      r0, r4                         
+000a12ec  bl       #0x87b34                       close@plt
+000a12f0  mov      r0, r5                         
+000a12f4  add      sp, sp, #0xc                   
+000a12f8  pop      {r4, r5, r6, r7, lr}           
+000a12fc  b        #0x87b34                       close@plt
+000a1300  mov      r7, #0                         
+000a1304  mov      r2, #0                         
+000a1308  str      r7, [sp]                       
+000a130c  mov      r3, #0                         
+000a1310  mov      r0, r4                         
+000a1314  bl       #0x88ea8                       lseek64@plt
+000a1318  str      r7, [sp]                       
+000a131c  mov      r2, #0                         
+000a1320  mov      r3, #0                         
+000a1324  mov      r0, r5                         
+000a1328  bl       #0x88ea8                       lseek64@plt
+000a132c  mov      r2, #0x200                     
+000a1330  mov      r1, r6                         
+000a1334  mov      r0, r4                         
+000a1338  bl       #0x88fe0                       read@plt
+000a133c  mov      r7, r0                         
+000a1340  mov      r2, r7                         
+000a1344  mov      r1, r6                         
+000a1348  mov      r0, r5                         
+000a134c  bl       #0x87234                       write@plt
+000a1350  cmp      r7, #0                         
+000a1354  beq      #0xa138c                       
+000a1358  mov      r2, #0x200                     
+000a135c  mov      r1, r6                         
+000a1360  mov      r0, r4                         
+000a1364  bl       #0x88fe0                       read@plt
+000a1368  cmn      r0, #1                         
+000a136c  mov      r7, r0                         
+000a1370  bne      #0xa1340                       
+000a1374  ldr      r0, [pc, #0x30]                0x248594 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/userdata_upgrade.cpp'
+000a1378  bl       #0x88d10                       __xpg_basename@plt
+000a137c  ldr      r3, [pc, #0x40]                0x26c31c 'read failed'
+000a1380  movw     r1, #0x1c7                     
+000a1384  ldr      r2, [pc, #0x28]                0x248467 'ChangeEmmcLogo'
+000a1388  bl       #0xb3968                       C_LJQ_LOG2
+000a138c  mov      r0, r5                         
+000a1390  bl       #0x88ca4                       fsync@plt
+000a1394  mov      r0, r6                         
+000a1398  bl       #0x87ad4                       free@plt
+000a139c  mov      r0, r5                         
+000a13a0  bl       #0x87b34                       close@plt
+000a13a4  b        #0xa12b8                       
+000a13a8  eoreq    r8, r4, sb, lsr r6             
+000a13ac  mlaeq    r4, r4, r5, r8                 
+000a13b0  eoreq    r8, r4, r7, asr r6             
+000a13b4  eoreq    r8, r4, r7, ror #8             
+000a13b8  eoreq    r8, r4, lr, asr r6             
+000a13bc  eoreq    r8, r4, sp, ror #12            
+000a13c0  eoreq    r8, r4, sl, lsl #13            
+000a13c4  eoreq    ip, r6, ip, lsl r3             

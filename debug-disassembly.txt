@@ -1,0 +1,75 @@
+
+FUNCTION 0x8b914  size 416
+0008b914  push     {r4, lr}                       
+0008b918  mov      r1, #0                         
+0008b91c  ldr      r0, [pc, #0x74]                0x241bc7 '/oem/qckj_debug_all_file'
+0008b920  bl       #0x87ce4                       access@plt
+0008b924  cmp      r0, #0                         
+0008b928  bne      #0x8b940                       
+0008b92c  ldr      r1, [pc, #0x68]                0x241a10 'debug_mode_enable'
+0008b930  ldr      r0, [pc, #0x68]                0x241be0 '%s: /oem/qckj_debug_all_file\n'
+0008b934  bl       #0x872b8                       printf@plt
+0008b938  mov      r0, #1                         
+0008b93c  pop      {r4, pc}                       
+0008b940  ldr      r0, [pc, #0x5c]                0x241bfe '/mnt/sdcard/qckj_debug_all_file'
+0008b944  mov      r1, #0                         
+0008b948  bl       #0x87ce4                       access@plt
+0008b94c  cmp      r0, #0                         
+0008b950  ldreq    r1, [pc, #0x44]                0x241a10 'debug_mode_enable'
+0008b954  ldreq    r0, [pc, #0x4c]                0x241c1e '%s: /mnt/sdcard/qckj_debug_all_file\n'
+0008b958  beq      #0x8b934                       
+0008b95c  ldr      r0, [pc, #0x48]                0x241c43 '/oem/qckj_isptunner_file'
+0008b960  mov      r1, #0                         
+0008b964  bl       #0x87ce4                       access@plt
+0008b968  cmp      r0, #0                         
+0008b96c  bne      #0x8b990                       
+0008b970  ldr      r1, [pc, #0x24]                0x241a10 'debug_mode_enable'
+0008b974  ldr      r0, [pc, #0x34]                0x241c5c '%s: /oem/qckj_isptunner_file, set Isp Debug!\n'
+0008b978  bl       #0x872b8                       printf@plt
+0008b97c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008b980  mov      r3, #1                         
+0008b984  strb     r3, [r0, #0xd]                 
+0008b988  mov      r0, #2                         
+0008b98c  pop      {r4, pc}                       
+0008b990  mov      r0, #0                         
+0008b994  pop      {r4, pc}                       
+0008b998  eoreq    r1, r4, r7, asr #23            
+0008b99c  eoreq    r1, r4, r0, lsl sl             
+0008b9a0  eoreq    r1, r4, r0, ror #23            
+
+FUNCTION 0x8bab4 _Z11Start_initdv size 172
+0008bab4  push     {r4, lr}                       
+0008bab8  bl       #0xb39a8                       getLog2DebugInfo
+0008babc  ldr      r0, [pc, #0x70]                0x241a39 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/main.cpp'
+0008bac0  bl       #0x88d10                       __xpg_basename@plt
+0008bac4  ldr      r3, [pc, #0x6c]                0x241c9c '***********start************\n'
+0008bac8  mov      r1, #0x67                      
+0008bacc  ldr      r2, [pc, #0x68]                0x241a22 'Start_initd'
+0008bad0  bl       #0xb3968                       C_LJQ_LOG2
+0008bad4  bl       #0x8b914                       
+0008bad8  cmp      r0, #2                         
+0008badc  bne      #0x8bb14                       
+0008bae0  ldr      r0, [pc, #0x58]                0x241cba '/etc/init.d/S10udev start'
+0008bae4  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008bae8  ldr      r0, [pc, #0x54]                0x241cd4 '/etc/init.d/S40network start'
+0008baec  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008baf0  ldr      r0, [pc, #0x50]                0x241cf1 '=========== debug mode enter =========='
+0008baf4  bl       #0x87720                       puts@plt
+0008baf8  ldr      r0, [pc, #0x4c]                0x241d19 'echo usb_adb_en > /tmp/.usb_config'
+0008bafc  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008bb00  ldr      r0, [pc, #0x48]                0x241d3c '/etc/init.d/S50usbdevice start'
+0008bb04  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008bb08  ldr      r0, [pc, #0x44]                0x241d5b 'echo 7 > /proc/sys/kernel/printk'
+0008bb0c  pop      {r4, lr}                       
+0008bb10  b        #0x9f9c4                       _Z9qc_systemPKc
+0008bb14  ldr      r0, [pc, #0x3c]                0x241d7c 'set usb default: otg_mode=host'
+0008bb18  bl       #0x87720                       puts@plt
+0008bb1c  ldr      r0, [pc, #0x38]                0x241d9b 'echo host > /sys/devices/platform/ff4c0000.usb2-phy/otg_mode'
+0008bb20  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008bb24  ldr      r0, [pc, #0x14]                0x241cba '/etc/init.d/S10udev start'
+0008bb28  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008bb2c  ldr      r0, [pc, #0x10]                0x241cd4 '/etc/init.d/S40network start'
+0008bb30  b        #0x8bb0c                       
+0008bb34  eoreq    r1, r4, sb, lsr sl             
+0008bb38  mlaeq    r4, ip, ip, r1                 
+0008bb3c  eoreq    r1, r4, r2, lsr #20            

@@ -1,0 +1,2 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:set_fm_mute qn8027

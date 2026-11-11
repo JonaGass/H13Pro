@@ -1,0 +1,384 @@
+
+FUNCTION 0x21986c _ZN10httpServer4initEv size 572
+0021986c  push     {r4, r5, r6, r7, r8, lr}       
+00219870  mov      r5, r0                         
+00219874  sub      sp, sp, #0x20                  
+00219878  mov      r0, #0xc                       
+0021987c  bl       #0x874ec                       _Znwj@plt
+00219880  ldr      r3, [pc, #0x200]               0x2671a0 
+00219884  mov      r7, r0                         
+00219888  str      r5, [r0, #8]                   
+0021988c  str      r3, [r0]                       
+00219890  mov      r0, #0x2c                      
+00219894  bl       #0x874ec                       _Znwj@plt
+00219898  ldr      r1, [pc, #0x1ec]               0x267cd3 '/api/setdeviceinfo'
+0021989c  add      r8, r0, #0x10                  
+002198a0  mov      r6, r0                         
+002198a4  mov      r0, r8                         
+002198a8  bl       #0x215f20                      
+002198ac  str      r7, [r6, #0x28]                
+002198b0  add      r4, r5, #0x14                  
+002198b4  mov      r2, r8                         
+002198b8  mov      r1, r4                         
+002198bc  add      r0, sp, #0x18                  
+002198c0  bl       #0x219f50                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE24_M_get_insert_unique_posERS7_
+002198c4  ldr      r2, [sp, #0x1c]                
+002198c8  cmp      r2, #0                         
+002198cc  bne      #0x2198f4                      
+002198d0  mov      r0, r6                         
+002198d4  bl       #0x215f04                      
+002198d8  b        #0x219904                      
+002198dc  bl       #0x875dc                       __cxa_begin_catch@plt
+002198e0  mov      r0, r6                         
+002198e4  bl       #0x881e8                       _ZdlPv@plt
+002198e8  bl       #0x88014                       __cxa_rethrow@plt
+002198ec  bl       #0x88d70                       __cxa_end_catch@plt
+002198f0  bl       #0x880d4                       __cxa_end_cleanup@plt
+002198f4  ldr      r1, [sp, #0x18]                
+002198f8  mov      r3, r6                         
+002198fc  mov      r0, r4                         
+00219900  bl       #0x219ffc                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSI_PSt13_Rb_tree_nodeISA_E
+00219904  mov      r0, #0xc                       
+00219908  bl       #0x874ec                       _Znwj@plt
+0021990c  ldr      r3, [pc, #0x17c]               0x2671cc 
+00219910  mov      r7, r0                         
+00219914  str      r5, [r0, #8]                   
+00219918  str      r3, [r0]                       
+0021991c  mov      r0, #0x2c                      
+00219920  bl       #0x874ec                       _Znwj@plt
+00219924  ldr      r1, [pc, #0x168]               0x267ce6 '/api/getdeviceinfo'
+00219928  add      r8, r0, #0x10                  
+0021992c  mov      r6, r0                         
+00219930  mov      r0, r8                         
+00219934  bl       #0x215f20                      
+00219938  str      r7, [r6, #0x28]                
+0021993c  mov      r2, r8                         
+00219940  mov      r1, r4                         
+00219944  add      r0, sp, #0x10                  
+00219948  bl       #0x219f50                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE24_M_get_insert_unique_posERS7_
+0021994c  ldr      r2, [sp, #0x14]                
+00219950  cmp      r2, #0                         
+00219954  bne      #0x21997c                      
+00219958  mov      r0, r6                         
+0021995c  bl       #0x215f04                      
+00219960  b        #0x21998c                      
+00219964  bl       #0x875dc                       __cxa_begin_catch@plt
+00219968  mov      r0, r6                         
+0021996c  bl       #0x881e8                       _ZdlPv@plt
+00219970  bl       #0x88014                       __cxa_rethrow@plt
+00219974  bl       #0x88d70                       __cxa_end_catch@plt
+00219978  b        #0x2198f0                      
+0021997c  ldr      r1, [sp, #0x10]                
+00219980  mov      r3, r6                         
+00219984  mov      r0, r4                         
+00219988  bl       #0x219ffc                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSI_PSt13_Rb_tree_nodeISA_E
+0021998c  ldr      r6, [pc, #0x104]               0x2671f8 
+00219990  mov      r0, #0xc                       
+00219994  bl       #0x874ec                       _Znwj@plt
+00219998  str      r6, [r0]                       
+0021999c  add      r3, sp, #4                     
+002199a0  ldr      r2, [pc, #0xf4]                0x267ae7 '/tmp/sqlite/'
+002199a4  mov      r1, r4                         
+002199a8  str      r5, [r0, #8]                   
+002199ac  str      r0, [sp, #4]                   
+002199b0  add      r0, sp, #8                     
+002199b4  bl       #0x21a05c                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE17_M_emplace_uniqueIJRA13_KcPN10httpServer15DownloadHandlerEEEES6_ISt17_Rb_tree_iteratorISA_EbEDpOT_
+002199b8  mov      r0, #0xc                       
+002199bc  bl       #0x874ec                       _Znwj@plt
+002199c0  str      r6, [r0]                       
+002199c4  mov      r1, r4                         
+002199c8  ldr      r2, [pc, #0xd0]                0x267ab9 '/mnt/sdcard/'
+002199cc  add      r3, sp, #4                     
+002199d0  str      r5, [r0, #8]                   
+002199d4  add      r6, r6, #0x2c                  
+002199d8  str      r0, [sp, #4]                   
+002199dc  add      r0, sp, #8                     
+002199e0  bl       #0x21a05c                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE17_M_emplace_uniqueIJRA13_KcPN10httpServer15DownloadHandlerEEEES6_ISt17_Rb_tree_iteratorISA_EbEDpOT_
+002199e4  mov      r0, #0xc                       
+002199e8  bl       #0x874ec                       _Znwj@plt
+002199ec  str      r6, [r0]                       
+002199f0  mov      r7, r0                         
+002199f4  str      r5, [r0, #8]                   
+002199f8  mov      r0, #0x2c                      
+002199fc  bl       #0x874ec                       _Znwj@plt
+00219a00  ldr      r1, [pc, #0x9c]                0x267cf9 '/mnt/extsd/version'
+00219a04  add      r8, r0, #0x10                  
+00219a08  mov      r6, r0                         
+00219a0c  mov      r0, r8                         
+00219a10  bl       #0x215f20                      
+00219a14  str      r7, [r6, #0x28]                
+00219a18  mov      r2, r8                         
+00219a1c  mov      r1, r4                         
+00219a20  add      r0, sp, #8                     
+00219a24  bl       #0x219f50                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE24_M_get_insert_unique_posERS7_
+00219a28  ldr      r2, [sp, #0xc]                 
+00219a2c  cmp      r2, #0                         
+00219a30  bne      #0x219a58                      
+00219a34  mov      r0, r6                         
+00219a38  bl       #0x215f04                      
+00219a3c  b        #0x219a68                      
+00219a40  bl       #0x875dc                       __cxa_begin_catch@plt
+00219a44  mov      r0, r6                         
+00219a48  bl       #0x881e8                       _ZdlPv@plt
+00219a4c  bl       #0x88014                       __cxa_rethrow@plt
+00219a50  bl       #0x88d70                       __cxa_end_catch@plt
+00219a54  b        #0x2198f0                      
+00219a58  ldr      r1, [sp, #8]                   
+00219a5c  mov      r3, r6                         
+00219a60  mov      r0, r4                         
+00219a64  bl       #0x219ffc                      _ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_P10UrlHandlerESt10_Select1stISA_ESt4lessIS5_ESaISA_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSI_PSt13_Rb_tree_nodeISA_E
+00219a68  ldr      r0, [r5, #0x10]                
+00219a6c  mov      r1, r4                         
+00219a70  bl       #0x21a608                      _ZN9WebServer16RegistUrlHandlerERKSt3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP10UrlHandlerSt4lessIS6_ESaISt4pairIKS6_S8_EEE
+00219a74  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00219a78  str      r0, [r5, #0x2c]                
+00219a7c  mov      r0, #0                         
+00219a80  add      sp, sp, #0x20                  
+00219a84  pop      {r4, r5, r6, r7, r8, pc}       
+00219a88  eoreq    r7, r6, r0, lsr #3             
+
+FUNCTION 0x218694 _ZN10httpServer20GetDeviceInfoHandler9handleGetEP11CivetServerP13mg_connection size 384
+00218694  push     {r4, r5, r6, r7, r8, lr}       
+00218698  sub      sp, sp, #0x850                 
+0021869c  ldr      r4, [pc, #0x154]               0x296d70 __stack_chk_guard
+002186a0  sub      sp, sp, #8                     
+002186a4  mov      r8, r0                         
+002186a8  mov      r0, r2                         
+002186ac  ldr      r3, [r4]                       
+002186b0  mov      r6, r2                         
+002186b4  add      r5, sp, #0xc                   
+002186b8  str      r3, [sp, #0x854]               
+002186bc  bl       #0x233728                      mg_get_request_info
+002186c0  add      r3, sp, #0x14                  
+002186c4  mov      r1, #0                         
+002186c8  str      r3, [sp, #0xc]                 
+002186cc  mov      r2, #0x800                     
+002186d0  str      r1, [sp, #0x10]                
+002186d4  add      r3, sp, #0x2c                  
+002186d8  strb     r1, [sp, #0x14]                
+002186dc  mov      r7, r0                         
+002186e0  str      r3, [sp, #0x24]                
+002186e4  add      r0, sp, #0x54                  
+002186e8  str      r1, [sp, #0x28]                
+002186ec  strb     r1, [sp, #0x2c]                
+002186f0  bl       #0x88848                       memset@plt
+002186f4  ldr      r0, [pc, #0x100]               0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+002186f8  bl       #0x88d10                       __xpg_basename@plt
+002186fc  ldr      r3, [r7, #8]                   
+00218700  movw     r1, #0x251                     
+00218704  ldr      r2, [pc, #0xf4]                0x267128 'handleGet'
+00218708  str      r3, [sp]                       
+0021870c  ldr      r3, [pc, #0xf0]                0x2679fa 'url: %s'
+00218710  bl       #0xb3968                       C_LJQ_LOG2
+00218714  ldr      r0, [pc, #0xe0]                0x267275 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/httpServer/httpServer.cpp'
+00218718  bl       #0x88d10                       __xpg_basename@plt
+0021871c  ldr      r3, [r7, #0x10]                
+00218720  movw     r1, #0x252                     
+00218724  ldr      r2, [pc, #0xd4]                0x267128 'handleGet'
+00218728  str      r3, [sp]                       
+0021872c  ldr      r3, [pc, #0xd4]                0x267a02 'query_string: %s'
+00218730  bl       #0xb3968                       C_LJQ_LOG2
+00218734  ldr      r1, [r7, #0x10]                
+00218738  add      r0, sp, #0x24                  
+0021873c  bl       #0x87cb4                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEPKc@plt
+00218740  ldr      r1, [pc, #0xc4]                0x26c04d 
+00218744  mvn      r2, #0                         
+00218748  add      r0, sp, #0x24                  
+0021874c  bl       #0x87c3c                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12find_last_ofEPKcj@plt
+00218750  add      r2, r0, #1                     
+00218754  mvn      r3, #0                         
+00218758  add      r1, sp, #0x24                  
+0021875c  add      r0, sp, #0x3c                  
+00218760  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+00218764  ldr      r0, [sp, #0x3c]                
+00218768  bl       #0x87f00                       atoi@plt
+0021876c  str      r5, [sp]                       
+00218770  mov      r1, r0                         
+00218774  ldr      r0, [r8, #8]                   
+00218778  add      r3, sp, #0x54                  
+0021877c  mov      r2, #0                         
+00218780  bl       #0x2170d8                      _ZN10httpServer19HandleGetIotCtrlCmdEiiPcRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+00218784  ldr      r1, [pc, #0x84]                0x267a13 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nConnection: close\r\n\r\n'
+00218788  mov      r0, r6                         
+0021878c  bl       #0x234e8c                      mg_printf
+00218790  ldr      r1, [sp, #0xc]                 
+00218794  mov      r0, r6                         
+00218798  bl       #0x234e8c                      mg_printf
+0021879c  add      r0, sp, #0x3c                  
+002187a0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187a4  add      r0, sp, #0x24                  
+002187a8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187ac  mov      r0, r5                         
+002187b0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187b4  ldr      r2, [sp, #0x854]               
+002187b8  mov      r0, #1                         
+002187bc  ldr      r3, [r4]                       
+002187c0  cmp      r2, r3                         
+002187c4  beq      #0x2187ec                      
+002187c8  bl       #0x874e0                       __stack_chk_fail@plt
+002187cc  add      r0, sp, #0x3c                  
+002187d0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187d4  add      r0, sp, #0x24                  
+002187d8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187dc  mov      r0, r5                         
+002187e0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+002187e4  bl       #0x880d4                       __cxa_end_cleanup@plt
+002187e8  b        #0x2187d4                      
+002187ec  add      sp, sp, #0x850                 
+002187f0  add      sp, sp, #8                     
+002187f4  pop      {r4, r5, r6, r7, r8, pc}       
+002187f8  eoreq    r6, sb, r0, ror sp             
+002187fc  eoreq    r7, r6, r5, ror r2             
+00218800  eoreq    r7, r6, r8, lsr #2             
+
+FUNCTION 0x218a14 _ZN10httpServer15DownloadHandler9handleGetEP11CivetServerP13mg_connection size 644
+00218a14  push     {r4, r5, r6, r7, lr}           
+00218a18  sub      sp, sp, #0x84                  
+00218a1c  ldr      r5, [pc, #0x23c]               0x296d70 __stack_chk_guard
+00218a20  mov      r0, r2                         
+00218a24  ldr      r4, [pc, #0x238]               0x2a8f99 _ZN10httpServer18sqlite_create_flagE
+00218a28  mov      r6, r2                         
+00218a2c  ldr      r3, [r5]                       
+00218a30  str      r3, [sp, #0x7c]                
+00218a34  bl       #0x233728                      mg_get_request_info
+00218a38  ldrb     r3, [r4]                       
+00218a3c  mov      r7, r0                         
+00218a40  cmp      r3, #0                         
+00218a44  bne      #0x218a58                      
+00218a48  bl       #0x219e34                      _ZN9SingletonIN11EyeseeLinux16MediaFileManagerEE11GetInstanceEv
+00218a4c  bl       #0x229df0                      _ZN11EyeseeLinux16MediaFileManager19startCreateDataBaseEv
+00218a50  mov      r3, #1                         
+00218a54  strb     r3, [r4]                       
+00218a58  ldr      r1, [r7, #8]                   
+00218a5c  add      r0, sp, #4                     
+00218a60  bl       #0x215f20                      
+00218a64  ldr      r1, [pc, #0x1fc]               0x24857a '/mnt/sdcard'
+00218a68  add      r3, sp, #0x24                  
+00218a6c  str      r3, [sp, #0x1c]                
+00218a70  mov      r3, #0                         
+00218a74  ldr      r0, [sp, #4]                   
+00218a78  str      r3, [sp, #0x20]                
+00218a7c  strb     r3, [sp, #0x24]                
+00218a80  bl       #0x8718c                       strstr@plt
+00218a84  cmp      r0, #0                         
+00218a88  beq      #0x218af0                      
+00218a8c  ldr      r1, [pc, #0x1d8]               0x267ab9 '/mnt/sdcard/'
+00218a90  add      r0, sp, #0x64                  
+00218a94  bl       #0x215f20                      
+00218a98  ldr      r2, [sp, #0x68]                
+00218a9c  mvn      r3, #0                         
+00218aa0  add      r1, sp, #4                     
+00218aa4  add      r0, sp, #0x34                  
+00218aa8  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+00218aac  add      r1, sp, #0x34                  
+00218ab0  add      r0, sp, #0x1c                  
+00218ab4  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+00218ab8  add      r0, sp, #0x34                  
+00218abc  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218ac0  add      r0, sp, #0x64                  
+00218ac4  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218ac8  ldr      r1, [pc, #0x1a0]               0x24e265 
+00218acc  mvn      r2, #0                         
+00218ad0  add      r0, sp, #0x1c                  
+00218ad4  bl       #0x87750                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5rfindEPKcj@plt
+00218ad8  cmn      r0, #1                         
+00218adc  mov      r2, r0                         
+00218ae0  bne      #0x218b3c                      
+00218ae4  ldr      r0, [pc, #0x188]               0x267ac6 '[handleGet]Error: File not found'
+00218ae8  bl       #0x87720                       puts@plt
+00218aec  b        #0x218b24                      
+00218af0  ldr      r1, [pc, #0x180]               0x248fe0 
+00218af4  mvn      r2, #0                         
+00218af8  add      r0, sp, #4                     
+00218afc  bl       #0x87750                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5rfindEPKcj@plt
+00218b00  add      r2, r0, #1                     
+00218b04  mvn      r3, #0                         
+00218b08  add      r1, sp, #4                     
+00218b0c  add      r0, sp, #0x64                  
+00218b10  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+00218b14  add      r1, sp, #0x64                  
+00218b18  add      r0, sp, #0x1c                  
+00218b1c  bl       #0x87c60                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSEOS4_@plt
+00218b20  b        #0x218ac0                      
+00218b24  ldr      r3, [pc, #0x150]               0x267ad1 'Error: File not found'
+00218b28  mov      r1, #0x194                     
+00218b2c  ldr      r2, [pc, #0x14c]               0x25aa33 
+00218b30  mov      r0, r6                         
+00218b34  bl       #0x236170                      mg_send_http_error
+00218b38  b        #0x218bdc                      
+00218b3c  mvn      r3, #0                         
+00218b40  add      r1, sp, #0x1c                  
+00218b44  add      r0, sp, #0x4c                  
+00218b48  bl       #0x884b8                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEjj@plt
+00218b4c  ldr      r1, [pc, #0x130]               0x26dfdb '.db'
+00218b50  add      r0, sp, #0x4c                  
+00218b54  bl       #0x884dc                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt
+00218b58  cmp      r0, #0                         
+00218b5c  bne      #0x218b84                      
+00218b60  ldr      r1, [pc, #0x120]               0x267ae7 '/tmp/sqlite/'
+00218b64  add      r2, sp, #0x1c                  
+00218b68  add      r0, sp, #0x64                  
+00218b6c  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+00218b70  ldr      r1, [sp, #0x64]                
+00218b74  mov      r2, #0                         
+00218b78  mov      r0, r6                         
+00218b7c  bl       #0x239354                      mg_send_mime_file
+00218b80  b        #0x218c14                      
+00218b84  ldr      r1, [pc, #0x100]               0x26de68 '.jpg'
+00218b88  add      r0, sp, #0x4c                  
+00218b8c  bl       #0x884dc                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt
+00218b90  cmp      r0, #0                         
+00218b94  bne      #0x218bac                      
+00218b98  ldr      r1, [pc, #0xcc]                0x267ab9 '/mnt/sdcard/'
+00218b9c  add      r2, sp, #0x1c                  
+00218ba0  add      r0, sp, #0x64                  
+00218ba4  bl       #0xa08e4                       _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_
+00218ba8  b        #0x218c04                      
+00218bac  ldr      r1, [pc, #0xdc]                0x26e15a '.mp4'
+00218bb0  add      r0, sp, #0x4c                  
+00218bb4  bl       #0x884dc                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt
+00218bb8  cmp      r0, #0                         
+00218bbc  beq      #0x218b98                      
+00218bc0  ldr      r1, [pc, #0xcc]                0x26de7a '.ts'
+00218bc4  add      r0, sp, #0x4c                  
+00218bc8  bl       #0x884dc                       _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc@plt
+00218bcc  cmp      r0, #0                         
+00218bd0  beq      #0x218b98                      
+00218bd4  add      r0, sp, #0x4c                  
+00218bd8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218bdc  add      r0, sp, #0x1c                  
+00218be0  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218be4  add      r0, sp, #4                     
+00218be8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218bec  ldr      r2, [sp, #0x7c]                
+00218bf0  mov      r0, #1                         
+00218bf4  ldr      r3, [r5]                       
+00218bf8  cmp      r2, r3                         
+00218bfc  beq      #0x218c58                      
+00218c00  bl       #0x874e0                       __stack_chk_fail@plt
+00218c04  ldr      r1, [sp, #0x64]                
+00218c08  mov      r2, #0                         
+00218c0c  mov      r0, r6                         
+00218c10  bl       #0x239354                      mg_send_mime_file
+00218c14  add      r0, sp, #0x64                  
+00218c18  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218c1c  b        #0x218bd4                      
+00218c20  add      r0, sp, #0x64                  
+00218c24  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218c28  add      r0, sp, #0x1c                  
+00218c2c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218c30  add      r0, sp, #4                     
+00218c34  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218c38  bl       #0x880d4                       __cxa_end_cleanup@plt
+00218c3c  add      r0, sp, #0x64                  
+00218c40  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00218c44  add      r0, sp, #0x4c                  
+00218c48  b        #0x218c24                      
+00218c4c  b        #0x218c3c                      
+00218c50  b        #0x218c44                      
+00218c54  b        #0x218c28                      
+00218c58  add      sp, sp, #0x84                  
+00218c5c  pop      {r4, r5, r6, r7, pc}           
+00218c60  eoreq    r6, sb, r0, ror sp             
+00218c64  mlaeq    sl, sb, pc, r8                 
+00218c68  eoreq    r8, r4, sl, ror r5             

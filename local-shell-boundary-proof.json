@@ -1,0 +1,7 @@
+{
+  "scope": "Local reproduction of the reference shell-command construction only; no real device or ARM execution",
+  "exit": 0,
+  "marker": "probe-ok",
+  "config": "ssid=Original\n",
+  "stderr": ""
+}

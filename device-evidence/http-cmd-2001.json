@@ -1,0 +1,15 @@
+{
+  "source": "User-reported response observed on the real Imagebon H13 Pro",
+  "date": "2026-11-11",
+  "method": "GET",
+  "url": "http://192.168.10.1:8082/api/getdeviceinfo?cmd=2001",
+  "connection": "Phone connected to the display WLAN",
+  "response_redacted": {
+    "Version": "v1.0",
+    "product": "R8-V2.0",
+    "sp": "qckj"
+  },
+  "redactions": ["mac: unnecessary device identifier omitted"],
+  "establishes": ["Reachable local HTTP service", "This GET API and command work"],
+  "does_not_establish": ["Root", "ADB access", "Exact chip identity", "Binary equivalence to the H70 reference", "Successful firmware readout"]
+}

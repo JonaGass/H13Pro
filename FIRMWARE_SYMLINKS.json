@@ -1,0 +1,1430 @@
+[
+  {
+    "path": "reference-rootfs/1305731643/rootfs/data",
+    "target": "userdata"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/vendor",
+    "target": "system"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib32",
+    "target": "lib"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sdcard",
+    "target": "mnt/sdcard"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/linuxrc",
+    "target": "bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/udisk",
+    "target": "media/usb0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/misc",
+    "target": "/dev/block/by-name/misc"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/etc/resolv.conf",
+    "target": "../tmp/resolv.conf"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/etc/mtab",
+    "target": "../proc/self/mounts"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/etc/os-release",
+    "target": "../usr/lib/os-release"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/system/system",
+    "target": "system"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mv",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/printenv",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/linux32",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mountpoint",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/true",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/ln",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/sync",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/watch",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/umount",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/echo",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/link",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/dnsdomainname",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/ash",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/pidof",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/pwd",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/kill",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/chown",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/setpriv",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/more",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/setserial",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/su",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/grep",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/uname",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mkdir",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/vi",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/gunzip",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/run-parts",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/chmod",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mount",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/egrep",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/pipe_progress",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/tar",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/stty",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/dmesg",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/dd",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/getopt",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/fgrep",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/false",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/netstat",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/fdflush",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/sh",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/setarch",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/usleep",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/chgrp",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/sleep",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/hostname",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mktemp",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mt",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/nice",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/date",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/cp",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/dumpkmap",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/sed",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/linux64",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/rm",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/touch",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/ls",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/login",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/ps",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/gzip",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/cat",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/mknod",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/rmdir",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/ping",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/bin/df",
+    "target": "busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/dev/log",
+    "target": "../tmp/log"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib32",
+    "target": "lib"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/openvt",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/microcom",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/printf",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/yes",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/deallocvt",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/id",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/head",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/uudecode",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/du",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/[",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/fold",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/xxd",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/taskset",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/who",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/cmp",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/flock",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/uuencode",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/cksum",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/shred",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/awk",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/chrt",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/resize",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/od",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/ipcs",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/svc",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/dirname",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/expr",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/clear",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/cut",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/logname",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/passwd",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/sort",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/which",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/setsid",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/tee",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/readlink",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/lspci",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/nohup",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/whoami",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/wc",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/env",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/test",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/realpath",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/install",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/uptime",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/uniq",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/hexdump",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/truncate",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/unlink",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/fallocate",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/w",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/fuser",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/factor",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/mesg",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/tr",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/xargs",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/seq",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/paste",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/mkfifo",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/setkeycodes",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/find",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/chvt",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/hostid",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/basename",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/tail",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/top",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/last",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/killall",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/nproc",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/nl",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/lsusb",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/time",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/reset",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/[[",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/lsof",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/ipcrm",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/strings",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/free",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/tty",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/bin/renice",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/terminfo",
+    "target": "../share/terminfo"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libkms.so.1",
+    "target": "libkms.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libasound.so",
+    "target": "libasound.so.2.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcurl.so.4",
+    "target": "libcurl.so.4.7.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-genl-3.so.200",
+    "target": "libnl-genl-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libmenu.so",
+    "target": "libmenu.so.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libmenu.so.6",
+    "target": "libmenu.so.6.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libjsoncpp.so.19",
+    "target": "libjsoncpp.so.1.8.3"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4lconvert.so.0",
+    "target": "libv4lconvert.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libfreetype.so.6",
+    "target": "libfreetype.so.6.17.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librockchip_mpp.so.1",
+    "target": "librockchip_mpp.so.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libudev.so",
+    "target": "../../lib/libudev.so.1.6.3"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libform.so.6",
+    "target": "libform.so.6.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpcap.so",
+    "target": "libpcap.so.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpng16.so.16",
+    "target": "libpng16.so.16.37.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libOpenVX.so",
+    "target": "libOpenVX.so.1.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libmad.so.0",
+    "target": "libmad.so.0.2.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librockchip_vpu.so.1",
+    "target": "librockchip_vpu.so.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-idiag-3.so",
+    "target": "libnl-idiag-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libliveMedia.so.61",
+    "target": "libliveMedia.so.61.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libext2fs.so.2",
+    "target": "libext2fs.so.2.4"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libatomic.so.1",
+    "target": "libatomic.so.1.2.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/v4l1compat.so",
+    "target": "libv4l/v4l1compat.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libform.so",
+    "target": "libform.so.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libasound.so.2",
+    "target": "libasound.so.2.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdvbv5.so.0",
+    "target": "libdvbv5.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libmad.so",
+    "target": "libmad.so.0.2.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libjsoncpp.so",
+    "target": "libjsoncpp.so.19"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libstdc++.so.6",
+    "target": "libstdc++.so.6.0.25"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libOpenVX.so.1",
+    "target": "libOpenVX.so.1.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libz.so",
+    "target": "libz.so.1.2.11"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcom_err.so",
+    "target": "libcom_err.so.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libkms.so",
+    "target": "libkms.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libkmod.so",
+    "target": "libkmod.so.2.3.4"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-genl-3.so",
+    "target": "libnl-genl-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-route-3.so",
+    "target": "libnl-route-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdrm_rockchip.so",
+    "target": "libdrm_rockchip.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libfreetype.so",
+    "target": "libfreetype.so.6.17.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcurl.so",
+    "target": "libcurl.so.4.7.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libeasymedia.so",
+    "target": "libeasymedia.so.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdrm.so",
+    "target": "libdrm.so.2.4.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l1.so",
+    "target": "libv4l1.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libeasymedia.so.1",
+    "target": "libeasymedia.so.1.0.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libkmod.so.2",
+    "target": "libkmod.so.2.3.4"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libz.so.1",
+    "target": "libz.so.1.2.11"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l2.so",
+    "target": "libv4l2.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libssl.so",
+    "target": "libssl.so.1.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libblkid.so",
+    "target": "../../lib/libblkid.so.1.1.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libuuid.so",
+    "target": "../../lib/libuuid.so.1.3.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libss.so.2",
+    "target": "libss.so.2.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libe2p.so",
+    "target": "libe2p.so.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-3.so",
+    "target": "libnl-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpanel.so.6",
+    "target": "libpanel.so.6.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdvbv5.so",
+    "target": "libdvbv5.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpng.so",
+    "target": "libpng16.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libss.so",
+    "target": "libss.so.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-idiag-3.so.200",
+    "target": "libnl-idiag-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-route-3.so.200",
+    "target": "libnl-route-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-nf-3.so",
+    "target": "libnl-nf-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libgroupsock.so",
+    "target": "libgroupsock.so.8.1.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librockchip_vpu.so",
+    "target": "librockchip_vpu.so.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcjson.so",
+    "target": "libcjson.so.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcrypto.so",
+    "target": "libcrypto.so.1.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcjson.so.1",
+    "target": "libcjson.so.1.7.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libBasicUsageEnvironment.so",
+    "target": "libBasicUsageEnvironment.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libext2fs.so",
+    "target": "libext2fs.so.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librga.so.2",
+    "target": "librga.so.2.1.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librga.so",
+    "target": "librga.so.2"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l1.so.0",
+    "target": "libv4l1.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l2.so.0",
+    "target": "libv4l2.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libUsageEnvironment.so.3",
+    "target": "libUsageEnvironment.so.3.1.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libsqlite3.so",
+    "target": "libsqlite3.so.0.8.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libgroupsock.so.8",
+    "target": "libgroupsock.so.8.1.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpcap.so.1",
+    "target": "libpcap.so.1.8.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libe2p.so.2",
+    "target": "libe2p.so.2.3"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcom_err.so.2",
+    "target": "libcom_err.so.2.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpng16.so",
+    "target": "libpng16.so.16.37.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-xfrm-3.so.200",
+    "target": "libnl-xfrm-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libliveMedia.so",
+    "target": "libliveMedia.so.61.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdrm.so.2",
+    "target": "libdrm.so.2.4.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-nf-3.so.200",
+    "target": "libnl-nf-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libncurses.so.6",
+    "target": "libncurses.so.6.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/v4l2convert.so",
+    "target": "libv4l/v4l2convert.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l2rds.so",
+    "target": "libv4l2rds.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-3.so.200",
+    "target": "libnl-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libncurses.so",
+    "target": "libncurses.so.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libBasicUsageEnvironment.so.1",
+    "target": "libBasicUsageEnvironment.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libUsageEnvironment.so",
+    "target": "libUsageEnvironment.so.3.1.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4l2rds.so.0",
+    "target": "libv4l2rds.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libdrm_rockchip.so.1",
+    "target": "libdrm_rockchip.so.1.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libpanel.so",
+    "target": "libpanel.so.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libv4lconvert.so",
+    "target": "libv4lconvert.so.0.0.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/librockchip_mpp.so",
+    "target": "librockchip_mpp.so.1"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libsqlite3.so.0",
+    "target": "libsqlite3.so.0.8.6"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libcurses.so",
+    "target": "libncurses.so.6.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/libnl-xfrm-3.so",
+    "target": "libnl-xfrm-3.so.200.26.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/alsa-lib/libasound_module_rate_speexrate_best.so",
+    "target": "libasound_module_rate_speexrate.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/lib/alsa-lib/libasound_module_rate_speexrate_medium.so",
+    "target": "libasound_module_rate_speexrate.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/chroot",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/fsfreeze",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/killall5",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/i2cset",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/i2cget",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/udhcpd",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/fbset",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/fdformat",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/readprofile",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/crond",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/loadfont",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/i2cdetect",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/setlogcons",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/i2cdump",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/arping",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/rdate",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/partprobe",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/usr/sbin/ubirename",
+    "target": "../../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/log",
+    "target": "../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/cache",
+    "target": "../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/spool",
+    "target": "../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/lock",
+    "target": "../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/tmp",
+    "target": "../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/run",
+    "target": "../run"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/var/lib/misc",
+    "target": "../../tmp"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libpthread.so.0",
+    "target": "libpthread-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libdl.so.2",
+    "target": "libdl-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libatomic.so.1",
+    "target": "libatomic.so.1.2.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libstdc++.so.6",
+    "target": "libstdc++.so.6.0.25"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libuuid.so.1",
+    "target": "libuuid.so.1.3.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libblkid.so.1",
+    "target": "libblkid.so.1.1.0"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libnss_files.so.2",
+    "target": "libnss_files-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libm.so.6",
+    "target": "libm-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libutil.so.1",
+    "target": "libutil-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libc.so.6",
+    "target": "libc-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/ld-linux-armhf.so.3",
+    "target": "ld-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/librt.so.1",
+    "target": "librt-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libnsl.so.1",
+    "target": "libnsl-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libudev.so.1",
+    "target": "libudev.so.1.6.3"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libanl.so.1",
+    "target": "libanl-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libresolv.so.2",
+    "target": "libresolv-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libnss_dns.so.2",
+    "target": "libnss_dns-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/lib/libcrypt.so.1",
+    "target": "libcrypt-2.28.so"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/freeramdisk",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/sulogin",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fsck.vfat",
+    "target": "fsck.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/runlevel",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/devmem",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/modprobe",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/iplink",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/reboot",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/switch_root",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/poweroff",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkfs.vfat",
+    "target": "mkfs.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/iptunnel",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkfs.ext4",
+    "target": "mke2fs"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/blkid",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ifup",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkdosfs",
+    "target": "mkfs.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/route",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/uevent",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mdev",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/insmod",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/losetup",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fsck.ext4",
+    "target": "e2fsck"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fsck.msdos",
+    "target": "fsck.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fdisk",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fsck.ext3",
+    "target": "e2fsck"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/halt",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkfs.msdos",
+    "target": "mkfs.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fsck.ext2",
+    "target": "e2fsck"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/iprule",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ifdown",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/dosfsck",
+    "target": "fsck.fat"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/arp",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/pivot_root",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/udhcpc",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/start-stop-daemon",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/fstrim",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/iproute",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/init",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ip",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ifconfig",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/makedevs",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/watchdog",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/e2label",
+    "target": "tune2fs"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/swapon",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ipaddr",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkswap",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/rmmod",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/getty",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/lsmod",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/setconsole",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/udevadm",
+    "target": "/usr/bin/udevadm"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/hwclock",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkfs.ext3",
+    "target": "mke2fs"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/loadkmap",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/ipneigh",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/swapoff",
+    "target": "../bin/busybox"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/mkfs.ext2",
+    "target": "mke2fs"
+  },
+  {
+    "path": "reference-rootfs/1305731643/rootfs/sbin/sysctl",
+    "target": "../bin/busybox"
+  }
+]
