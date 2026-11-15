@@ -1,5 +1,7 @@
 # Aktueller Arbeitsstand
 
+**Fortsetzung vom 15.11.2026:** Zuerst [research-2026-11-15/ERGEBNISSE.md](research-2026-11-15/ERGEBNISSE.md) lesen. USB-C zeigte laut Nutzer kein neues Windows-Gerät. Neuer, isoliert ARM-emulierter SD-Fertigungstestpfad und ein vorbereitetes App-Auslesepaket liegen in `research-2026-11-15/sd-readout/`. Noch kein H13-Test, keine Root-/Flash-Erfolgsmeldung. Der Referenz-Aufrufer remountet `/` schreibbar. Die nachfolgenden Abschnitte dokumentieren den ursprünglichen Stand vom 11.11.; offene H13-HTTP-Abfrage und fehlender Zieldump sind weiterhin aktuell.
+
 ## Nutzerauftrag
 
 Der Nutzer besitzt ein portables CarPlay-/Android-Auto-Display **Imagebon H13 Pro**, vor längerer Zeit auf AliExpress gekauft. Er möchte das Bootlogo durch ein eigenes Bild ersetzen und wünscht eine gründliche Untersuchung einschließlich Reverse Engineering, Firmwaremodifikation und Auslesen/Flashing, soweit erforderlich.

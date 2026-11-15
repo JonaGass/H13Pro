@@ -1,0 +1,782 @@
+
+FUNCTION 0x225530 _Z9pcba_testv size 2176
+00225530  push     {r4, r5, r6, r7, r8, sb, lr}   
+00225534  sub      sp, sp, #0xac                  
+00225538  ldr      r7, [pc, #0x7d4]               0x296d70 __stack_chk_guard
+0022553c  mov      r1, #0                         
+00225540  ldr      r0, [pc, #0x7d0]               0x268b4e '/mnt/sdcard/rk_pcba_test_res'
+00225544  ldr      r3, [r7]                       
+00225548  str      r3, [sp, #0xa4]                
+0022554c  bl       #0x87ce4                       access@plt
+00225550  subs     r8, r0, #0                     
+00225554  beq      #0x22557c                      
+00225558  ldr      r0, [pc, #0x7bc]               0x26c718 '/mnt/sdcard/pcba_test_flag_file not exist, pcba_test mode exit. '
+0022555c  mvn      r8, #0                         
+00225560  bl       #0x87720                       puts@plt
+00225564  ldr      r2, [sp, #0xa4]                
+00225568  mov      r0, r8                         
+0022556c  ldr      r3, [r7]                       
+00225570  cmp      r2, r3                         
+00225574  beq      #0x225d0c                      
+00225578  bl       #0x874e0                       __stack_chk_fail@plt
+0022557c  ldr      r0, [pc, #0x79c]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00225580  ldr      r5, [pc, #0x79c]               0x2995f8 GRID_WIDTH
+00225584  bl       #0x88d10                       __xpg_basename@plt
+00225588  ldr      r3, [pc, #0x798]               0x26c759 '=========== pcba_test mode enter =====\n'
+0022558c  movw     r1, #0x7c7                     
+00225590  ldr      r2, [pc, #0x794]               0x26b1cd 'pcba_test'
+00225594  bl       #0xb3968                       C_LJQ_LOG2
+00225598  ldr      r0, [pc, #0x790]               0x2a91b4 m_lock
+0022559c  mov      r1, r8                         
+002255a0  bl       #0x890dc                       pthread_mutex_init@plt
+002255a4  bl       #0x88bb4                       lv_disp_get_default@plt
+002255a8  bl       #0x881dc                       lv_disp_get_hor_res@plt
+002255ac  cmp      r0, #0x500                     
+002255b0  beq      #0x2255e0                      
+002255b4  bl       #0x88bb4                       lv_disp_get_default@plt
+002255b8  bl       #0x881dc                       lv_disp_get_hor_res@plt
+002255bc  cmp      r0, #0x400                     
+002255c0  beq      #0x2255f0                      
+002255c4  bl       #0x88bb4                       lv_disp_get_default@plt
+002255c8  bl       #0x881dc                       lv_disp_get_hor_res@plt
+002255cc  movw     r3, #0x356                     
+002255d0  cmp      r0, r3                         
+002255d4  beq      #0x2258cc                      
+002255d8  mov      r3, #0x12c                     
+002255dc  b        #0x2255f4                      
+002255e0  bl       #0x88bb4                       lv_disp_get_default@plt
+002255e4  bl       #0x87a38                       lv_disp_get_ver_res@plt
+002255e8  cmp      r0, #0x1e0                     
+002255ec  bne      #0x2255b4                      
+002255f0  mov      r3, #0x100                     
+002255f4  str      r3, [r5]                       
+002255f8  mov      r3, #0x5a                      
+002255fc  ldr      r4, [pc, #0x730]               0x2a9074 wlan_obj
+00225600  str      r3, [r5, #4]                   
+00225604  mov      r3, #1                         
+00225608  strb     r3, [r4, #0xf0]                
+0022560c  bl       #0xbac4c                       _ZN18StartWindowFactory11GetInstanceEv
+00225610  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+00225614  cmp      r0, #4                         
+00225618  beq      #0x2258e4                      
+0022561c  bl       #0x910c0                       _ZN7Preview11GetInstanceEv
+00225620  mov      r3, #2                         
+00225624  str      r3, [r0]                       
+00225628  bl       #0x910c0                       _ZN7Preview11GetInstanceEv
+0022562c  bl       #0x915bc                       _ZN7Preview11ShowDisplayEv
+00225630  bl       #0x220754                      
+00225634  bl       #0x88da0                       lv_obj_create@plt
+00225638  str      r0, [r4, #0xf4]                
+0022563c  ldr      r0, [pc, #0x6dc]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00225640  bl       #0x88d10                       __xpg_basename@plt
+00225644  mov      r6, r0                         
+00225648  bl       #0x88bb4                       lv_disp_get_default@plt
+0022564c  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00225650  mov      sb, r0                         
+00225654  bl       #0x88bb4                       lv_disp_get_default@plt
+00225658  bl       #0x87a38                       lv_disp_get_ver_res@plt
+0022565c  str      r0, [sp, #4]                   
+00225660  mov      r1, #0x7e0                     
+00225664  ldr      r3, [pc, #0x6cc]               0x26c192 '====================%d------%d======='
+00225668  mov      r0, r6                         
+0022566c  ldr      r2, [pc, #0x6b8]               0x26b1cd 'pcba_test'
+00225670  str      sb, [sp]                       
+00225674  bl       #0xb3968                       C_LJQ_LOG2
+00225678  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0022567c  bl       #0x992c0                       _ZN12SystemConfig19GetScreenResolutionEv
+00225680  ldr      r6, [r4, #0xf4]                
+00225684  cmp      r0, #0xc                       
+00225688  bne      #0x225900                      
+0022568c  bl       #0x88bb4                       lv_disp_get_default@plt
+00225690  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00225694  mov      r1, r0                         
+00225698  movw     r2, #0x1ae                     
+0022569c  mov      r0, r6                         
+002256a0  bl       #0x884a0                       lv_obj_set_size@plt
+002256a4  mov      r2, #0xaa                      
+002256a8  mov      r1, #0                         
+002256ac  ldr      r0, [r4, #0xf4]                
+002256b0  bl       #0x88ddc                       lv_obj_set_pos@plt
+002256b4  ldr      r0, [r4, #0xf4]                
+002256b8  mov      r2, #0                         
+002256bc  mov      r6, r2                         
+002256c0  mov      r1, r2                         
+002256c4  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002256c8  ldr      r0, [r4, #0xf4]                
+002256cc  mov      r2, r6                         
+002256d0  mov      r1, r6                         
+002256d4  bl       #0x88f2c                       lv_obj_set_style_border_color@plt
+002256d8  ldr      r0, [r4, #0xf4]                
+002256dc  mov      r2, r6                         
+002256e0  mov      r1, r6                         
+002256e4  bl       #0x88f5c                       lv_obj_set_style_radius@plt
+002256e8  ldr      r0, [r4, #0xf4]                
+002256ec  mov      r1, #0x10                      
+002256f0  bl       #0x87f6c                       lv_obj_clear_flag@plt
+002256f4  ldr      r0, [r4, #0xf4]                
+002256f8  bl       #0x88da0                       lv_obj_create@plt
+002256fc  str      r0, [r4, #0x13c]               
+00225700  mov      r1, #0x10                      
+00225704  bl       #0x87f6c                       lv_obj_clear_flag@plt
+00225708  ldr      r0, [r4, #0x13c]               
+0022570c  mov      r2, r6                         
+00225710  mov      r1, r6                         
+00225714  bl       #0x87408                       lv_obj_set_style_border_width@plt
+00225718  ldr      sb, [r4, #0x13c]               
+0022571c  bl       #0x88bb4                       lv_disp_get_default@plt
+00225720  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00225724  mov      r1, r0                         
+00225728  mov      r2, #0x168                     
+0022572c  mov      r0, sb                         
+00225730  bl       #0x884a0                       lv_obj_set_size@plt
+00225734  ldr      r0, [r4, #0x13c]               
+00225738  mov      r2, #0x32                      
+0022573c  mvn      r1, #9                         
+00225740  bl       #0x88ddc                       lv_obj_set_pos@plt
+00225744  ldr      r0, [r4, #0x13c]               
+00225748  mov      r2, r6                         
+0022574c  mov      r1, r6                         
+00225750  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00225754  ldr      r0, [r4, #0x13c]               
+00225758  mov      r2, r6                         
+0022575c  mov      r1, r6                         
+00225760  bl       #0x88f5c                       lv_obj_set_style_radius@plt
+00225764  ldr      r0, [r4, #0x13c]               
+00225768  mov      r1, #4                         
+0022576c  bl       #0x882f0                       lv_obj_set_flex_flow@plt
+00225770  ldr      r0, [r4, #0x13c]               
+00225774  mov      r2, r6                         
+00225778  mov      r1, #0xa                       
+0022577c  bl       #0x88f80                       lv_obj_set_style_pad_column@plt
+00225780  ldr      r0, [pc, #0x5b4]               0x2a916c 
+00225784  bl       #0x88428                       lv_style_init@plt
+00225788  ldr      r0, [pc, #0x5ac]               0x2a916c 
+0022578c  mov      r1, #0xcc                      
+00225790  bl       #0x87324                       lv_style_set_bg_opa@plt
+00225794  ldr      r1, [pc, #0x5a4]               0xffe599 
+00225798  ldr      r0, [pc, #0x59c]               0x2a916c 
+0022579c  bl       #0x88a10                       lv_style_set_bg_color@plt
+002257a0  ldr      r0, [pc, #0x594]               0x2a916c 
+002257a4  mov      r1, #0xcc                      
+002257a8  bl       #0x86f28                       lv_style_set_img_opa@plt
+002257ac  ldr      r0, [pc, #0x588]               0x2a916c 
+002257b0  mov      r1, #2                         
+002257b4  bl       #0x87dc8                       lv_style_set_outline_width@plt
+002257b8  ldr      r0, [pc, #0x57c]               0x2a916c 
+002257bc  mov      r1, r6                         
+002257c0  bl       #0x88710                       lv_style_set_outline_color@plt
+002257c4  ldr      r0, [pc, #0x570]               0x2a916c 
+002257c8  mov      r1, #0xff                      
+002257cc  bl       #0x87894                       lv_style_set_outline_opa@plt
+002257d0  ldr      r0, [pc, #0x564]               0x2a916c 
+002257d4  mov      r1, #6                         
+002257d8  bl       #0x874a4                       lv_style_set_radius@plt
+002257dc  ldrsh    r1, [r5]                       
+002257e0  ldr      r0, [pc, #0x554]               0x2a916c 
+002257e4  bl       #0x888d8                       lv_style_set_width@plt
+002257e8  ldrsh    r1, [r5, #4]                   
+002257ec  ldr      r0, [pc, #0x548]               0x2a916c 
+002257f0  bl       #0x882cc                       lv_style_set_height@plt
+002257f4  ldr      r0, [pc, #0x548]               0x26c781 '/mnt/sdcard/rk_pcba_test_res/pcba_factory_flag_file'
+002257f8  mov      r1, r6                         
+002257fc  bl       #0x87ce4                       access@plt
+00225800  cmp      r0, r6                         
+00225804  bne      #0x225930                      
+00225808  bl       #0x222a4c                      _Z15CreateBigWindowv
+0022580c  ldr      r0, [pc, #0x534]               0x26c974 '/mnt/sdcard/rk_pcba_test_res/pcba_mic_flag_file'
+00225810  mov      r1, #0                         
+00225814  bl       #0x87ce4                       access@plt
+00225818  subs     r6, r0, #0                     
+0022581c  bne      #0x2258b0                      
+00225820  ldr      r0, [r4, #0x13c]               
+00225824  bl       #0x890e8                       lv_imgbtn_create@plt
+00225828  ldr      r1, [pc, #0x50c]               0x2a916c 
+0022582c  mov      r2, r6                         
+00225830  str      r0, [r4, #0x98]                
+00225834  bl       #0x880e0                       lv_obj_add_style@plt
+00225838  ldr      r0, [r4, #0x98]                
+0022583c  bl       #0x87f54                       lv_label_create@plt
+00225840  str      r0, [r4, #0x9c]                
+00225844  mov      r3, r6                         
+00225848  mov      r2, r6                         
+0022584c  mov      r1, #9                         
+00225850  bl       #0x872c4                       lv_obj_align@plt
+00225854  ldr      r0, [r4, #0x9c]                
+00225858  mov      r2, r6                         
+0022585c  mov      r1, #2                         
+00225860  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00225864  ldr      r1, [pc, #0x4e0]               0x296ce0 my_font_for_pcba_28
+00225868  mov      r2, r6                         
+0022586c  ldr      r0, [r4, #0x9c]                
+00225870  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00225874  ldrsh    r2, [r5, #4]                   
+00225878  ldrsh    r1, [r5]                       
+0022587c  ldr      r0, [r4, #0x9c]                
+00225880  bl       #0x884a0                       lv_obj_set_size@plt
+00225884  ldr      r0, [r4, #0x9c]                
+00225888  mov      r1, r6                         
+0022588c  bl       #0x881a0                       lv_label_set_long_mode@plt
+00225890  ldr      r1, [pc, #0x4b8]               0x26c456 
+00225894  ldr      r0, [r4, #0x9c]                
+00225898  bl       #0x87a14                       lv_label_set_text@plt
+0022589c  ldr      r1, [pc, #0x4b0]               0x22225c 
+002258a0  mov      r3, r6                         
+002258a4  ldr      r0, [r4, #0x98]                
+002258a8  mov      r2, #7                         
+002258ac  bl       #0x870c0                       lv_obj_add_event_cb@plt
+002258b0  ldr      r0, [pc, #0x468]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+002258b4  bl       #0x88d10                       __xpg_basename@plt
+002258b8  ldr      r3, [pc, #0x498]               0x26c9a4 '=========== pcba_test mode end =========\n'
+002258bc  movw     r1, #0x8b6                     
+002258c0  ldr      r2, [pc, #0x464]               0x26b1cd 'pcba_test'
+002258c4  bl       #0xb3968                       C_LJQ_LOG2
+002258c8  b        #0x225564                      
+002258cc  bl       #0x88bb4                       lv_disp_get_default@plt
+002258d0  bl       #0x87a38                       lv_disp_get_ver_res@plt
+002258d4  cmp      r0, #0x1e0                     
+002258d8  bne      #0x2255d8                      
+002258dc  mov      r3, #0xc8                      
+002258e0  b        #0x2255f4                      
+002258e4  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+002258e8  ldrb     r6, [r0, #0x8c]                
+002258ec  cmp      r6, #0                         
+002258f0  bne      #0x22561c                      
+002258f4  bl       #0x910c0                       _ZN7Preview11GetInstanceEv
+002258f8  str      r6, [r0]                       
+002258fc  b        #0x225628                      
+00225900  bl       #0x88bb4                       lv_disp_get_default@plt
+00225904  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00225908  mov      sb, r0                         
+0022590c  bl       #0x88bb4                       lv_disp_get_default@plt
+00225910  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00225914  mov      r2, r0                         
+00225918  mov      r1, sb                         
+0022591c  mov      r0, r6                         
+00225920  bl       #0x884a0                       lv_obj_set_size@plt
+00225924  mov      r2, #0                         
+00225928  mov      r1, r2                         
+0022592c  b        #0x2256ac                      
+00225930  ldr      r0, [pc, #0x424]               0x26c7b5 '/mnt/sdcard/rk_pcba_test_res/pcba_activate_flag_file'
+00225934  mov      r1, #0                         
+00225938  bl       #0x87ce4                       access@plt
+0022593c  cmp      r0, #0                         
+00225940  bne      #0x225984                      
+00225944  bl       #0x9d740                       _ZN12WifiBtConfig11GetInstanceEv
+00225948  bl       #0x9d780                       _ZN12WifiBtConfig13GetWifiBtNameEv
+0022594c  mov      r1, r0                         
+00225950  add      r0, sp, #0xc                   
+00225954  bl       #0x221230                      
+00225958  mov      r2, #0x80                      
+0022595c  mov      r1, #0                         
+00225960  add      r0, sp, #0x24                  
+00225964  bl       #0x88848                       memset@plt
+00225968  ldr      r2, [sp, #0xc]                 
+0022596c  add      r0, sp, #0x24                  
+00225970  ldr      r1, [pc, #0x3e8]               0x26c7ea 'hostname %s'
+00225974  bl       #0x88590                       sprintf@plt
+00225978  add      r0, sp, #0x24                  
+0022597c  bl       #0x8808c                       system@plt
+00225980  b        #0x2259b0                      
+00225984  ldr      r0, [pc, #0x3d8]               0x26c7f6 '/mnt/sdcard/rk_pcba_test_res/pcba_carplay_activate_flag_file'
+00225988  mov      r1, #0                         
+0022598c  bl       #0x87ce4                       access@plt
+00225990  cmp      r0, #0                         
+00225994  beq      #0x225944                      
+00225998  ldr      r0, [pc, #0x3c8]               0x26c833 '/mnt/sdcard/rk_pcba_test_res/pcba_adas_activate_flag_file'
+0022599c  mov      r1, #0                         
+002259a0  bl       #0x87ce4                       access@plt
+002259a4  cmp      r0, #0                         
+002259a8  beq      #0x225944                      
+002259ac  b        #0x22580c                      
+002259b0  ldr      r0, [pc, #0x3b4]               0x269ab7 '/mnt/private/uuid'
+002259b4  mov      r1, #0                         
+002259b8  bl       #0x87ce4                       access@plt
+002259bc  cmp      r0, #0                         
+002259c0  bne      #0x225a08                      
+002259c4  ldr      r0, [pc, #0x390]               0x26c7b5 '/mnt/sdcard/rk_pcba_test_res/pcba_activate_flag_file'
+002259c8  mov      r1, #0                         
+002259cc  bl       #0x87ce4                       access@plt
+002259d0  cmp      r0, #0                         
+002259d4  beq      #0x225a10                      
+002259d8  ldr      r0, [pc, #0x384]               0x26c7f6 '/mnt/sdcard/rk_pcba_test_res/pcba_carplay_activate_flag_file'
+002259dc  mov      r1, #0                         
+002259e0  bl       #0x87ce4                       access@plt
+002259e4  cmp      r0, #0                         
+002259e8  beq      #0x225a10                      
+002259ec  ldr      r0, [pc, #0x374]               0x26c833 '/mnt/sdcard/rk_pcba_test_res/pcba_adas_activate_flag_file'
+002259f0  mov      r1, #0                         
+002259f4  bl       #0x87ce4                       access@plt
+002259f8  cmp      r0, #0                         
+002259fc  beq      #0x225b08                      
+00225a00  bl       #0x87ed0                       lv_timer_handler@plt
+00225a04  b        #0x225c10                      
+00225a08  bl       #0x21ce34                      _Z14GetWlanoHwaddrv
+00225a0c  b        #0x2259c4                      
+00225a10  bl       #0x222988                      _Z21check_compressed_filev
+00225a14  ldr      r0, [r4, #0x13c]               
+00225a18  bl       #0x890e8                       lv_imgbtn_create@plt
+00225a1c  ldr      r1, [pc, #0x318]               0x2a916c 
+00225a20  mov      r2, #0                         
+00225a24  str      r0, [r4, #0x80]                
+00225a28  bl       #0x880e0                       lv_obj_add_style@plt
+00225a2c  ldr      r0, [r4, #0x80]                
+00225a30  bl       #0x87f54                       lv_label_create@plt
+00225a34  str      r0, [r4, #0x84]                
+00225a38  mov      r3, #0                         
+00225a3c  mov      r2, r3                         
+00225a40  mov      r1, #9                         
+00225a44  bl       #0x872c4                       lv_obj_align@plt
+00225a48  ldr      r0, [r4, #0x84]                
+00225a4c  mov      r2, #0                         
+00225a50  mov      r1, #2                         
+00225a54  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00225a58  ldr      r1, [pc, #0x2ec]               0x296ce0 my_font_for_pcba_28
+00225a5c  mov      r2, #0                         
+00225a60  ldr      r0, [r4, #0x84]                
+00225a64  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00225a68  ldrsh    r2, [r5, #4]                   
+00225a6c  ldrsh    r1, [r5]                       
+00225a70  ldr      r0, [r4, #0x84]                
+00225a74  bl       #0x884a0                       lv_obj_set_size@plt
+00225a78  ldr      r0, [r4, #0x84]                
+00225a7c  mov      r1, #0                         
+00225a80  bl       #0x881a0                       lv_label_set_long_mode@plt
+00225a84  ldr      r1, [pc, #0x2e4]               0x26c86d 
+00225a88  ldr      r0, [r4, #0x84]                
+00225a8c  bl       #0x87a14                       lv_label_set_text@plt
+00225a90  ldr      r0, [r4, #0x13c]               
+00225a94  bl       #0x890e8                       lv_imgbtn_create@plt
+00225a98  ldr      r1, [pc, #0x29c]               0x2a916c 
+00225a9c  mov      r2, #0                         
+00225aa0  mov      sb, r0                         
+00225aa4  bl       #0x880e0                       lv_obj_add_style@plt
+00225aa8  mov      r0, sb                         
+00225aac  bl       #0x87f54                       lv_label_create@plt
+00225ab0  mov      r3, #0                         
+00225ab4  mov      r1, #9                         
+00225ab8  mov      r2, r3                         
+00225abc  mov      r6, r0                         
+00225ac0  bl       #0x872c4                       lv_obj_align@plt
+00225ac4  mov      r2, #0                         
+00225ac8  mov      r1, #2                         
+00225acc  mov      r0, r6                         
+00225ad0  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00225ad4  ldr      r1, [pc, #0x270]               0x296ce0 my_font_for_pcba_28
+00225ad8  mov      r2, #0                         
+00225adc  mov      r0, r6                         
+00225ae0  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00225ae4  ldr      r1, [pc, #0x288]               0x26c887 
+00225ae8  mov      r0, r6                         
+00225aec  bl       #0x87a14                       lv_label_set_text@plt
+00225af0  ldr      r1, [pc, #0x280]               0x2216ec 
+00225af4  mov      r3, #0                         
+00225af8  mov      r2, #6                         
+00225afc  mov      r0, sb                         
+00225b00  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00225b04  b        #0x2259ec                      
+00225b08  ldr      r0, [r4, #0x13c]               
+00225b0c  bl       #0x890e8                       lv_imgbtn_create@plt
+00225b10  ldr      r1, [pc, #0x224]               0x2a916c 
+00225b14  mov      r2, #0                         
+00225b18  str      r0, [r4, #0x58]                
+00225b1c  bl       #0x880e0                       lv_obj_add_style@plt
+00225b20  ldr      r0, [r4, #0x58]                
+00225b24  bl       #0x87f54                       lv_label_create@plt
+00225b28  str      r0, [r4, #0x5c]                
+00225b2c  mov      r3, #0                         
+00225b30  mov      r2, r3                         
+00225b34  mov      r1, #9                         
+00225b38  bl       #0x872c4                       lv_obj_align@plt
+00225b3c  ldr      r0, [r4, #0x5c]                
+00225b40  mov      r2, #0                         
+00225b44  mov      r1, #2                         
+00225b48  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00225b4c  ldr      r1, [pc, #0x1f8]               0x296ce0 my_font_for_pcba_28
+00225b50  mov      r2, #0                         
+00225b54  ldr      r0, [r4, #0x5c]                
+00225b58  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00225b5c  ldrsh    r2, [r5, #4]                   
+00225b60  ldrsh    r1, [r5]                       
+00225b64  ldr      r0, [r4, #0x5c]                
+00225b68  bl       #0x884a0                       lv_obj_set_size@plt
+00225b6c  ldr      r0, [r4, #0x5c]                
+00225b70  mov      r1, #0                         
+00225b74  bl       #0x881a0                       lv_label_set_long_mode@plt
+00225b78  ldr      r1, [pc, #0x1fc]               0x26c8a5 
+00225b7c  ldr      r0, [r4, #0x5c]                
+00225b80  bl       #0x87a14                       lv_label_set_text@plt
+00225b84  ldr      r1, [pc, #0x1f4]               0x220ff0 
+00225b88  mov      r3, #0                         
+00225b8c  ldr      r0, [r4, #0x58]                
+00225b90  mov      r2, #6                         
+00225b94  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00225b98  ldr      r0, [r4, #0x13c]               
+00225b9c  bl       #0x890e8                       lv_imgbtn_create@plt
+00225ba0  ldr      r1, [pc, #0x194]               0x2a916c 
+00225ba4  mov      r2, #0                         
+00225ba8  str      r0, [r4, #0x158]               
+00225bac  bl       #0x880e0                       lv_obj_add_style@plt
+00225bb0  ldr      r0, [r4, #0x158]               
+00225bb4  bl       #0x87f54                       lv_label_create@plt
+00225bb8  str      r0, [r4, #0x15c]               
+00225bbc  mov      r3, #0                         
+00225bc0  mov      r2, r3                         
+00225bc4  mov      r1, #9                         
+00225bc8  bl       #0x872c4                       lv_obj_align@plt
+00225bcc  ldr      r0, [r4, #0x15c]               
+00225bd0  mov      r2, #0                         
+00225bd4  mov      r1, #2                         
+00225bd8  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00225bdc  ldr      r1, [pc, #0x168]               0x296ce0 my_font_for_pcba_28
+00225be0  mov      r2, #0                         
+00225be4  ldr      r0, [r4, #0x15c]               
+00225be8  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00225bec  ldr      r1, [pc, #0x190]               0x26c8c6 
+00225bf0  ldr      r0, [r4, #0x15c]               
+00225bf4  bl       #0x87a14                       lv_label_set_text@plt
+00225bf8  ldr      r1, [pc, #0x188]               0x221ca4 
+00225bfc  mov      r3, #0                         
+00225c00  ldr      r0, [r4, #0x158]               
+00225c04  mov      r2, #6                         
+00225c08  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00225c0c  b        #0x225a00                      
+00225c10  bl       #0x225068                      _Z10ConnetWifiv
+00225c14  ldr      r0, [pc, #0x140]               0x26c7b5 '/mnt/sdcard/rk_pcba_test_res/pcba_activate_flag_file'
+00225c18  mov      r1, #0                         
+00225c1c  bl       #0x87ce4                       access@plt
+00225c20  cmp      r0, #0                         
+00225c24  bne      #0x225c60                      
+00225c28  ldr      r2, [pc, #0x15c]               0x220820 _Z25bluetooth_activate_ThreadPv
+00225c2c  mov      r3, #0                         
+00225c30  ldr      r0, [pc, #0x158]               0x2a91d4 bluetooth_activate_id
+00225c34  mov      r1, r3                         
+00225c38  bl       #0x88b60                       pthread_create@plt
+00225c3c  cmp      r0, #0                         
+00225c40  bge      #0x225c74                      
+00225c44  ldr      r0, [pc, #0xd4]                0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00225c48  bl       #0x88d10                       __xpg_basename@plt
+00225c4c  ldr      r3, [pc, #0x140]               0x26c8e7 'pthread_create for bluetooth_activate_Thread failed'
+00225c50  movw     r1, #0x888                     
+00225c54  ldr      r2, [pc, #0xd0]                0x26b1cd 'pcba_test'
+00225c58  bl       #0xb3968                       C_LJQ_LOG2
+00225c5c  b        #0x225c74                      
+00225c60  ldr      r0, [pc, #0xfc]                0x26c7f6 '/mnt/sdcard/rk_pcba_test_res/pcba_carplay_activate_flag_file'
+00225c64  mov      r1, #0                         
+00225c68  bl       #0x87ce4                       access@plt
+00225c6c  cmp      r0, #0                         
+00225c70  beq      #0x225c28                      
+00225c74  ldr      r0, [pc, #0xec]                0x26c833 '/mnt/sdcard/rk_pcba_test_res/pcba_adas_activate_flag_file'
+00225c78  mov      r1, #0                         
+00225c7c  bl       #0x87ce4                       access@plt
+00225c80  subs     r3, r0, #0                     
+00225c84  beq      #0x225cc0                      
+00225c88  ldr      r2, [pc, #0x108]               0x220364 _Z9CloseWifiPv
+00225c8c  mov      r3, #0                         
+00225c90  ldr      r0, [pc, #0x104]               0x2a91d8 close_wifi_id
+00225c94  mov      r1, r3                         
+00225c98  bl       #0x88b60                       pthread_create@plt
+00225c9c  cmp      r0, #0                         
+00225ca0  bge      #0x225cf4                      
+00225ca4  ldr      r0, [pc, #0x74]                0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00225ca8  bl       #0x88d10                       __xpg_basename@plt
+00225cac  ldr      r3, [pc, #0xec]                0x26c950 'pthread_create for CloseWifi failed'
+00225cb0  movw     r1, #0x8a3                     
+00225cb4  ldr      r2, [pc, #0x70]                0x26b1cd 'pcba_test'
+00225cb8  bl       #0xb3968                       C_LJQ_LOG2
+00225cbc  b        #0x225cf4                      
+00225cc0  ldr      r2, [pc, #0xdc]                0x220644 _Z26rknpu_adas_activate_ThreadPv
+00225cc4  mov      r1, r3                         
+00225cc8  ldr      r0, [pc, #0xd8]                0x2a91dc adas_activate_id
+00225ccc  bl       #0x88b60                       pthread_create@plt
+00225cd0  cmp      r0, #0                         
+00225cd4  bge      #0x225c88                      
+00225cd8  ldr      r0, [pc, #0x40]                0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00225cdc  bl       #0x88d10                       __xpg_basename@plt
+00225ce0  ldr      r3, [pc, #0xc4]                0x26c91b 'pthread_create for rknpu_adas_activate_Thread failed'
+00225ce4  movw     r1, #0x896                     
+00225ce8  ldr      r2, [pc, #0x3c]                0x26b1cd 'pcba_test'
+00225cec  bl       #0xb3968                       C_LJQ_LOG2
+00225cf0  b        #0x225c88                      
+00225cf4  add      r0, sp, #0xc                   
+00225cf8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00225cfc  b        #0x22580c                      
+00225d00  add      r0, sp, #0xc                   
+00225d04  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00225d08  bl       #0x880d4                       __cxa_end_cleanup@plt
+00225d0c  add      sp, sp, #0xac                  
+00225d10  pop      {r4, r5, r6, r7, r8, sb, pc}   
+00225d14  eoreq    r6, sb, r0, ror sp             
+00225d18  eoreq    r8, r6, lr, asr #22            
+00225d1c  eoreq    ip, r6, r8, lsl r7             
+
+FUNCTION 0x21d3f8 _Z13pcba_ddr_testv size 124
+0021d3f8  push     {r4, lr}                       
+0021d3fc  sub      sp, sp, #0x68                  
+0021d400  ldr      r4, [pc, #0x60]                0x296d70 __stack_chk_guard
+0021d404  mov      r2, #0x5f                      
+0021d408  mov      r1, #0                         
+0021d40c  ldr      r3, [r4]                       
+0021d410  str      r3, [sp, #0x64]                
+0021d414  ldr      r3, [pc, #0x50]                0x269bea 'PASS'
+0021d418  ldr      r0, [r3]                       
+0021d41c  ldrb     r3, [r3, #4]                   
+0021d420  str      r0, [sp]                       
+0021d424  add      r0, sp, #5                     
+0021d428  strb     r3, [sp, #4]                   
+0021d42c  bl       #0x88848                       memset@plt
+0021d430  bl       #0x21d2dc                      _Z8ddr_testv
+0021d434  cmp      r0, #0                         
+0021d438  bgt      #0x21d44c                      
+0021d43c  ldr      r1, [pc, #0x2c]                0x26a16d 'FAIL'
+0021d440  mov      r0, sp                         
+0021d444  bl       #0x87e88                       strcpy@plt
+0021d448  mvn      r0, #0                         
+0021d44c  ldr      r2, [sp, #0x64]                
+0021d450  ldr      r3, [r4]                       
+0021d454  cmp      r2, r3                         
+0021d458  beq      #0x21d460                      
+0021d45c  bl       #0x874e0                       __stack_chk_fail@plt
+0021d460  add      sp, sp, #0x68                  
+0021d464  pop      {r4, pc}                       
+0021d468  eoreq    r6, sb, r0, ror sp             
+0021d46c  eoreq    sb, r6, sl, ror #23            
+0021d470  eoreq    sl, r6, sp, ror #2             
+
+FUNCTION 0x21c510 _Z12pcba_bt_testv size 248
+0021c510  push     {r4, r5, r6, lr}               
+0021c514  sub      sp, sp, #0xd8                  
+0021c518  ldr      r5, [pc, #0xcc]                0x296d70 __stack_chk_guard
+0021c51c  mov      r2, #0x5c                      
+0021c520  ldr      r6, [pc, #0xc8]                0x26846b 'bt_test'
+0021c524  ldr      r3, [r5]                       
+0021c528  ldr      r0, [r6]                       
+0021c52c  ldr      r1, [r6, #4]                   
+0021c530  str      r3, [sp, #0xd4]                
+0021c534  add      r3, sp, #0xc                   
+0021c538  stm      r3!, {r0, r1}                  
+0021c53c  mov      r1, #0                         
+0021c540  add      r0, sp, #0x14                  
+0021c544  bl       #0x88848                       memset@plt
+0021c548  mov      r3, r6                         
+0021c54c  mov      r2, #0x5f                      
+0021c550  mov      r1, #0                         
+0021c554  ldr      r0, [r3, #0x64]!               
+0021c558  ldrb     r3, [r3, #4]                   
+0021c55c  str      r0, [sp, #0x70]                
+0021c560  add      r0, sp, #0x75                  
+0021c564  strb     r3, [sp, #0x74]                
+0021c568  bl       #0x88848                       memset@plt
+0021c56c  bl       #0x21bd98                      _Z7bt_testv
+0021c570  cmp      r0, #0                         
+0021c574  movge    r4, #0                         
+0021c578  bge      #0x21c5b4                      
+0021c57c  ldr      r1, [pc, #0x70]                0x26a16d 'FAIL'
+0021c580  add      r0, sp, #0x70                  
+0021c584  mvn      r4, #0x1d                      
+0021c588  bl       #0x87e88                       strcpy@plt
+0021c58c  ldr      r0, [pc, #0x64]                0x268540 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/bt_test.cpp'
+0021c590  bl       #0x88d10                       __xpg_basename@plt
+0021c594  str      r4, [sp]                       
+0021c598  movw     r1, #0x226                     
+0021c59c  ldr      r3, [pc, #0x58]                0x2691bc '==pcba_bt_test=err_code = %d===\n'
+0021c5a0  add      r2, r6, #0xc8                  
+0021c5a4  bl       #0xb3968                       C_LJQ_LOG2
+0021c5a8  ldr      r1, [pc, #0x44]                0x26a16d 'FAIL'
+0021c5ac  add      r0, sp, #0x70                  
+0021c5b0  bl       #0x87e88                       strcpy@plt
+0021c5b4  str      r4, [sp]                       
+0021c5b8  add      r3, sp, #0x70                  
+0021c5bc  ldr      r1, [pc, #0x3c]                0x267fc6 '[R8]'
+0021c5c0  add      r2, sp, #0xc                   
+0021c5c4  ldr      r0, [pc, #0x38]                0x267fcb '%s<%s>,<%s>,<%d>\n'
+0021c5c8  bl       #0x872b8                       printf@plt
+0021c5cc  ldr      r2, [sp, #0xd4]                
+0021c5d0  mov      r0, r4                         
+0021c5d4  ldr      r3, [r5]                       
+0021c5d8  cmp      r2, r3                         
+0021c5dc  beq      #0x21c5e4                      
+0021c5e0  bl       #0x874e0                       __stack_chk_fail@plt
+0021c5e4  add      sp, sp, #0xd8                  
+0021c5e8  pop      {r4, r5, r6, pc}               
+0021c5ec  eoreq    r6, sb, r0, ror sp             
+0021c5f0  eoreq    r8, r6, fp, ror #8             
+0021c5f4  eoreq    sl, r6, sp, ror #2             
+0021c5f8  eoreq    r8, r6, r0, asr #10            
+
+FUNCTION 0x21c9a4 _Z13pcba_cpu_testv size 820
+0021c9a4  push     {r4, r5, r6, r7, lr}           
+0021c9a8  sub      sp, sp, #0x35c                 
+0021c9ac  ldr      r7, [pc, #0x2ac]               0x296d70 __stack_chk_guard
+0021c9b0  ldr      r5, [pc, #0x2ac]               0x2691fe 'cpu_test'
+0021c9b4  ldr      r3, [r7]                       
+0021c9b8  ldr      r0, [r5]                       
+0021c9bc  ldr      r1, [r5, #4]                   
+0021c9c0  ldrb     r2, [r5, #8]                   
+0021c9c4  str      r3, [sp, #0x354]               
+0021c9c8  add      r3, sp, #0xc                   
+0021c9cc  ldr      r4, [pc, #0x294]               0x2a9048 
+0021c9d0  stm      r3!, {r0, r1}                  
+0021c9d4  strb     r2, [r3]                       
+0021c9d8  mov      r1, #0                         
+0021c9dc  mov      r2, #0x5b                      
+0021c9e0  add      r0, sp, #0x15                  
+0021c9e4  bl       #0x88848                       memset@plt
+0021c9e8  mov      r3, r5                         
+0021c9ec  mov      r2, #0x5f                      
+0021c9f0  mov      r1, #0                         
+0021c9f4  ldr      r0, [r3, #0x64]!               
+0021c9f8  ldrb     r3, [r3, #4]                   
+0021c9fc  str      r0, [sp, #0x70]                
+0021ca00  add      r0, sp, #0x75                  
+0021ca04  strb     r3, [sp, #0x74]                
+0021ca08  bl       #0x88848                       memset@plt
+0021ca0c  ldr      r0, [pc, #0x258]               0x269566 '=======  cpu frequency test starting   ========\n'
+0021ca10  bl       #0x87720                       puts@plt
+0021ca14  ldr      r0, [pc, #0x254]               0x269597 'mkdir -p /tmp/rk_pcba_test'
+0021ca18  bl       #0x8808c                       system@plt
+0021ca1c  ldr      r0, [pc, #0x250]               0x2695b2 '********************get cpu frequency table start ***************'
+0021ca20  bl       #0x87720                       puts@plt
+0021ca24  mov      r1, r4                         
+0021ca28  mov      r0, #0                         
+0021ca2c  bl       #0x21c608                      
+0021ca30  str      r0, [r4, #8]                   
+0021ca34  add      r1, r4, #0xc                   
+0021ca38  mov      r0, #1                         
+0021ca3c  bl       #0x21c608                      
+0021ca40  ldr      r6, [r4, #8]                   
+0021ca44  str      r0, [r4, #0x14]                
+0021ca48  cmn      r6, #1                         
+0021ca4c  cmnne    r0, #1                         
+0021ca50  moveq    r6, #1                         
+0021ca54  movne    r6, #0                         
+0021ca58  beq      #0x21cc44                      
+0021ca5c  ldr      r0, [pc, #0x214]               0x2695f4 '********************get cpu frequency table finish***************\n'
+0021ca60  bl       #0x87720                       puts@plt
+0021ca64  ldr      r0, [pc, #0x210]               0x269637 '********************get current cpu frequency start ***************'
+0021ca68  bl       #0x87720                       puts@plt
+0021ca6c  mov      r0, r6                         
+0021ca70  bl       #0x21c850                      
+0021ca74  mov      r6, r0                         
+0021ca78  mov      r0, #1                         
+0021ca7c  bl       #0x21c850                      
+0021ca80  cmn      r6, #1                         
+0021ca84  cmnne    r0, #1                         
+0021ca88  moveq    r6, #1                         
+0021ca8c  movne    r6, #0                         
+0021ca90  beq      #0x21cc44                      
+0021ca94  ldr      r0, [pc, #0x1e4]               0x26967b '********************get current cpu frequency finish ***************\n'
+0021ca98  bl       #0x87720                       puts@plt
+0021ca9c  ldr      r0, [pc, #0x1e0]               0x2696c1 '********************set cpu frequency start ***************'
+0021caa0  bl       #0x87720                       puts@plt
+0021caa4  ldr      r0, [pc, #0x1dc]               0x2696fd '\n=================== function :%s start======================\n'
+0021caa8  add      r1, r5, #0xc8                  
+0021caac  bl       #0x872b8                       printf@plt
+0021cab0  ldr      r3, [r4, #8]                   
+0021cab4  cmp      r3, #0                         
+0021cab8  ble      #0x21cae8                      
+0021cabc  mov      r2, #0x200                     
+0021cac0  mov      r1, r6                         
+0021cac4  add      r0, sp, #0x154                 
+0021cac8  bl       #0x88848                       memset@plt
+0021cacc  ldr      r3, [pc, #0x1b8]               0x26973c '/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor'
+0021cad0  add      r0, sp, #0x154                 
+0021cad4  ldr      r2, [pc, #0x1b4]               0x269772 'userspace'
+0021cad8  ldr      r1, [pc, #0x1b4]               0x26977c 'echo %s > %s'
+0021cadc  bl       #0x88590                       sprintf@plt
+0021cae0  add      r0, sp, #0x154                 
+0021cae4  bl       #0x8808c                       system@plt
+0021cae8  ldr      r3, [r4, #0x14]                
+0021caec  cmp      r3, #0                         
+0021caf0  ble      #0x21cb20                      
+0021caf4  mov      r2, #0x200                     
+0021caf8  mov      r1, #0                         
+0021cafc  add      r0, sp, #0x154                 
+0021cb00  bl       #0x88848                       memset@plt
+0021cb04  ldr      r3, [pc, #0x18c]               0x269789 '/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor'
+0021cb08  add      r0, sp, #0x154                 
+0021cb0c  ldr      r2, [pc, #0x17c]               0x269772 'userspace'
+0021cb10  ldr      r1, [pc, #0x17c]               0x26977c 'echo %s > %s'
+0021cb14  bl       #0x88590                       sprintf@plt
+0021cb18  add      r0, sp, #0x154                 
+0021cb1c  bl       #0x8808c                       system@plt
+0021cb20  ldr      r1, [pc, #0x174]               0x2692c6 'cpu_set_mode'
+0021cb24  ldr      r0, [pc, #0x174]               0x2697bf '\n=================== function :%s finish======================\n'
+0021cb28  bl       #0x872b8                       printf@plt
+0021cb2c  ldr      r1, [pc, #0x170]               0x2692d3 'set_curl_freq'
+0021cb30  ldr      r0, [pc, #0x150]               0x2696fd '\n=================== function :%s start======================\n'
+0021cb34  bl       #0x872b8                       printf@plt
+0021cb38  ldr      r3, [r4, #4]                   
+0021cb3c  mov      r1, #0                         
+0021cb40  ldr      r2, [pc, #0x120]               0x2a9048 
+0021cb44  add      r0, sp, #0x154                 
+0021cb48  cmp      r3, #0                         
+0021cb4c  moveq    r3, r2                         
+0021cb50  ldr      r2, [r3, #4]                   
+0021cb54  cmp      r2, #0                         
+0021cb58  movne    r3, r2                         
+0021cb5c  ldr      r2, [r3, #4]                   
+0021cb60  cmp      r2, #0                         
+0021cb64  movne    r3, r2                         
+0021cb68  mov      r2, #0x200                     
+0021cb6c  ldr      r5, [r3]                       
+0021cb70  bl       #0x88848                       memset@plt
+0021cb74  ldr      r1, [pc, #0x12c]               0x2697ff '/sys/devices/system/cpu/cpu%d/cpufreq/scaling_setspeed'
+0021cb78  mov      r2, #0                         
+0021cb7c  add      r0, sp, #0xd4                  
+0021cb80  bl       #0x88590                       sprintf@plt
+0021cb84  ldr      r1, [pc, #0x120]               0x269836 'echo %d > %s'
+0021cb88  add      r3, sp, #0xd4                  
+0021cb8c  mov      r2, r5                         
+0021cb90  add      r0, sp, #0x154                 
+0021cb94  bl       #0x88590                       sprintf@plt
+0021cb98  ldr      r0, [pc, #0x110]               0x269843 'cpu: %d; set current frequency cmd is: %s\n'
+0021cb9c  add      r2, sp, #0x154                 
+0021cba0  mov      r1, #0                         
+0021cba4  bl       #0x872b8                       printf@plt
+0021cba8  add      r0, sp, #0x154                 
+0021cbac  bl       #0x8808c                       system@plt
+0021cbb0  ldr      r1, [pc, #0xec]                0x2692d3 'set_curl_freq'
+0021cbb4  ldr      r0, [pc, #0xe4]                0x2697bf '\n=================== function :%s finish======================\n'
+0021cbb8  bl       #0x872b8                       printf@plt
+0021cbbc  ldr      r0, [pc, #0xf0]                0x26986e '********************set cpu frequency finish ***************'
+0021cbc0  bl       #0x87720                       puts@plt
+0021cbc4  mov      r0, #0                         
+0021cbc8  bl       #0x21c850                      
+0021cbcc  cmp      r0, r5                         
+0021cbd0  mov      r4, r0                         
+0021cbd4  bne      #0x21cc24                      
+0021cbd8  mov      r1, #0x3e8                     
+0021cbdc  mov      r4, #0                         
+0021cbe0  sdiv     r1, r0, r1                     
+0021cbe4  ldr      r0, [pc, #0xcc]                0x2698ab 'Cpu frequency set and get is equal; is %d MHz\n'
+0021cbe8  bl       #0x872b8                       printf@plt
+0021cbec  ldr      r0, [pc, #0xc8]                0x2698da '=======  cpu frequency test success   ========'
+0021cbf0  bl       #0x87720                       puts@plt
+0021cbf4  str      r4, [sp]                       
+0021cbf8  add      r3, sp, #0x70                  
+0021cbfc  ldr      r1, [pc, #0xbc]                0x267fc6 '[R8]'
+0021cc00  add      r2, sp, #0xc                   
+0021cc04  ldr      r0, [pc, #0xb8]                0x267fcb '%s<%s>,<%s>,<%d>\n'
+0021cc08  bl       #0x872b8                       printf@plt
+0021cc0c  ldr      r2, [sp, #0x354]               
+0021cc10  mov      r0, r4                         
+0021cc14  ldr      r3, [r7]                       
+0021cc18  cmp      r2, r3                         
+0021cc1c  beq      #0x21cc58                      
+0021cc20  bl       #0x874e0                       __stack_chk_fail@plt
+0021cc24  ldr      r0, [pc, #0x9c]                0x269909 'Cpu frequency set and get is not equal; set failed'
+0021cc28  bl       #0x87720                       puts@plt
+0021cc2c  ldr      r0, [pc, #0x98]                0x26993c 'Cpu frequency set is :%d MHz\n'
+0021cc30  mov      r1, r5                         
+0021cc34  bl       #0x872b8                       printf@plt
+0021cc38  ldr      r0, [pc, #0x90]                0x26995a 'Cpu frequency get is :%d MHz\n'
+0021cc3c  mov      r1, r4                         
+0021cc40  bl       #0x872b8                       printf@plt
+0021cc44  ldr      r1, [pc, #0x88]                0x26a16d 'FAIL'
+0021cc48  add      r0, sp, #0x70                  
+0021cc4c  mvn      r4, #0x36                      
+0021cc50  bl       #0x87e88                       strcpy@plt
+0021cc54  b        #0x21cbf4                      
+0021cc58  add      sp, sp, #0x35c                 
+0021cc5c  pop      {r4, r5, r6, r7, pc}           
+0021cc60  eoreq    r6, sb, r0, ror sp             

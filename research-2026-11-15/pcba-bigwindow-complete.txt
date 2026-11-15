@@ -1,0 +1,1605 @@
+
+FUNCTION 0x222a4c _Z15CreateBigWindowv size 6412
+00222a4c  push     {r0, r1, r2, r4, r5, r6, r7, r8, sb, lr} 
+00222a50  bl       #0x220754                      
+00222a54  ldr      r4, [pc, #0x76c]               0x2a9074 wlan_obj
+00222a58  bl       #0x88da0                       lv_obj_create@plt
+00222a5c  str      r0, [r4, #0xf4]                
+00222a60  ldr      r0, [pc, #0x890]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00222a64  bl       #0x88d10                       __xpg_basename@plt
+00222a68  mov      r5, r0                         
+00222a6c  bl       #0x88bb4                       lv_disp_get_default@plt
+00222a70  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222a74  mov      r6, r0                         
+00222a78  bl       #0x88bb4                       lv_disp_get_default@plt
+00222a7c  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222a80  str      r0, [sp, #4]                   
+00222a84  movw     r1, #0x8c8                     
+00222a88  ldr      r3, [pc, #0x73c]               0x26c192 '====================%d------%d======='
+00222a8c  mov      r0, r5                         
+00222a90  ldr      r2, [pc, #0x868]               0x26b131 'CreateBigWindow'
+00222a94  str      r6, [sp]                       
+00222a98  bl       #0xb3968                       C_LJQ_LOG2
+00222a9c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00222aa0  bl       #0x992c0                       _ZN12SystemConfig19GetScreenResolutionEv
+00222aa4  ldr      r5, [r4, #0xf4]                
+00222aa8  cmp      r0, #0xc                       
+00222aac  bne      #0x222d44                      
+00222ab0  bl       #0x88bb4                       lv_disp_get_default@plt
+00222ab4  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222ab8  mov      r1, r0                         
+00222abc  mov      r2, #0x1a4                     
+00222ac0  mov      r0, r5                         
+00222ac4  bl       #0x884a0                       lv_obj_set_size@plt
+00222ac8  mov      r2, #0xb4                      
+00222acc  mov      r1, #0                         
+00222ad0  ldr      r0, [r4, #0xf4]                
+00222ad4  ldr      r5, [pc, #0x6f4]               0x2995f8 GRID_WIDTH
+00222ad8  bl       #0x88ddc                       lv_obj_set_pos@plt
+00222adc  ldr      r0, [r4, #0xf4]                
+00222ae0  mov      r2, #0                         
+00222ae4  mov      r1, r2                         
+00222ae8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00222aec  ldr      r0, [r4, #0xf4]                
+00222af0  mov      r2, #0                         
+00222af4  mov      r1, r2                         
+00222af8  bl       #0x88f2c                       lv_obj_set_style_border_color@plt
+00222afc  ldr      r0, [r4, #0xf4]                
+00222b00  mov      r2, #0                         
+00222b04  mov      r1, r2                         
+00222b08  bl       #0x88f5c                       lv_obj_set_style_radius@plt
+00222b0c  ldr      r0, [r4, #0xf4]                
+00222b10  mov      r1, #0x10                      
+00222b14  bl       #0x87f6c                       lv_obj_clear_flag@plt
+00222b18  ldr      r0, [r4, #0xf4]                
+00222b1c  mov      r1, #4                         
+00222b20  bl       #0x882f0                       lv_obj_set_flex_flow@plt
+00222b24  ldr      r0, [r4, #0xf4]                
+00222b28  mov      r2, #0                         
+00222b2c  mov      r1, #0x32                      
+00222b30  bl       #0x88f80                       lv_obj_set_style_pad_column@plt
+00222b34  ldr      r0, [pc, #0x7a8]               0x2a916c 
+00222b38  bl       #0x88428                       lv_style_init@plt
+00222b3c  ldr      r0, [pc, #0x7a0]               0x2a916c 
+00222b40  mov      r1, #0xcc                      
+00222b44  bl       #0x87324                       lv_style_set_bg_opa@plt
+00222b48  ldr      r1, [pc, #0x734]               0xffe599 
+00222b4c  ldr      r0, [pc, #0x790]               0x2a916c 
+00222b50  bl       #0x88a10                       lv_style_set_bg_color@plt
+00222b54  ldr      r0, [pc, #0x788]               0x2a916c 
+00222b58  mov      r1, #0xcc                      
+00222b5c  bl       #0x86f28                       lv_style_set_img_opa@plt
+00222b60  ldr      r0, [pc, #0x77c]               0x2a916c 
+00222b64  mov      r1, #2                         
+00222b68  bl       #0x87dc8                       lv_style_set_outline_width@plt
+00222b6c  ldr      r0, [pc, #0x770]               0x2a916c 
+00222b70  mvn      r1, #0                         
+00222b74  bl       #0x88710                       lv_style_set_outline_color@plt
+00222b78  ldr      r0, [pc, #0x764]               0x2a916c 
+00222b7c  mov      r1, #0xff                      
+00222b80  bl       #0x87894                       lv_style_set_outline_opa@plt
+00222b84  ldr      r0, [pc, #0x758]               0x2a916c 
+00222b88  mov      r1, #6                         
+00222b8c  bl       #0x874a4                       lv_style_set_radius@plt
+00222b90  bl       #0x88bb4                       lv_disp_get_default@plt
+00222b94  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222b98  cmp      r0, #0x500                     
+00222b9c  bne      #0x222d74                      
+00222ba0  bl       #0x88bb4                       lv_disp_get_default@plt
+00222ba4  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222ba8  cmp      r0, #0x1e0                     
+00222bac  bne      #0x222d74                      
+00222bb0  ldr      r0, [pc, #0x72c]               0x2a916c 
+00222bb4  mov      r1, #0x100                     
+00222bb8  bl       #0x888d8                       lv_style_set_width@plt
+00222bbc  mov      r1, #0x5a                      
+00222bc0  ldr      r0, [pc, #0x71c]               0x2a916c 
+00222bc4  bl       #0x882cc                       lv_style_set_height@plt
+00222bc8  ldr      r0, [pc, #0x728]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00222bcc  bl       #0x88d10                       __xpg_basename@plt
+00222bd0  ldr      r3, [pc, #0x5fc]               0x265fb4 '------------------------------------'
+00222bd4  movw     r1, #0x8ec                     
+00222bd8  ldr      r2, [pc, #0x720]               0x26b131 'CreateBigWindow'
+00222bdc  bl       #0xb3968                       C_LJQ_LOG2
+00222be0  bl       #0x220754                      
+00222be4  bl       #0x87e4c                       lv_img_create@plt
+00222be8  mov      r7, r0                         
+00222bec  bl       #0x88bb4                       lv_disp_get_default@plt
+00222bf0  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222bf4  mov      r6, r0                         
+00222bf8  bl       #0x88bb4                       lv_disp_get_default@plt
+00222bfc  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222c00  mov      r2, r0                         
+00222c04  mov      r1, r6                         
+00222c08  mov      r0, r7                         
+00222c0c  bl       #0x884a0                       lv_obj_set_size@plt
+00222c10  mov      r0, r7                         
+00222c14  bl       #0x87f54                       lv_label_create@plt
+00222c18  ldrsh    r2, [r5, #4]                   
+00222c1c  mov      r6, r0                         
+00222c20  ldrsh    r1, [r5]                       
+00222c24  bl       #0x884a0                       lv_obj_set_size@plt
+00222c28  mov      r2, #0                         
+00222c2c  mov      r1, #2                         
+00222c30  mov      r0, r6                         
+00222c34  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00222c38  mov      r3, #0                         
+00222c3c  mov      r1, #6                         
+00222c40  mov      r2, r3                         
+00222c44  mov      r0, r6                         
+00222c48  bl       #0x872c4                       lv_obj_align@plt
+00222c4c  ldr      r1, [pc, #0x584]               0x296d28 lv_font_montserrat_34
+00222c50  mov      r2, #0                         
+00222c54  mov      r0, r6                         
+00222c58  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00222c5c  mov      r1, #1                         
+00222c60  mov      r0, r6                         
+00222c64  bl       #0x8859c                       lv_label_set_recolor@plt
+00222c68  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00222c6c  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+00222c70  cmp      r0, #0                         
+00222c74  bne      #0x222dac                      
+00222c78  ldr      r1, [pc, #0x55c]               0x26c1b8 
+00222c7c  mov      r0, r6                         
+00222c80  bl       #0x87a14                       lv_label_set_text@plt
+00222c84  mov      r0, r7                         
+00222c88  bl       #0x87f54                       lv_label_create@plt
+00222c8c  ldrsh    r2, [r5, #4]                   
+00222c90  mov      r7, r0                         
+00222c94  ldrsh    r1, [r5]                       
+00222c98  bl       #0x884a0                       lv_obj_set_size@plt
+00222c9c  mov      r3, #0                         
+00222ca0  mov      r1, #4                         
+00222ca4  mov      r2, r3                         
+00222ca8  mov      r0, r7                         
+00222cac  bl       #0x872c4                       lv_obj_align@plt
+00222cb0  mov      r2, #0                         
+00222cb4  mov      r1, #2                         
+00222cb8  mov      r0, r7                         
+00222cbc  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00222cc0  ldr      r1, [pc, #0x510]               0x296d28 lv_font_montserrat_34
+00222cc4  mov      r2, #0                         
+00222cc8  mov      r0, r7                         
+00222ccc  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00222cd0  mov      r1, #1                         
+00222cd4  mov      r0, r7                         
+00222cd8  bl       #0x8859c                       lv_label_set_recolor@plt
+00222cdc  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00222ce0  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+00222ce4  cmp      r0, #0                         
+00222ce8  bne      #0x222dbc                      
+00222cec  ldr      r1, [pc, #0x4ec]               0x26c1d1 
+00222cf0  mov      r0, r7                         
+00222cf4  bl       #0x87a14                       lv_label_set_text@plt
+00222cf8  bl       #0x88bb4                       lv_disp_get_default@plt
+00222cfc  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222d00  cmp      r0, #0x640                     
+00222d04  beq      #0x222dcc                      
+00222d08  bl       #0x88bb4                       lv_disp_get_default@plt
+00222d0c  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222d10  cmp      r0, #0x500                     
+00222d14  bne      #0x22309c                      
+00222d18  bl       #0x88bb4                       lv_disp_get_default@plt
+00222d1c  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222d20  cmp      r0, #0x1e0                     
+00222d24  bne      #0x22309c                      
+00222d28  mov      r3, #0x14                      
+00222d2c  mov      r2, #0                         
+00222d30  mov      r1, #6                         
+00222d34  mov      r0, r7                         
+00222d38  bl       #0x872c4                       lv_obj_align@plt
+00222d3c  mov      r3, #0x14                      
+00222d40  b        #0x2230b4                      
+00222d44  bl       #0x88bb4                       lv_disp_get_default@plt
+00222d48  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00222d4c  mov      r6, r0                         
+00222d50  bl       #0x88bb4                       lv_disp_get_default@plt
+00222d54  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222d58  mov      r2, r0                         
+00222d5c  mov      r1, r6                         
+00222d60  mov      r0, r5                         
+00222d64  bl       #0x884a0                       lv_obj_set_size@plt
+00222d68  mov      r2, #0                         
+00222d6c  mov      r1, r2                         
+00222d70  b        #0x222ad0                      
+00222d74  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00222d78  bl       #0x992c0                       _ZN12SystemConfig19GetScreenResolutionEv
+00222d7c  cmp      r0, #0xc                       
+00222d80  bne      #0x222d98                      
+00222d84  ldr      r0, [pc, #0x558]               0x2a916c 
+00222d88  mov      r1, #0xc8                      
+00222d8c  bl       #0x888d8                       lv_style_set_width@plt
+00222d90  mov      r1, #0x50                      
+00222d94  b        #0x222bc0                      
+00222d98  ldrsh    r1, [r5]                       
+00222d9c  ldr      r0, [pc, #0x540]               0x2a916c 
+00222da0  bl       #0x888d8                       lv_style_set_width@plt
+00222da4  ldrsh    r1, [r5, #4]                   
+00222da8  b        #0x222bc0                      
+00222dac  mov      r1, #1                         
+00222db0  mov      r0, r6                         
+00222db4  bl       #0x88c08                       lv_obj_add_flag@plt
+00222db8  b        #0x222c84                      
+00222dbc  mov      r1, #1                         
+00222dc0  mov      r0, r7                         
+00222dc4  bl       #0x88c08                       lv_obj_add_flag@plt
+00222dc8  b        #0x222cf8                      
+00222dcc  bl       #0x88bb4                       lv_disp_get_default@plt
+00222dd0  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00222dd4  cmp      r0, #0x260                     
+00222dd8  bne      #0x222d08                      
+00222ddc  mov      r3, #0                         
+00222de0  mov      r1, #6                         
+00222de4  mov      r2, r3                         
+00222de8  mov      r0, r6                         
+00222dec  bl       #0x872c4                       lv_obj_align@plt
+00222df0  mov      r3, #0                         
+00222df4  mov      r1, #4                         
+00222df8  mov      r2, r3                         
+00222dfc  mov      r0, r7                         
+00222e00  bl       #0x872c4                       lv_obj_align@plt
+00222e04  ldr      r0, [pc, #0x3d8]               0x26c1ea '/mnt/sdcard/rk_pcba_test_res/pcba_ddr_special_flag_file'
+00222e08  mov      r1, #0                         
+00222e0c  bl       #0x87ce4                       access@plt
+00222e10  subs     r6, r0, #0                     
+00222e14  bne      #0x223328                      
+00222e18  ldr      r0, [pc, #0x4d8]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00222e1c  bl       #0x88d10                       __xpg_basename@plt
+00222e20  ldr      r3, [pc, #0x3c0]               0x26c222 ' /*ddr_test*/ '
+00222e24  movw     r1, #0x913                     
+00222e28  ldr      r2, [pc, #0x4d0]               0x26b131 'CreateBigWindow'
+00222e2c  bl       #0xb3968                       C_LJQ_LOG2
+00222e30  ldr      r0, [r4, #0xf4]                
+00222e34  bl       #0x890e8                       lv_imgbtn_create@plt
+00222e38  ldr      r1, [pc, #0x4a4]               0x2a916c 
+00222e3c  mov      r2, r6                         
+00222e40  str      r0, [r4, #0x50]                
+00222e44  bl       #0x880e0                       lv_obj_add_style@plt
+00222e48  ldr      r0, [r4, #0x50]                
+00222e4c  bl       #0x87f54                       lv_label_create@plt
+00222e50  str      r0, [r4, #0x54]                
+00222e54  mov      r3, r6                         
+00222e58  mov      r2, r6                         
+00222e5c  mov      r1, #9                         
+00222e60  bl       #0x872c4                       lv_obj_align@plt
+00222e64  ldr      r0, [r4, #0x54]                
+00222e68  mov      r2, r6                         
+00222e6c  mov      r1, #2                         
+00222e70  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00222e74  ldr      r1, [pc, #0x46c]               0x296ce0 my_font_for_pcba_28
+00222e78  mov      r2, r6                         
+00222e7c  ldr      r0, [r4, #0x54]                
+00222e80  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00222e84  bl       #0x21d3f8                      _Z13pcba_ddr_testv
+00222e88  mov      r7, r0                         
+00222e8c  mov      r1, r6                         
+00222e90  ldr      r0, [pc, #0x374]               0x26b6fd '/mnt/sdcard/rk_pcba_test_res/memtester_smd'
+00222e94  sub      r8, r7, #0x1c0                 
+00222e98  sub      r8, r8, #3                     
+00222e9c  bl       #0x87ce4                       access@plt
+00222ea0  subs     r3, r0, #0                     
+00222ea4  bne      #0x2230fc                      
+00222ea8  ldr      r2, [pc, #0x360]               0x220448 _Z10ddr_ThreadPv
+00222eac  mov      r1, r3                         
+00222eb0  ldr      r0, [pc, #0x35c]               0x2a9174 ddr_test_id
+00222eb4  bl       #0x88b60                       pthread_create@plt
+00222eb8  cmp      r0, #0                         
+00222ebc  bge      #0x222ed8                      
+00222ec0  ldr      r0, [pc, #0x430]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00222ec4  bl       #0x88d10                       __xpg_basename@plt
+00222ec8  ldr      r3, [pc, #0x348]               0x26c231 'pthread_create for ddr_test_id failed'
+00222ecc  movw     r1, #0x91e                     
+00222ed0  ldr      r2, [pc, #0x428]               0x26b131 'CreateBigWindow'
+00222ed4  bl       #0xb3968                       C_LJQ_LOG2
+00222ed8  cmp      r8, #0x3d                      
+00222edc  bhi      #0x2230c4                      
+00222ee0  ldr      r6, [r4, #0x50]                
+00222ee4  mov      r0, #9                         
+00222ee8  bl       #0x88794                       lv_palette_main@plt
+00222eec  mov      r1, r0                         
+00222ef0  mov      r2, #0                         
+00222ef4  mov      r0, r6                         
+00222ef8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00222efc  ldr      r3, [pc, #0x400]               0x26c4c4 
+00222f00  mov      r2, #0x200                     
+00222f04  ldr      r1, [pc, #0x310]               0x26b777 'DDR:\n%dMB/%s'
+00222f08  ldr      r0, [r4, #0x54]                
+00222f0c  bl       #0x87534                       lv_label_set_text_fmt@plt
+00222f10  ldr      r0, [r4, #0xf4]                
+00222f14  bl       #0x890e8                       lv_imgbtn_create@plt
+00222f18  ldr      r1, [pc, #0x3c4]               0x2a916c 
+00222f1c  mov      r2, #0                         
+00222f20  str      r0, [r4, #0x104]               
+00222f24  bl       #0x880e0                       lv_obj_add_style@plt
+00222f28  ldr      r0, [r4, #0x104]               
+00222f2c  bl       #0x87f54                       lv_label_create@plt
+00222f30  ldrsh    r2, [r5, #4]                   
+00222f34  ldrsh    r1, [r5]                       
+00222f38  str      r0, [r4, #0x108]               
+00222f3c  bl       #0x884a0                       lv_obj_set_size@plt
+00222f40  ldr      r0, [r4, #0x108]               
+00222f44  mov      r3, #0                         
+00222f48  mov      r2, r3                         
+00222f4c  mov      r1, #9                         
+00222f50  bl       #0x872c4                       lv_obj_align@plt
+00222f54  ldr      r0, [r4, #0x108]               
+00222f58  mov      r2, #0                         
+00222f5c  mov      r1, #2                         
+00222f60  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00222f64  ldr      r1, [pc, #0x37c]               0x296ce0 my_font_for_pcba_28
+00222f68  mov      r2, #0                         
+00222f6c  ldr      r0, [r4, #0x108]               
+00222f70  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00222f74  ldr      r0, [r4, #0x108]               
+00222f78  mov      r1, #0                         
+00222f7c  bl       #0x881a0                       lv_label_set_long_mode@plt
+00222f80  bl       #0x21fbc8                      _Z18pcba_norflash_testv
+00222f84  cmn      r0, #0x6f                      
+00222f88  mov      r6, r0                         
+00222f8c  beq      #0x223188                      
+00222f90  ldr      r7, [r4, #0x104]               
+00222f94  mov      r0, #9                         
+00222f98  bl       #0x88794                       lv_palette_main@plt
+00222f9c  mov      r1, r0                         
+00222fa0  mov      r2, #0                         
+00222fa4  mov      r0, r7                         
+00222fa8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00222fac  ldr      r0, [pc, #0x364]               0x269bdd '/dev/mmcblk0'
+00222fb0  mov      r1, #0                         
+00222fb4  bl       #0x87ce4                       access@plt
+00222fb8  cmp      r0, #0                         
+00222fbc  mov      r2, r6                         
+00222fc0  ldr      r0, [r4, #0x108]               
+00222fc4  ldreq    r1, [pc, #0x25c]               0x26c270 'emmc:\n%dMB'
+00222fc8  ldrne    r1, [pc, #0x25c]               0x26c27b 'norflash:\n%dMB'
+00222fcc  bl       #0x87534                       lv_label_set_text_fmt@plt
+00222fd0  ldr      r0, [r4, #0xf4]                
+00222fd4  bl       #0x890e8                       lv_imgbtn_create@plt
+00222fd8  ldr      r1, [pc, #0x280]               0x220af4 
+00222fdc  mov      r3, #0                         
+00222fe0  str      r0, [r4, #0x28]                
+00222fe4  mov      r2, #7                         
+00222fe8  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00222fec  ldr      r1, [pc, #0x2f0]               0x2a916c 
+00222ff0  mov      r2, #0                         
+00222ff4  ldr      r0, [r4, #0x28]                
+00222ff8  bl       #0x880e0                       lv_obj_add_style@plt
+00222ffc  ldr      r0, [r4, #0x28]                
+00223000  bl       #0x87f54                       lv_label_create@plt
+00223004  str      r0, [r4, #0x2c]                
+00223008  mov      r3, #0                         
+0022300c  mov      r2, r3                         
+00223010  mov      r1, #9                         
+00223014  bl       #0x872c4                       lv_obj_align@plt
+00223018  ldr      r0, [r4, #0x2c]                
+0022301c  mov      r2, #0                         
+00223020  mov      r1, #2                         
+00223024  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223028  ldr      r1, [pc, #0x2b8]               0x296ce0 my_font_for_pcba_28
+0022302c  mov      r2, #0                         
+00223030  ldr      r0, [r4, #0x2c]                
+00223034  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223038  ldrsh    r2, [r5, #4]                   
+0022303c  ldrsh    r1, [r5]                       
+00223040  ldr      r0, [r4, #0x2c]                
+00223044  bl       #0x884a0                       lv_obj_set_size@plt
+00223048  ldr      r0, [r4, #0x2c]                
+0022304c  mov      r1, #0                         
+00223050  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223054  ldr      r1, [pc, #0x208]               0x26c2a4 
+00223058  ldr      r0, [r4, #0x2c]                
+0022305c  bl       #0x87a14                       lv_label_set_text@plt
+00223060  ldr      r2, [pc, #0x200]               0x21ffec _Z9tp_ThreadPv
+00223064  mov      r3, #0                         
+00223068  ldr      r0, [pc, #0x1fc]               0x2a9180 tp_id
+0022306c  mov      r1, r3                         
+00223070  bl       #0x88b60                       pthread_create@plt
+00223074  cmp      r0, #0                         
+00223078  bge      #0x224348                      
+0022307c  ldr      r0, [pc, #0x274]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223080  bl       #0x88d10                       __xpg_basename@plt
+00223084  ldr      r3, [pc, #0x1e4]               0x26c2bb 'pthread_create for key_Thread failed'
+00223088  movw     r1, #0x959                     
+0022308c  ldr      r2, [pc, #0x26c]               0x26b131 'CreateBigWindow'
+00223090  add      sp, sp, #0xc                   
+00223094  pop      {r4, r5, r6, r7, r8, sb, lr}   
+00223098  b        #0xb3968                       C_LJQ_LOG2
+0022309c  mov      r3, #0                         
+002230a0  mov      r1, #6                         
+002230a4  mov      r2, r3                         
+002230a8  mov      r0, r7                         
+002230ac  bl       #0x872c4                       lv_obj_align@plt
+002230b0  mov      r3, #0                         
+002230b4  mov      r2, #0                         
+002230b8  mov      r1, #4                         
+002230bc  mov      r0, r6                         
+002230c0  b        #0x222e00                      
+002230c4  sub      r7, r7, #0x320                 
+002230c8  sub      r7, r7, #1                     
+002230cc  cmp      r7, #0xdf                      
+002230d0  bhi      #0x222f10                      
+002230d4  ldr      r6, [r4, #0x50]                
+002230d8  mov      r0, #9                         
+002230dc  bl       #0x88794                       lv_palette_main@plt
+002230e0  mov      r1, r0                         
+002230e4  mov      r2, #0                         
+002230e8  mov      r0, r6                         
+002230ec  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002230f0  ldr      r3, [pc, #0x20c]               0x26c4c4 
+002230f4  mov      r2, #0x400                     
+002230f8  b        #0x222f04                      
+002230fc  ldr      sb, [r4, #0x50]                
+00223100  cmp      r8, #0x3d                      
+00223104  bhi      #0x223134                      
+00223108  mov      r0, #9                         
+0022310c  bl       #0x88794                       lv_palette_main@plt
+00223110  mov      r1, r0                         
+00223114  mov      r2, r6                         
+00223118  mov      r0, sb                         
+0022311c  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00223120  mov      r2, #0x200                     
+00223124  ldr      r1, [pc, #0x1dc]               0x26c257 'DDR:\n%dMB'
+00223128  ldr      r0, [r4, #0x54]                
+0022312c  bl       #0x87534                       lv_label_set_text_fmt@plt
+00223130  b        #0x222f10                      
+00223134  sub      r3, r7, #0x320                 
+00223138  sub      r3, r3, #1                     
+0022313c  cmp      r3, #0xdf                      
+00223140  bhi      #0x223164                      
+00223144  mov      r0, #9                         
+00223148  bl       #0x88794                       lv_palette_main@plt
+0022314c  mov      r1, r0                         
+00223150  mov      r2, r6                         
+00223154  mov      r0, sb                         
+00223158  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022315c  mov      r2, #0x400                     
+00223160  b        #0x223124                      
+00223164  mov      r0, r6                         
+00223168  bl       #0x88794                       lv_palette_main@plt
+0022316c  mov      r1, r0                         
+00223170  mov      r2, r6                         
+00223174  mov      r0, sb                         
+00223178  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022317c  ldr      r1, [pc, #0x188]               0x26c261 'DDR:\nfail:%dMB'
+00223180  mov      r2, r7                         
+00223184  b        #0x223128                      
+00223188  ldr      r6, [r4, #0x104]               
+0022318c  mov      r0, #0                         
+00223190  bl       #0x88794                       lv_palette_main@plt
+00223194  mov      r1, r0                         
+00223198  mov      r2, #0                         
+0022319c  mov      r0, r6                         
+002231a0  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002231a4  ldr      r0, [pc, #0x16c]               0x269bdd '/dev/mmcblk0'
+002231a8  mov      r1, #0                         
+002231ac  bl       #0x87ce4                       access@plt
+002231b0  cmp      r0, #0                         
+002231b4  ldr      r0, [r4, #0x108]               
+002231b8  ldreq    r1, [pc, #0x15c]               0x26c28a 'emmc:\nfail'
+002231bc  ldrne    r1, [pc, #0x15c]               0x26c295 'norflash:\nfail'
+002231c0  bl       #0x87a14                       lv_label_set_text@plt
+002231c4  b        #0x222fd0                      
+002231c8  eoreq    sb, sl, r4, ror r0             
+002231cc  mlaeq    r6, r2, r1, ip                 
+002231d0  [undecodable bytes] f8952900
+002231d4  [undecodable bytes] b45f2600
+002231d8  eoreq    r6, sb, r8, lsr #26            
+002231dc  [undecodable bytes] b8c12600
+002231e0  [undecodable bytes] d1c12600
+002231e4  eoreq    ip, r6, sl, ror #3             
+002231e8  eoreq    ip, r6, r2, lsr #4             
+002231ec  eoreq    ip, r6, r0, ror #5             
+002231f0  eoreq    r0, r2, r4, lsl r1             
+002231f4  eoreq    sb, sl, r4, lsl #3             
+002231f8  [undecodable bytes] f8c22600
+002231fc  eoreq    ip, r6, r8, lsr #6             
+00223200  eoreq    r0, r2, r0, lsl #1             
+00223204  eoreq    sb, sl, r8, lsl #3             
+00223208  eoreq    ip, r6, r8, lsr r3             
+0022320c  [undecodable bytes] fdb62600
+00223210  eoreq    r0, r2, r8, asr #8             
+00223214  eoreq    sb, sl, r4, ror r1             
+00223218  eoreq    ip, r6, r1, lsr r2             
+0022321c  eoreq    fp, r6, r7, ror r7             
+00223220  eoreq    ip, r6, ip, asr r3             
+00223224  eoreq    ip, r6, r6, ror r3             
+00223228  eoreq    ip, r6, r0, ror r2             
+0022322c  eoreq    ip, r6, fp, ror r2             
+00223230  eoreq    ip, r6, lr, lsl #7             
+00223234  [undecodable bytes] b4c32600
+00223238  eoreq    pc, r1, r0, lsr lr             
+0022323c  eoreq    sb, sl, ip, lsl #3             
+00223240  eoreq    ip, r6, r1, asr #7             
+00223244  [undecodable bytes] dfc32600
+00223248  eoreq    pc, r1, r4, asr #29            
+0022324c  mlaeq    sl, r0, r1, sb                 
+00223250  [undecodable bytes] f5c32600
+00223254  eoreq    ip, r6, sp, lsl r4             
+00223258  eoreq    pc, r1, r8, asr pc             
+0022325c  mlaeq    sl, r4, r1, sb                 
+00223260  [undecodable bytes] f40a2200
+00223264  eoreq    ip, r6, r4, lsr #5             
+00223268  eoreq    pc, r1, ip, ror #31            
+0022326c  eoreq    sb, sl, r0, lsl #3             
+00223270  [undecodable bytes] bbc22600
+00223274  eoreq    ip, r6, r8, lsr r4             
+00223278  [undecodable bytes] b8122200
+0022327c  eoreq    ip, r6, r6, asr r4             
+00223280  eoreq    r2, r2, ip, asr r2             
+00223284  smlalseq lr, pc, sb, r5                 
+00223288  [undecodable bytes] ddb92600
+0022328c  eoreq    r0, r2, ip, lsl #21            
+00223290  eoreq    fp, r6, r0, ror #19            
+00223294  eoreq    r0, r2, r0, lsl #20            
+00223298  eoreq    fp, r6, r3, ror #19            
+0022329c  eoreq    r0, r2, r4, ror sb             
+002232a0  mlaeq    sl, r8, r1, sb                 
+002232a4  eoreq    fp, r6, fp, lsr #20            
+002232a8  eoreq    r0, r2, r8, ror #17            
+002232ac  [undecodable bytes] b6c42600
+002232b0  eoreq    r0, r2, r8, ror #28            
+002232b4  [undecodable bytes] bec42600
+002232b8  eoreq    pc, r1, r8, lsl #25            
+002232bc  eoreq    sb, sl, r0, lsr #3             
+002232c0  eoreq    ip, r6, lr, asr #9             
+002232c4  [undecodable bytes] f3c42600
+002232c8  eoreq    pc, r1, r4, asr #26            
+002232cc  eoreq    sb, sl, r4, lsr #3             
+002232d0  eoreq    ip, r6, r2, lsl #10            
+002232d4  eoreq    ip, r6, r8, lsr #10            
+002232d8  eoreq    r0, r2, ip, lsr r2             
+002232dc  eoreq    sb, sl, r8, lsr #3             
+002232e0  eoreq    ip, r6, pc, lsr r5             
+002232e4  eoreq    sb, sl, ip, ror #2             
+002232e8  eoreq    r6, sb, r0, ror #25            
+002232ec  eoreq    ip, r6, ip, ror #10            
+002232f0  [undecodable bytes] d0022200
+002232f4  eoreq    sb, sl, ip, lsr #3             
+002232f8  [undecodable bytes] d7b12600
+002232fc  eoreq    ip, r6, ip, ror r5             
+00223300  eoreq    fp, r6, r1, lsr r1             
+00223304  eoreq    ip, r6, r4, asr #9             
+00223308  eoreq    ip, r6, r7, asr r2             
+0022330c  eoreq    ip, r6, r1, ror #4             
+00223310  eoreq    ip, r6, sb, ror #6             
+00223314  eoreq    ip, r6, r2, lsl #7             
+00223318  [undecodable bytes] dd9b2600
+0022331c  eoreq    ip, r6, sl, lsl #5             
+00223320  mlaeq    r6, r5, r2, ip                 
+00223324  eoreq    ip, r6, r1, lsr #7             
+00223328  ldr      r0, [r4, #0xf4]                
+0022332c  bl       #0x890e8                       lv_imgbtn_create@plt
+00223330  ldr      r1, [pc, #-0x54]               0x2a916c 
+00223334  mov      r2, #0                         
+00223338  str      r0, [r4, #0x38]                
+0022333c  bl       #0x880e0                       lv_obj_add_style@plt
+00223340  ldr      r0, [r4, #0x38]                
+00223344  bl       #0x87f54                       lv_label_create@plt
+00223348  str      r0, [r4, #0x3c]                
+0022334c  mov      r3, #0                         
+00223350  mov      r2, r3                         
+00223354  mov      r1, #9                         
+00223358  bl       #0x872c4                       lv_obj_align@plt
+0022335c  ldr      r0, [r4, #0x3c]                
+00223360  mov      r2, #0                         
+00223364  mov      r1, #2                         
+00223368  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+0022336c  ldr      r1, [pc, #-0x8c]               0x296ce0 my_font_for_pcba_28
+00223370  mov      r2, #0                         
+00223374  ldr      r0, [r4, #0x3c]                
+00223378  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+0022337c  ldr      r1, [pc, #-0x198]              0x26c2e0 
+00223380  ldr      r0, [r4, #0x3c]                
+00223384  bl       #0x87a14                       lv_label_set_text@plt
+00223388  ldr      r2, [pc, #-0x1a0]              0x220114 _Z21encryption_i2c_ThreadPv
+0022338c  mov      r3, #0                         
+00223390  ldr      r0, [pc, #-0x1a4]              0x2a9184 encryption_i2c_id
+00223394  mov      r1, r3                         
+00223398  bl       #0x88b60                       pthread_create@plt
+0022339c  cmp      r0, #0                         
+002233a0  bge      #0x2233bc                      
+002233a4  ldr      r0, [pc, #-0xb4]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+002233a8  bl       #0x88d10                       __xpg_basename@plt
+002233ac  ldr      r3, [pc, #-0x1bc]              0x26c2f8 'pthread_create for encryption_i2c_Thread failed'
+002233b0  movw     r1, #0x968                     
+002233b4  ldr      r2, [pc, #-0xbc]               0x26b131 'CreateBigWindow'
+002233b8  bl       #0xb3968                       C_LJQ_LOG2
+002233bc  ldr      r0, [r4, #0x110]               
+002233c0  mov      r1, #0                         
+002233c4  bl       #0x88098                       pthread_join@plt
+002233c8  ldr      r0, [r4, #0xf4]                
+002233cc  bl       #0x890e8                       lv_imgbtn_create@plt
+002233d0  ldr      r1, [pc, #-0xf4]               0x2a916c 
+002233d4  mov      r2, #0                         
+002233d8  str      r0, [r4, #0x30]                
+002233dc  bl       #0x880e0                       lv_obj_add_style@plt
+002233e0  ldr      r0, [r4, #0x30]                
+002233e4  bl       #0x87f54                       lv_label_create@plt
+002233e8  str      r0, [r4, #0x34]                
+002233ec  mov      r3, #0                         
+002233f0  mov      r2, r3                         
+002233f4  mov      r1, #9                         
+002233f8  bl       #0x872c4                       lv_obj_align@plt
+002233fc  ldr      r0, [r4, #0x34]                
+00223400  mov      r2, #0                         
+00223404  mov      r1, #2                         
+00223408  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+0022340c  ldr      r1, [pc, #-0x12c]              0x296ce0 my_font_for_pcba_28
+00223410  mov      r2, #0                         
+00223414  ldr      r0, [r4, #0x34]                
+00223418  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+0022341c  ldrsh    r2, [r5, #4]                   
+00223420  ldrsh    r1, [r5]                       
+00223424  ldr      r0, [r4, #0x34]                
+00223428  bl       #0x884a0                       lv_obj_set_size@plt
+0022342c  ldr      r0, [r4, #0x34]                
+00223430  mov      r1, #0                         
+00223434  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223438  ldr      r1, [pc, #-0x244]              0x26c328 
+0022343c  ldr      r0, [r4, #0x34]                
+00223440  bl       #0x87a14                       lv_label_set_text@plt
+00223444  ldr      r2, [pc, #-0x24c]              0x220080 _Z9bt_ThreadPv
+00223448  mov      r3, #0                         
+0022344c  ldr      r0, [pc, #-0x250]              0x2a9188 bt_id
+00223450  mov      r1, r3                         
+00223454  bl       #0x88b60                       pthread_create@plt
+00223458  cmp      r0, #0                         
+0022345c  bge      #0x223478                      
+00223460  ldr      r0, [pc, #-0x170]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223464  bl       #0x88d10                       __xpg_basename@plt
+00223468  ldr      r3, [pc, #-0x268]              0x26c338 'pthread_create for bt_Thread failed'
+0022346c  movw     r1, #0x978                     
+00223470  ldr      r2, [pc, #-0x178]              0x26b131 'CreateBigWindow'
+00223474  bl       #0xb3968                       C_LJQ_LOG2
+00223478  ldr      r0, [r4, #0xf4]                
+0022347c  bl       #0x890e8                       lv_imgbtn_create@plt
+00223480  ldr      r1, [pc, #-0x1a4]              0x2a916c 
+00223484  mov      r2, #0                         
+00223488  str      r0, [r4, #0x50]                
+0022348c  bl       #0x880e0                       lv_obj_add_style@plt
+00223490  ldr      r0, [r4, #0x50]                
+00223494  bl       #0x87f54                       lv_label_create@plt
+00223498  str      r0, [r4, #0x54]                
+0022349c  mov      r3, #0                         
+002234a0  mov      r2, r3                         
+002234a4  mov      r1, #9                         
+002234a8  bl       #0x872c4                       lv_obj_align@plt
+002234ac  ldr      r0, [r4, #0x54]                
+002234b0  mov      r2, #0                         
+002234b4  mov      r1, #2                         
+002234b8  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+002234bc  ldr      r1, [pc, #-0x1dc]              0x296ce0 my_font_for_pcba_28
+002234c0  mov      r2, #0                         
+002234c4  ldr      r0, [r4, #0x54]                
+002234c8  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+002234cc  bl       #0x21d3f8                      _Z13pcba_ddr_testv
+002234d0  mov      r6, r0                         
+002234d4  mov      r1, #0                         
+002234d8  ldr      r0, [pc, #-0x2d4]              0x26b6fd '/mnt/sdcard/rk_pcba_test_res/memtester_smd'
+002234dc  sub      r7, r6, #0x1c0                 
+002234e0  sub      r7, r7, #3                     
+002234e4  bl       #0x87ce4                       access@plt
+002234e8  subs     r3, r0, #0                     
+002234ec  bne      #0x2241e8                      
+002234f0  ldr      r2, [pc, #-0x2e8]              0x220448 _Z10ddr_ThreadPv
+002234f4  mov      r1, r3                         
+002234f8  ldr      r0, [pc, #-0x2ec]              0x2a9174 ddr_test_id
+002234fc  bl       #0x88b60                       pthread_create@plt
+00223500  cmp      r0, #0                         
+00223504  bge      #0x223520                      
+00223508  ldr      r0, [pc, #-0x218]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+0022350c  bl       #0x88d10                       __xpg_basename@plt
+00223510  ldr      r3, [pc, #-0x300]              0x26c231 'pthread_create for ddr_test_id failed'
+00223514  movw     r1, #0x988                     
+00223518  ldr      r2, [pc, #-0x220]              0x26b131 'CreateBigWindow'
+0022351c  bl       #0xb3968                       C_LJQ_LOG2
+00223520  cmp      r7, #0x3d                      
+00223524  bhi      #0x2241b0                      
+00223528  ldr      r6, [r4, #0x50]                
+0022352c  mov      r0, #9                         
+00223530  bl       #0x88794                       lv_palette_main@plt
+00223534  mov      r1, r0                         
+00223538  mov      r2, #0                         
+0022353c  mov      r0, r6                         
+00223540  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00223544  ldr      r3, [pc, #-0x248]              0x26c4c4 
+00223548  mov      r2, #0x200                     
+0022354c  ldr      r1, [pc, #-0x338]              0x26b777 'DDR:\n%dMB/%s'
+00223550  ldr      r0, [r4, #0x54]                
+00223554  bl       #0x87534                       lv_label_set_text_fmt@plt
+00223558  ldr      r0, [r4, #0xf4]                
+0022355c  bl       #0x890e8                       lv_imgbtn_create@plt
+00223560  ldr      r1, [pc, #-0x284]              0x2a916c 
+00223564  mov      r2, #0                         
+00223568  mov      r7, r0                         
+0022356c  bl       #0x880e0                       lv_obj_add_style@plt
+00223570  mov      r0, r7                         
+00223574  bl       #0x87f54                       lv_label_create@plt
+00223578  mov      r3, #0                         
+0022357c  mov      r6, r0                         
+00223580  mov      r2, r3                         
+00223584  mov      r1, #9                         
+00223588  bl       #0x872c4                       lv_obj_align@plt
+0022358c  mov      r2, #0                         
+00223590  mov      r1, #2                         
+00223594  mov      r0, r6                         
+00223598  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+0022359c  ldr      r1, [pc, #-0x2bc]              0x296ce0 my_font_for_pcba_28
+002235a0  mov      r2, #0                         
+002235a4  mov      r0, r6                         
+002235a8  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+002235ac  bl       #0x226840                      _Z13pcba_rtc_testv
+002235b0  subs     r8, r0, #0                     
+002235b4  bne      #0x224274                      
+002235b8  mov      r0, #9                         
+002235bc  bl       #0x88794                       lv_palette_main@plt
+002235c0  mov      r1, r0                         
+002235c4  mov      r2, r8                         
+002235c8  mov      r0, r7                         
+002235cc  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002235d0  ldr      r1, [pc, #-0x3b8]              0x26c35c 
+002235d4  mov      r0, r6                         
+002235d8  bl       #0x87a14                       lv_label_set_text@plt
+002235dc  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+002235e0  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+002235e4  subs     r6, r0, #0                     
+002235e8  bne      #0x223670                      
+002235ec  ldr      r0, [r4, #0xf4]                
+002235f0  bl       #0x890e8                       lv_imgbtn_create@plt
+002235f4  ldr      r1, [pc, #-0x318]              0x2a916c 
+002235f8  mov      r2, r6                         
+002235fc  mov      r8, r0                         
+00223600  bl       #0x880e0                       lv_obj_add_style@plt
+00223604  mov      r0, r8                         
+00223608  bl       #0x87f54                       lv_label_create@plt
+0022360c  mov      r7, r0                         
+00223610  mov      r3, r6                         
+00223614  mov      r2, r6                         
+00223618  mov      r1, #9                         
+0022361c  bl       #0x872c4                       lv_obj_align@plt
+00223620  mov      r2, r6                         
+00223624  mov      r1, #2                         
+00223628  mov      r0, r7                         
+0022362c  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223630  ldr      r1, [pc, #-0x350]              0x296ce0 my_font_for_pcba_28
+00223634  mov      r2, r6                         
+00223638  mov      r0, r7                         
+0022363c  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223640  bl       #0x226898                      _Z16pcba_sdcard_testv
+00223644  subs     sb, r0, #0                     
+00223648  bne      #0x224294                      
+0022364c  mov      r0, #9                         
+00223650  bl       #0x88794                       lv_palette_main@plt
+00223654  mov      r1, r0                         
+00223658  mov      r2, sb                         
+0022365c  mov      r0, r8                         
+00223660  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00223664  ldr      r1, [pc, #-0x448]              0x26c376 
+00223668  mov      r0, r7                         
+0022366c  bl       #0x87a14                       lv_label_set_text@plt
+00223670  ldr      r0, [r4, #0xf4]                
+00223674  bl       #0x890e8                       lv_imgbtn_create@plt
+00223678  ldr      r1, [pc, #-0x39c]              0x2a916c 
+0022367c  mov      r2, #0                         
+00223680  str      r0, [r4, #0x104]               
+00223684  bl       #0x880e0                       lv_obj_add_style@plt
+00223688  ldr      r0, [r4, #0x104]               
+0022368c  bl       #0x87f54                       lv_label_create@plt
+00223690  ldrsh    r2, [r5, #4]                   
+00223694  ldrsh    r1, [r5]                       
+00223698  str      r0, [r4, #0x108]               
+0022369c  bl       #0x884a0                       lv_obj_set_size@plt
+002236a0  ldr      r0, [r4, #0x108]               
+002236a4  mov      r3, #0                         
+002236a8  mov      r2, r3                         
+002236ac  mov      r1, #9                         
+002236b0  bl       #0x872c4                       lv_obj_align@plt
+002236b4  ldr      r0, [r4, #0x108]               
+002236b8  mov      r2, #0                         
+002236bc  mov      r1, #2                         
+002236c0  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+002236c4  ldr      r1, [pc, #-0x3e4]              0x296ce0 my_font_for_pcba_28
+002236c8  mov      r2, #0                         
+002236cc  ldr      r0, [r4, #0x108]               
+002236d0  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+002236d4  ldr      r0, [r4, #0x108]               
+002236d8  mov      r1, #0                         
+002236dc  bl       #0x881a0                       lv_label_set_long_mode@plt
+002236e0  bl       #0x21fbc8                      _Z18pcba_norflash_testv
+002236e4  cmn      r0, #0x6f                      
+002236e8  mov      r6, r0                         
+002236ec  beq      #0x2242b4                      
+002236f0  ldr      r7, [r4, #0x104]               
+002236f4  mov      r0, #9                         
+002236f8  bl       #0x88794                       lv_palette_main@plt
+002236fc  mov      r1, r0                         
+00223700  mov      r2, #0                         
+00223704  mov      r0, r7                         
+00223708  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022370c  ldr      r0, [pc, #-0x3fc]              0x269bdd '/dev/mmcblk0'
+00223710  mov      r1, #0                         
+00223714  bl       #0x87ce4                       access@plt
+00223718  cmp      r0, #0                         
+0022371c  mov      r2, r6                         
+00223720  ldr      r0, [r4, #0x108]               
+00223724  ldreq    r1, [pc, #-0x504]              0x26c270 'emmc:\n%dMB'
+00223728  ldrne    r1, [pc, #-0x504]              0x26c27b 'norflash:\n%dMB'
+0022372c  bl       #0x87534                       lv_label_set_text_fmt@plt
+00223730  ldr      r0, [r4, #0xf4]                
+00223734  bl       #0x890e8                       lv_imgbtn_create@plt
+00223738  ldr      r1, [pc, #-0x45c]              0x2a916c 
+0022373c  mov      r2, #0                         
+00223740  mov      r7, r0                         
+00223744  bl       #0x880e0                       lv_obj_add_style@plt
+00223748  mov      r0, r7                         
+0022374c  bl       #0x87f54                       lv_label_create@plt
+00223750  mov      r3, #0                         
+00223754  mov      r6, r0                         
+00223758  mov      r2, r3                         
+0022375c  mov      r1, #9                         
+00223760  bl       #0x872c4                       lv_obj_align@plt
+00223764  mov      r2, #0                         
+00223768  mov      r1, #2                         
+0022376c  mov      r0, r6                         
+00223770  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223774  ldr      r1, [pc, #-0x494]              0x296ce0 my_font_for_pcba_28
+00223778  mov      r2, #0                         
+0022377c  mov      r0, r6                         
+00223780  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223784  bl       #0x21f7a4                      _Z12mfi_i2c_testv
+00223788  subs     r8, r0, #0                     
+0022378c  bne      #0x2242f4                      
+00223790  mov      r0, #9                         
+00223794  bl       #0x88794                       lv_palette_main@plt
+00223798  mov      r1, r0                         
+0022379c  mov      r2, r8                         
+002237a0  mov      r0, r7                         
+002237a4  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002237a8  ldr      r1, [pc, #-0x580]              0x26c38e 
+002237ac  mov      r0, r6                         
+002237b0  bl       #0x87a14                       lv_label_set_text@plt
+002237b4  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+002237b8  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+002237bc  subs     r6, r0, #0                     
+002237c0  bne      #0x223924                      
+002237c4  ldr      r0, [r4, #0xf4]                
+002237c8  bl       #0x890e8                       lv_imgbtn_create@plt
+002237cc  ldr      r1, [pc, #-0x4f0]              0x2a916c 
+002237d0  mov      r2, r6                         
+002237d4  str      r0, [r4, #0x10]                
+002237d8  bl       #0x880e0                       lv_obj_add_style@plt
+002237dc  ldr      r0, [r4, #0x10]                
+002237e0  bl       #0x87f54                       lv_label_create@plt
+002237e4  str      r0, [r4, #0x14]                
+002237e8  mov      r3, r6                         
+002237ec  mov      r2, r6                         
+002237f0  mov      r1, #9                         
+002237f4  bl       #0x872c4                       lv_obj_align@plt
+002237f8  ldr      r0, [r4, #0x14]                
+002237fc  mov      r2, r6                         
+00223800  mov      r1, #2                         
+00223804  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223808  ldr      r1, [pc, #-0x528]              0x296ce0 my_font_for_pcba_28
+0022380c  mov      r2, r6                         
+00223810  ldr      r0, [r4, #0x14]                
+00223814  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223818  ldrsh    r2, [r5, #4]                   
+0022381c  ldrsh    r1, [r5]                       
+00223820  ldr      r0, [r4, #0x14]                
+00223824  bl       #0x884a0                       lv_obj_set_size@plt
+00223828  ldr      r0, [r4, #0x14]                
+0022382c  mov      r1, r6                         
+00223830  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223834  ldr      r1, [pc, #-0x608]              0x26c3b4 'gps:\ntesting'
+00223838  ldr      r0, [r4, #0x14]                
+0022383c  bl       #0x87a14                       lv_label_set_text@plt
+00223840  ldr      r2, [pc, #-0x610]              0x21fe30 _Z9gpsThreadPv
+00223844  mov      r3, r6                         
+00223848  ldr      r0, [pc, #-0x614]              0x2a918c gpsid
+0022384c  mov      r1, r6                         
+00223850  bl       #0x88b60                       pthread_create@plt
+00223854  cmp      r0, #0                         
+00223858  bge      #0x223874                      
+0022385c  ldr      r0, [pc, #-0x56c]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223860  bl       #0x88d10                       __xpg_basename@plt
+00223864  ldr      r3, [pc, #-0x62c]              0x26c3c1 'pthread_create for gps failed'
+00223868  movw     r1, #0x9fc                     
+0022386c  ldr      r2, [pc, #-0x574]              0x26b131 'CreateBigWindow'
+00223870  bl       #0xb3968                       C_LJQ_LOG2
+00223874  ldr      r0, [r4, #0xf4]                
+00223878  bl       #0x890e8                       lv_imgbtn_create@plt
+0022387c  ldr      r1, [pc, #-0x5a0]              0x2a916c 
+00223880  mov      r2, #0                         
+00223884  str      r0, [r4, #0x18]                
+00223888  bl       #0x880e0                       lv_obj_add_style@plt
+0022388c  ldr      r0, [r4, #0x18]                
+00223890  bl       #0x87f54                       lv_label_create@plt
+00223894  str      r0, [r4, #0x1c]                
+00223898  mov      r3, #0                         
+0022389c  mov      r2, r3                         
+002238a0  mov      r1, #9                         
+002238a4  bl       #0x872c4                       lv_obj_align@plt
+002238a8  ldr      r0, [r4, #0x1c]                
+002238ac  mov      r2, #0                         
+002238b0  mov      r1, #2                         
+002238b4  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+002238b8  ldr      r1, [pc, #-0x5d8]              0x296ce0 my_font_for_pcba_28
+002238bc  mov      r2, #0                         
+002238c0  ldr      r0, [r4, #0x1c]                
+002238c4  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+002238c8  ldrsh    r2, [r5, #4]                   
+002238cc  ldrsh    r1, [r5]                       
+002238d0  ldr      r0, [r4, #0x1c]                
+002238d4  bl       #0x884a0                       lv_obj_set_size@plt
+002238d8  ldr      r0, [r4, #0x1c]                
+002238dc  mov      r1, #0                         
+002238e0  bl       #0x881a0                       lv_label_set_long_mode@plt
+002238e4  ldr      r1, [pc, #-0x6a8]              0x26c3df 
+002238e8  ldr      r0, [r4, #0x1c]                
+002238ec  bl       #0x87a14                       lv_label_set_text@plt
+002238f0  ldr      r2, [pc, #-0x6b0]              0x21fec4 _Z13gsensorThreadPv
+002238f4  mov      r3, #0                         
+002238f8  ldr      r0, [pc, #-0x6b4]              0x2a9190 gsensorid
+002238fc  mov      r1, r3                         
+00223900  bl       #0x88b60                       pthread_create@plt
+00223904  cmp      r0, #0                         
+00223908  bge      #0x223924                      
+0022390c  ldr      r0, [pc, #-0x61c]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223910  bl       #0x88d10                       __xpg_basename@plt
+00223914  ldr      r3, [pc, #-0x6cc]              0x26c3f5 'pthread_create for gsensorThread failed'
+00223918  movw     r1, #0xa0a                     
+0022391c  ldr      r2, [pc, #-0x624]              0x26b131 'CreateBigWindow'
+00223920  bl       #0xb3968                       C_LJQ_LOG2
+00223924  ldr      r0, [r4, #0xf4]                
+00223928  bl       #0x890e8                       lv_imgbtn_create@plt
+0022392c  ldr      r1, [pc, #-0x650]              0x2a916c 
+00223930  mov      r2, #0                         
+00223934  str      r0, [r4, #0x20]                
+00223938  bl       #0x880e0                       lv_obj_add_style@plt
+0022393c  ldr      r0, [r4, #0x20]                
+00223940  bl       #0x87f54                       lv_label_create@plt
+00223944  str      r0, [r4, #0x24]                
+00223948  mov      r3, #0                         
+0022394c  mov      r2, r3                         
+00223950  mov      r1, #9                         
+00223954  bl       #0x872c4                       lv_obj_align@plt
+00223958  ldr      r0, [r4, #0x24]                
+0022395c  mov      r2, #0                         
+00223960  mov      r1, #2                         
+00223964  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223968  ldr      r1, [pc, #-0x688]              0x296ce0 my_font_for_pcba_28
+0022396c  mov      r2, #0                         
+00223970  ldr      r0, [r4, #0x24]                
+00223974  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223978  ldrsh    r2, [r5, #4]                   
+0022397c  ldrsh    r1, [r5]                       
+00223980  ldr      r0, [r4, #0x24]                
+00223984  bl       #0x884a0                       lv_obj_set_size@plt
+00223988  ldr      r0, [r4, #0x24]                
+0022398c  mov      r1, #0                         
+00223990  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223994  ldr      r1, [pc, #-0x748]              0x26c41d 
+00223998  ldr      r0, [r4, #0x24]                
+0022399c  bl       #0x87a14                       lv_label_set_text@plt
+002239a0  ldr      r2, [pc, #-0x750]              0x21ff58 _Z10key_ThreadPv
+002239a4  mov      r3, #0                         
+002239a8  ldr      r0, [pc, #-0x754]              0x2a9194 key_id
+002239ac  mov      r1, r3                         
+002239b0  bl       #0x88b60                       pthread_create@plt
+002239b4  cmp      r0, #0                         
+002239b8  bge      #0x2239d4                      
+002239bc  ldr      r0, [pc, #-0x6cc]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+002239c0  bl       #0x88d10                       __xpg_basename@plt
+002239c4  ldr      r3, [pc, #-0x75c]              0x26c2bb 'pthread_create for key_Thread failed'
+002239c8  movw     r1, #0xa19                     
+002239cc  ldr      r2, [pc, #-0x6d4]              0x26b131 'CreateBigWindow'
+002239d0  bl       #0xb3968                       C_LJQ_LOG2
+002239d4  ldr      r0, [r4, #0xf4]                
+002239d8  bl       #0x890e8                       lv_imgbtn_create@plt
+002239dc  ldr      r1, [pc, #-0x784]              0x220af4 
+002239e0  mov      r3, #0                         
+002239e4  str      r0, [r4, #0x28]                
+002239e8  mov      r2, #7                         
+002239ec  bl       #0x870c0                       lv_obj_add_event_cb@plt
+002239f0  ldr      r1, [pc, #-0x714]              0x2a916c 
+002239f4  mov      r2, #0                         
+002239f8  ldr      r0, [r4, #0x28]                
+002239fc  bl       #0x880e0                       lv_obj_add_style@plt
+00223a00  ldr      r0, [r4, #0x28]                
+00223a04  bl       #0x87f54                       lv_label_create@plt
+00223a08  str      r0, [r4, #0x2c]                
+00223a0c  mov      r3, #0                         
+00223a10  mov      r2, r3                         
+00223a14  mov      r1, #9                         
+00223a18  bl       #0x872c4                       lv_obj_align@plt
+00223a1c  ldr      r0, [r4, #0x2c]                
+00223a20  mov      r2, #0                         
+00223a24  mov      r1, #2                         
+00223a28  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223a2c  ldr      r1, [pc, #-0x74c]              0x296ce0 my_font_for_pcba_28
+00223a30  mov      r2, #0                         
+00223a34  ldr      r0, [r4, #0x2c]                
+00223a38  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223a3c  ldrsh    r2, [r5, #4]                   
+00223a40  ldrsh    r1, [r5]                       
+00223a44  ldr      r0, [r4, #0x2c]                
+00223a48  bl       #0x884a0                       lv_obj_set_size@plt
+00223a4c  ldr      r0, [r4, #0x2c]                
+00223a50  mov      r1, #0                         
+00223a54  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223a58  ldr      r1, [pc, #-0x7fc]              0x26c2a4 
+00223a5c  ldr      r0, [r4, #0x2c]                
+00223a60  bl       #0x87a14                       lv_label_set_text@plt
+00223a64  ldr      r2, [pc, #-0x804]              0x21ffec _Z9tp_ThreadPv
+00223a68  mov      r3, #0                         
+00223a6c  ldr      r0, [pc, #-0x808]              0x2a9180 tp_id
+00223a70  mov      r1, r3                         
+00223a74  bl       #0x88b60                       pthread_create@plt
+00223a78  cmp      r0, #0                         
+00223a7c  bge      #0x223a98                      
+00223a80  ldr      r0, [pc, #-0x790]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223a84  bl       #0x88d10                       __xpg_basename@plt
+00223a88  ldr      r3, [pc, #-0x820]              0x26c2bb 'pthread_create for key_Thread failed'
+00223a8c  movw     r1, #0xa29                     
+00223a90  ldr      r2, [pc, #-0x798]              0x26b131 'CreateBigWindow'
+00223a94  bl       #0xb3968                       C_LJQ_LOG2
+00223a98  ldr      r0, [r4, #0xf4]                
+00223a9c  bl       #0x890e8                       lv_imgbtn_create@plt
+00223aa0  ldr      r1, [pc, #-0x7c4]              0x2a916c 
+00223aa4  mov      r2, #0                         
+00223aa8  str      r0, [r4, #0xa0]                
+00223aac  bl       #0x880e0                       lv_obj_add_style@plt
+00223ab0  ldr      r0, [r4, #0xa0]                
+00223ab4  bl       #0x87f54                       lv_label_create@plt
+00223ab8  str      r0, [r4, #0xa4]                
+00223abc  mov      r3, #0                         
+00223ac0  mov      r2, r3                         
+00223ac4  mov      r1, #9                         
+00223ac8  bl       #0x872c4                       lv_obj_align@plt
+00223acc  ldr      r0, [r4, #0xa4]                
+00223ad0  mov      r2, #0                         
+00223ad4  mov      r1, #2                         
+00223ad8  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223adc  ldr      r1, [pc, #-0x7fc]              0x296ce0 my_font_for_pcba_28
+00223ae0  mov      r2, #0                         
+00223ae4  ldr      r0, [r4, #0xa4]                
+00223ae8  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223aec  ldrsh    r2, [r5, #4]                   
+00223af0  ldrsh    r1, [r5]                       
+00223af4  ldr      r0, [r4, #0xa4]                
+00223af8  bl       #0x884a0                       lv_obj_set_size@plt
+00223afc  ldr      r0, [r4, #0xa4]                
+00223b00  mov      r1, #0                         
+00223b04  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223b08  ldr      r1, [pc, #-0x89c]              0x26c438 
+00223b0c  ldr      r0, [r4, #0xa4]                
+00223b10  bl       #0x87a14                       lv_label_set_text@plt
+00223b14  ldr      r1, [pc, #-0x8a4]              0x2212b8 
+00223b18  mov      r3, #0                         
+00223b1c  ldr      r0, [r4, #0xa0]                
+00223b20  mov      r2, #7                         
+00223b24  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223b28  ldr      r0, [r4, #0xf4]                
+00223b2c  bl       #0x890e8                       lv_imgbtn_create@plt
+00223b30  ldr      r1, [pc, #-0x854]              0x2a916c 
+00223b34  mov      r2, #0                         
+00223b38  str      r0, [r4, #0x98]                
+00223b3c  bl       #0x880e0                       lv_obj_add_style@plt
+00223b40  ldr      r0, [r4, #0x98]                
+00223b44  bl       #0x87f54                       lv_label_create@plt
+00223b48  str      r0, [r4, #0x9c]                
+00223b4c  mov      r3, #0                         
+00223b50  mov      r2, r3                         
+00223b54  mov      r1, #9                         
+00223b58  bl       #0x872c4                       lv_obj_align@plt
+00223b5c  ldr      r0, [r4, #0x9c]                
+00223b60  mov      r2, #0                         
+00223b64  mov      r1, #2                         
+00223b68  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223b6c  bl       #0x88bb4                       lv_disp_get_default@plt
+00223b70  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00223b74  cmp      r0, #0x500                     
+00223b78  beq      #0x224314                      
+00223b7c  ldr      r1, [pc, #-0x89c]              0x296ce0 my_font_for_pcba_28
+00223b80  mov      r2, #0                         
+00223b84  ldr      r0, [r4, #0x9c]                
+00223b88  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223b8c  ldrsh    r2, [r5, #4]                   
+00223b90  ldrsh    r1, [r5]                       
+00223b94  ldr      r0, [r4, #0x9c]                
+00223b98  bl       #0x884a0                       lv_obj_set_size@plt
+00223b9c  ldr      r0, [r4, #0x9c]                
+00223ba0  mov      r1, #0                         
+00223ba4  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223ba8  bl       #0x88bb4                       lv_disp_get_default@plt
+00223bac  bl       #0x881dc                       lv_disp_get_hor_res@plt
+00223bb0  cmp      r0, #0x500                     
+00223bb4  beq      #0x224330                      
+00223bb8  ldr      r1, [pc, #-0x944]              0x26c456 
+00223bbc  ldr      r0, [r4, #0x9c]                
+00223bc0  bl       #0x87a14                       lv_label_set_text@plt
+00223bc4  ldr      r1, [pc, #-0x94c]              0x22225c 
+00223bc8  mov      r3, #0                         
+00223bcc  ldr      r0, [r4, #0x98]                
+00223bd0  mov      r2, #7                         
+00223bd4  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223bd8  ldr      r0, [pc, #-0x940]              0x2a9198 
+00223bdc  bl       #0x88428                       lv_style_init@plt
+00223be0  ldr      r0, [pc, #-0x948]              0x2a9198 
+00223be4  bl       #0x890c4                       lv_style_reset@plt
+00223be8  ldr      r0, [pc, #-0x950]              0x2a9198 
+00223bec  mov      r1, #0                         
+00223bf0  bl       #0x874a4                       lv_style_set_radius@plt
+00223bf4  ldr      r0, [pc, #-0x95c]              0x2a9198 
+00223bf8  mvn      r1, #0                         
+00223bfc  bl       #0x88ed8                       lv_style_set_border_color@plt
+00223c00  ldr      r0, [pc, #-0x968]              0x2a9198 
+00223c04  mov      r1, #1                         
+00223c08  bl       #0x88950                       lv_style_set_border_width@plt
+00223c0c  ldr      r0, [pc, #-0x974]              0x2a9198 
+00223c10  mov      r1, #0xf                       
+00223c14  bl       #0x88c38                       lv_style_set_border_side@plt
+00223c18  ldr      r1, [pc, #-0x99c]              0xffe599 
+00223c1c  ldr      r0, [pc, #-0x984]              0x2a9198 
+00223c20  bl       #0x88a10                       lv_style_set_bg_color@plt
+00223c24  ldr      r0, [pc, #-0x98c]              0x2a9198 
+00223c28  mov      r1, #0xcc                      
+00223c2c  bl       #0x86f28                       lv_style_set_img_opa@plt
+00223c30  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+00223c34  bl       #0x9a820                       _ZN12SystemConfig19PureCarplayMotoFlagEv
+00223c38  subs     r6, r0, #0                     
+00223c3c  bne      #0x223ee4                      
+00223c40  ldr      r0, [r4, #0xf4]                
+00223c44  mov      r8, #3                         
+00223c48  bl       #0x890e8                       lv_imgbtn_create@plt
+00223c4c  ldr      r1, [pc, #-0x970]              0x2a916c 
+00223c50  mov      r7, r0                         
+00223c54  mov      r2, r6                         
+00223c58  bl       #0x880e0                       lv_obj_add_style@plt
+00223c5c  mov      r0, r7                         
+00223c60  bl       #0x890e8                       lv_imgbtn_create@plt
+00223c64  ldr      r1, [r5]                       
+00223c68  mov      sb, r0                         
+00223c6c  ldr      r2, [r5, #4]                   
+00223c70  sdiv     r1, r1, r8                     
+00223c74  add      r2, r2, r2, lsr #31            
+00223c78  sxth     r1, r1                         
+00223c7c  sbfx     r2, r2, #1, #0x10              
+00223c80  bl       #0x884a0                       lv_obj_set_size@plt
+00223c84  mov      r3, r6                         
+00223c88  mov      r0, sb                         
+00223c8c  mov      r2, r6                         
+00223c90  mov      r1, #1                         
+00223c94  bl       #0x872c4                       lv_obj_align@plt
+00223c98  ldr      r1, [pc, #-0xa00]              0x2a9198 
+00223c9c  mov      r2, r6                         
+00223ca0  mov      r0, sb                         
+00223ca4  bl       #0x880e0                       lv_obj_add_style@plt
+00223ca8  mov      r0, sb                         
+00223cac  bl       #0x87f54                       lv_label_create@plt
+00223cb0  ldr      r1, [pc, #-0x9d0]              0x296ce0 my_font_for_pcba_28
+00223cb4  mov      r2, r6                         
+00223cb8  str      r0, [r4, #0x88]                
+00223cbc  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223cc0  ldr      r1, [pc, #-0xa40]              0x26b9dd 
+00223cc4  ldr      r0, [r4, #0x88]                
+00223cc8  bl       #0x87a14                       lv_label_set_text@plt
+00223ccc  ldr      r1, [pc, #-0xa48]              0x220a8c 
+00223cd0  mov      r3, r6                         
+00223cd4  mov      r2, #7                         
+00223cd8  mov      r0, sb                         
+00223cdc  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223ce0  mov      r0, r7                         
+00223ce4  bl       #0x890e8                       lv_imgbtn_create@plt
+00223ce8  ldr      r1, [r5]                       
+00223cec  mov      sb, r0                         
+00223cf0  ldr      r2, [r5, #4]                   
+00223cf4  sdiv     r1, r1, r8                     
+00223cf8  add      r2, r2, r2, lsr #31            
+00223cfc  sxth     r1, r1                         
+00223d00  sbfx     r2, r2, #1, #0x10              
+00223d04  bl       #0x884a0                       lv_obj_set_size@plt
+00223d08  mov      r3, r6                         
+00223d0c  mov      r0, sb                         
+00223d10  mov      r2, r6                         
+00223d14  mov      r1, r8                         
+00223d18  bl       #0x872c4                       lv_obj_align@plt
+00223d1c  ldr      r1, [pc, #-0xa84]              0x2a9198 
+00223d20  mov      r2, r6                         
+00223d24  mov      r0, sb                         
+00223d28  bl       #0x880e0                       lv_obj_add_style@plt
+00223d2c  mov      r0, sb                         
+00223d30  bl       #0x87f54                       lv_label_create@plt
+00223d34  ldr      r1, [pc, #-0xa54]              0x296ce0 my_font_for_pcba_28
+00223d38  mov      r2, r6                         
+00223d3c  str      r0, [r4, #0x8c]                
+00223d40  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223d44  ldr      r1, [pc, #-0xabc]              0x26b9e0 
+00223d48  ldr      r0, [r4, #0x8c]                
+00223d4c  bl       #0x87a14                       lv_label_set_text@plt
+00223d50  ldr      r1, [pc, #-0xac4]              0x220a00 
+00223d54  mov      r3, r6                         
+00223d58  mov      r2, #7                         
+00223d5c  mov      r0, sb                         
+00223d60  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223d64  mov      r0, r7                         
+00223d68  bl       #0x890e8                       lv_imgbtn_create@plt
+00223d6c  ldr      r1, [r5]                       
+00223d70  mov      sb, r0                         
+00223d74  ldr      r2, [r5, #4]                   
+00223d78  sdiv     r1, r1, r8                     
+00223d7c  add      r2, r2, r2, lsr #31            
+00223d80  sxth     r1, r1                         
+00223d84  sbfx     r2, r2, #1, #0x10              
+00223d88  bl       #0x884a0                       lv_obj_set_size@plt
+00223d8c  mov      r3, r6                         
+00223d90  mov      r0, sb                         
+00223d94  mov      r2, r6                         
+00223d98  mov      r1, #4                         
+00223d9c  bl       #0x872c4                       lv_obj_align@plt
+00223da0  ldr      r1, [pc, #-0xb08]              0x2a9198 
+00223da4  mov      r2, r6                         
+00223da8  mov      r0, sb                         
+00223dac  bl       #0x880e0                       lv_obj_add_style@plt
+00223db0  mov      r0, sb                         
+00223db4  bl       #0x87f54                       lv_label_create@plt
+00223db8  ldr      r1, [pc, #-0xad8]              0x296ce0 my_font_for_pcba_28
+00223dbc  mov      r2, r6                         
+00223dc0  str      r0, [r4, #0x90]                
+00223dc4  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223dc8  ldr      r1, [pc, #-0xb38]              0x26b9e3 
+00223dcc  ldr      r0, [r4, #0x90]                
+00223dd0  bl       #0x87a14                       lv_label_set_text@plt
+00223dd4  ldr      r1, [pc, #-0xb40]              0x220974 
+00223dd8  mov      r3, r6                         
+00223ddc  mov      r2, #7                         
+00223de0  mov      r0, sb                         
+00223de4  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223de8  mov      r0, r7                         
+00223dec  bl       #0x890e8                       lv_imgbtn_create@plt
+00223df0  ldr      r1, [r5]                       
+00223df4  mov      sb, r0                         
+00223df8  ldr      r2, [r5, #4]                   
+00223dfc  sdiv     r1, r1, r8                     
+00223e00  add      r2, r2, r2, lsr #31            
+00223e04  sxth     r1, r1                         
+00223e08  sbfx     r2, r2, #1, #0x10              
+00223e0c  bl       #0x884a0                       lv_obj_set_size@plt
+00223e10  mov      r3, r6                         
+00223e14  mov      r2, r6                         
+00223e18  mov      r1, #6                         
+00223e1c  mov      r0, sb                         
+00223e20  bl       #0x872c4                       lv_obj_align@plt
+00223e24  ldr      r1, [pc, #-0xb8c]              0x2a9198 
+00223e28  mov      r2, r6                         
+00223e2c  mov      r0, sb                         
+00223e30  bl       #0x880e0                       lv_obj_add_style@plt
+00223e34  mov      r0, sb                         
+00223e38  bl       #0x87f54                       lv_label_create@plt
+00223e3c  ldr      r1, [pc, #-0xb5c]              0x296ce0 my_font_for_pcba_28
+00223e40  mov      r2, r6                         
+00223e44  str      r0, [r4, #0x94]                
+00223e48  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223e4c  ldr      r1, [pc, #-0xbb0]              0x26ba2b '100'
+00223e50  ldr      r0, [r4, #0x94]                
+00223e54  bl       #0x87a14                       lv_label_set_text@plt
+00223e58  ldr      r1, [pc, #-0xbb8]              0x2208e8 
+00223e5c  mov      r3, r6                         
+00223e60  mov      r2, #7                         
+00223e64  mov      r0, sb                         
+00223e68  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223e6c  mov      r0, r7                         
+00223e70  bl       #0x87f54                       lv_label_create@plt
+00223e74  str      r0, [r4, #0xb8]                
+00223e78  mov      r3, r6                         
+00223e7c  mov      r2, r6                         
+00223e80  mov      r1, #9                         
+00223e84  bl       #0x872c4                       lv_obj_align@plt
+00223e88  ldr      r0, [r4, #0xb8]                
+00223e8c  mov      r2, r6                         
+00223e90  mov      r1, #2                         
+00223e94  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223e98  ldr      r1, [pc, #-0xbb8]              0x296ce0 my_font_for_pcba_28
+00223e9c  mov      r2, r6                         
+00223ea0  ldr      r0, [r4, #0xb8]                
+00223ea4  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223ea8  ldrsh    r2, [r5, #4]                   
+00223eac  ldrsh    r1, [r5]                       
+00223eb0  ldr      r0, [r4, #0xb8]                
+00223eb4  bl       #0x884a0                       lv_obj_set_size@plt
+00223eb8  ldr      r0, [r4, #0xb8]                
+00223ebc  mov      r1, r6                         
+00223ec0  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223ec4  ldr      r1, [pc, #-0xc20]              0x26c4b6 'fm:\noff'
+00223ec8  ldr      r0, [r4, #0xb8]                
+00223ecc  bl       #0x87a14                       lv_label_set_text@plt
+00223ed0  ldr      r1, [pc, #-0xc28]              0x220e68 
+00223ed4  mov      r3, r6                         
+00223ed8  mov      r2, #7                         
+00223edc  mov      r0, r7                         
+00223ee0  bl       #0x870c0                       lv_obj_add_event_cb@plt
+00223ee4  ldr      r0, [r4, #0xf4]                
+00223ee8  bl       #0x890e8                       lv_imgbtn_create@plt
+00223eec  ldr      r1, [pc, #-0xc10]              0x2a916c 
+00223ef0  mov      r2, #0                         
+00223ef4  str      r0, [r4]                       
+00223ef8  bl       #0x880e0                       lv_obj_add_style@plt
+00223efc  ldr      r0, [r4]                       
+00223f00  bl       #0x87f54                       lv_label_create@plt
+00223f04  str      r0, [r4, #4]                   
+00223f08  mov      r3, #0                         
+00223f0c  mov      r2, r3                         
+00223f10  mov      r1, #9                         
+00223f14  bl       #0x872c4                       lv_obj_align@plt
+00223f18  ldr      r0, [r4, #4]                   
+00223f1c  mov      r2, #0                         
+00223f20  mov      r1, #2                         
+00223f24  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223f28  ldr      r1, [pc, #-0xc48]              0x296ce0 my_font_for_pcba_28
+00223f2c  mov      r2, #0                         
+00223f30  ldr      r0, [r4, #4]                   
+00223f34  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223f38  ldrsh    r2, [r5, #4]                   
+00223f3c  ldrsh    r1, [r5]                       
+00223f40  ldr      r0, [r4, #4]                   
+00223f44  bl       #0x884a0                       lv_obj_set_size@plt
+00223f48  ldr      r0, [r4, #4]                   
+00223f4c  mov      r1, #0                         
+00223f50  bl       #0x881a0                       lv_label_set_long_mode@plt
+00223f54  ldr      r1, [pc, #-0xca8]              0x26c4be 
+00223f58  ldr      r0, [r4, #4]                   
+00223f5c  bl       #0x87a14                       lv_label_set_text@plt
+00223f60  ldr      r2, [pc, #-0xcb0]              0x21fc88 _Z10wlanThreadPv
+00223f64  mov      r3, #0                         
+00223f68  ldr      r0, [pc, #-0xcb4]              0x2a91a0 wlan_id
+00223f6c  mov      r1, r3                         
+00223f70  bl       #0x88b60                       pthread_create@plt
+00223f74  cmp      r0, #0                         
+00223f78  bge      #0x223f94                      
+00223f7c  ldr      r0, [pc, #-0xc8c]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00223f80  bl       #0x88d10                       __xpg_basename@plt
+00223f84  ldr      r3, [pc, #-0xccc]              0x26c4ce 'pthread_create for wlanThread failed'
+00223f88  movw     r1, #0xa94                     
+00223f8c  ldr      r2, [pc, #-0xc94]              0x26b131 'CreateBigWindow'
+00223f90  bl       #0xb3968                       C_LJQ_LOG2
+00223f94  ldr      r0, [r4, #0xf4]                
+00223f98  bl       #0x890e8                       lv_imgbtn_create@plt
+00223f9c  ldr      r1, [pc, #-0xcc0]              0x2a916c 
+00223fa0  mov      r2, #0                         
+00223fa4  str      r0, [r4, #8]                   
+00223fa8  bl       #0x880e0                       lv_obj_add_style@plt
+00223fac  ldr      r0, [r4, #8]                   
+00223fb0  bl       #0x87f54                       lv_label_create@plt
+00223fb4  str      r0, [r4, #0xc]                 
+00223fb8  mov      r3, #0                         
+00223fbc  mov      r2, r3                         
+00223fc0  mov      r1, #9                         
+00223fc4  bl       #0x872c4                       lv_obj_align@plt
+00223fc8  ldr      r0, [r4, #0xc]                 
+00223fcc  mov      r2, #0                         
+00223fd0  mov      r1, #2                         
+00223fd4  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00223fd8  ldr      r1, [pc, #-0xcf8]              0x296ce0 my_font_for_pcba_28
+00223fdc  mov      r2, #0                         
+00223fe0  ldr      r0, [r4, #0xc]                 
+00223fe4  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00223fe8  ldrsh    r2, [r5, #4]                   
+00223fec  ldrsh    r1, [r5]                       
+00223ff0  ldr      r0, [r4, #0xc]                 
+00223ff4  bl       #0x884a0                       lv_obj_set_size@plt
+00223ff8  ldr      r0, [r4, #0xc]                 
+00223ffc  mov      r1, #0                         
+00224000  bl       #0x881a0                       lv_label_set_long_mode@plt
+00224004  ldr      r1, [pc, #-0xd48]              0x26c4f3 'uuid:\ncreating'
+00224008  ldr      r0, [r4, #0xc]                 
+0022400c  bl       #0x87a14                       lv_label_set_text@plt
+00224010  ldr      r2, [pc, #-0xd50]              0x21fd44 _Z11uuid_ThreadPv
+00224014  mov      r3, #0                         
+00224018  ldr      r0, [pc, #-0xd54]              0x2a91a4 uuid_id
+0022401c  mov      r1, r3                         
+00224020  bl       #0x88b60                       pthread_create@plt
+00224024  cmp      r0, #0                         
+00224028  bge      #0x224044                      
+0022402c  ldr      r0, [pc, #-0xd3c]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00224030  bl       #0x88d10                       __xpg_basename@plt
+00224034  ldr      r3, [pc, #-0xd6c]              0x26c502 'pthread_create for uuid_Thread failed'
+00224038  movw     r1, #0xaa2                     
+0022403c  ldr      r2, [pc, #-0xd44]              0x26b131 'CreateBigWindow'
+00224040  bl       #0xb3968                       C_LJQ_LOG2
+00224044  bl       #0xbb230                       _ZN18StartWindowFactory13GetWindowTypeEv
+00224048  cmp      r0, #0xb                       
+0022404c  bne      #0x224348                      
+00224050  ldr      r0, [r4, #0xf4]                
+00224054  bl       #0x890e8                       lv_imgbtn_create@plt
+00224058  ldr      r1, [pc, #-0xd7c]              0x2a916c 
+0022405c  mov      r2, #0                         
+00224060  str      r0, [r4, #0x40]                
+00224064  bl       #0x880e0                       lv_obj_add_style@plt
+00224068  ldr      r0, [r4, #0x40]                
+0022406c  bl       #0x87f54                       lv_label_create@plt
+00224070  str      r0, [r4, #0x44]                
+00224074  mov      r3, #0                         
+00224078  mov      r2, r3                         
+0022407c  mov      r1, #9                         
+00224080  bl       #0x872c4                       lv_obj_align@plt
+00224084  ldr      r0, [r4, #0x44]                
+00224088  mov      r2, #0                         
+0022408c  mov      r1, #2                         
+00224090  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00224094  ldr      r1, [pc, #-0xdb4]              0x296ce0 my_font_for_pcba_28
+00224098  mov      r2, #0                         
+0022409c  ldr      r0, [r4, #0x44]                
+002240a0  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+002240a4  ldrsh    r2, [r5, #4]                   
+002240a8  ldrsh    r1, [r5]                       
+002240ac  ldr      r0, [r4, #0x44]                
+002240b0  bl       #0x884a0                       lv_obj_set_size@plt
+002240b4  ldr      r0, [r4, #0x44]                
+002240b8  mov      r1, #0                         
+002240bc  bl       #0x881a0                       lv_label_set_long_mode@plt
+002240c0  ldr      r1, [pc, #-0xdf4]              0x26c528 
+002240c4  ldr      r0, [r4, #0x44]                
+002240c8  bl       #0x87a14                       lv_label_set_text@plt
+002240cc  ldr      r2, [pc, #-0xdfc]              0x22023c _Z18lightsensor_ThreadPv
+002240d0  mov      r3, #0                         
+002240d4  ldr      r0, [pc, #-0xe00]              0x2a91a8 lightsensor_id
+002240d8  mov      r1, r3                         
+002240dc  bl       #0x88b60                       pthread_create@plt
+002240e0  cmp      r0, #0                         
+002240e4  bge      #0x224100                      
+002240e8  ldr      r0, [pc, #-0xdf8]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+002240ec  bl       #0x88d10                       __xpg_basename@plt
+002240f0  ldr      r3, [pc, #-0xe18]              0x26c53f 'pthread_create for lightsensor_Thread failed'
+002240f4  movw     r1, #0xab1                     
+002240f8  ldr      r2, [pc, #-0xe00]              0x26b131 'CreateBigWindow'
+002240fc  bl       #0xb3968                       C_LJQ_LOG2
+00224100  ldr      r0, [r4, #0xf4]                
+00224104  bl       #0x890e8                       lv_imgbtn_create@plt
+00224108  ldr      r1, [pc, #-0xe2c]              0x2a916c 
+0022410c  mov      r2, #0                         
+00224110  str      r0, [r4, #0x48]                
+00224114  bl       #0x880e0                       lv_obj_add_style@plt
+00224118  ldr      r0, [r4, #0x48]                
+0022411c  bl       #0x87f54                       lv_label_create@plt
+00224120  str      r0, [r4, #0x4c]                
+00224124  mov      r3, #0                         
+00224128  mov      r2, r3                         
+0022412c  mov      r1, #9                         
+00224130  bl       #0x872c4                       lv_obj_align@plt
+00224134  ldr      r0, [r4, #0x4c]                
+00224138  mov      r2, #0                         
+0022413c  mov      r1, #2                         
+00224140  bl       #0x88d1c                       lv_obj_set_style_text_align@plt
+00224144  ldr      r1, [pc, #-0xe64]              0x296ce0 my_font_for_pcba_28
+00224148  mov      r2, #0                         
+0022414c  ldr      r0, [r4, #0x4c]                
+00224150  bl       #0x8886c                       lv_obj_set_style_text_font@plt
+00224154  ldrsh    r2, [r5, #4]                   
+00224158  ldrsh    r1, [r5]                       
+0022415c  ldr      r0, [r4, #0x4c]                
+00224160  bl       #0x884a0                       lv_obj_set_size@plt
+00224164  ldr      r0, [r4, #0x4c]                
+00224168  mov      r1, #0                         
+0022416c  bl       #0x881a0                       lv_label_set_long_mode@plt
+00224170  ldr      r1, [pc, #-0xe8c]              0x26c56c 
+00224174  ldr      r0, [r4, #0x4c]                
+00224178  bl       #0x87a14                       lv_label_set_text@plt
+0022417c  ldr      r2, [pc, #-0xe94]              0x2202d0 _Z11tpms_ThreadPv
+00224180  mov      r3, #0                         
+00224184  ldr      r0, [pc, #-0xe98]              0x2a91ac tpms_id
+00224188  mov      r1, r3                         
+0022418c  bl       #0x88b60                       pthread_create@plt
+00224190  cmp      r0, #0                         
+00224194  bge      #0x224348                      
+00224198  ldr      r0, [pc, #-0xea8]              0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+0022419c  bl       #0x88d10                       __xpg_basename@plt
+002241a0  ldr      r3, [pc, #-0xeac]              0x26c57c 'pthread_create for tpms_Thread failed'
+002241a4  movw     r1, #0xabf                     
+002241a8  ldr      r2, [pc, #-0xeb0]              0x26b131 'CreateBigWindow'
+002241ac  b        #0x223090                      
+002241b0  sub      r6, r6, #0x320                 
+002241b4  sub      r6, r6, #1                     
+002241b8  cmp      r6, #0xdf                      
+002241bc  bhi      #0x223558                      
+002241c0  ldr      r6, [r4, #0x50]                
+002241c4  mov      r0, #9                         
+002241c8  bl       #0x88794                       lv_palette_main@plt
+002241cc  mov      r1, r0                         
+002241d0  mov      r2, #0                         
+002241d4  mov      r0, r6                         
+002241d8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002241dc  ldr      r3, [pc, #-0xee0]              0x26c4c4 
+002241e0  mov      r2, #0x400                     
+002241e4  b        #0x22354c                      
+002241e8  ldr      r8, [r4, #0x50]                
+002241ec  cmp      r7, #0x3d                      
+002241f0  bhi      #0x224220                      
+002241f4  mov      r0, #9                         
+002241f8  bl       #0x88794                       lv_palette_main@plt
+002241fc  mov      r1, r0                         
+00224200  mov      r2, #0                         
+00224204  mov      r0, r8                         
+00224208  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022420c  mov      r2, #0x200                     
+00224210  ldr      r1, [pc, #-0xf10]              0x26c257 'DDR:\n%dMB'
+00224214  ldr      r0, [r4, #0x54]                
+00224218  bl       #0x87534                       lv_label_set_text_fmt@plt
+0022421c  b        #0x223558                      
+00224220  sub      r3, r6, #0x320                 
+00224224  sub      r3, r3, #1                     
+00224228  cmp      r3, #0xdf                      
+0022422c  bhi      #0x224250                      
+00224230  mov      r0, #9                         
+00224234  bl       #0x88794                       lv_palette_main@plt
+00224238  mov      r1, r0                         
+0022423c  mov      r2, #0                         
+00224240  mov      r0, r8                         
+00224244  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00224248  mov      r2, #0x400                     
+0022424c  b        #0x224210                      
+00224250  mov      r0, #0                         
+00224254  bl       #0x88794                       lv_palette_main@plt
+00224258  mov      r1, r0                         
+0022425c  mov      r2, #0                         
+00224260  mov      r0, r8                         
+00224264  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+00224268  ldr      r1, [pc, #-0xf64]              0x26c261 'DDR:\nfail:%dMB'
+0022426c  mov      r2, r6                         
+00224270  b        #0x224214                      
+00224274  mov      r0, #0                         
+00224278  bl       #0x88794                       lv_palette_main@plt
+0022427c  mov      r1, r0                         
+00224280  mov      r2, #0                         
+00224284  mov      r0, r7                         
+00224288  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022428c  ldr      r1, [pc, #-0xf84]              0x26c369 
+00224290  b        #0x2235d4                      
+00224294  mov      r0, r6                         
+00224298  bl       #0x88794                       lv_palette_main@plt
+0022429c  mov      r1, r0                         
+002242a0  mov      r2, r6                         
+002242a4  mov      r0, r8                         
+002242a8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002242ac  ldr      r1, [pc, #-0xfa0]              0x26c382 
+002242b0  b        #0x223668                      
+002242b4  ldr      r6, [r4, #0x104]               
+002242b8  mov      r0, #0                         
+002242bc  bl       #0x88794                       lv_palette_main@plt
+002242c0  mov      r1, r0                         
+002242c4  mov      r2, #0                         
+002242c8  mov      r0, r6                         
+002242cc  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002242d0  ldr      r0, [pc, #-0xfc0]              0x269bdd '/dev/mmcblk0'
+002242d4  mov      r1, #0                         
+002242d8  bl       #0x87ce4                       access@plt
+002242dc  cmp      r0, #0                         
+002242e0  ldr      r0, [r4, #0x108]               
+002242e4  ldreq    r1, [pc, #-0xfd0]              0x26c28a 'emmc:\nfail'
+002242e8  ldrne    r1, [pc, #-0xfd0]              0x26c295 'norflash:\nfail'
+002242ec  bl       #0x87a14                       lv_label_set_text@plt
+002242f0  b        #0x223730                      
+002242f4  mov      r0, #0                         
+002242f8  bl       #0x88794                       lv_palette_main@plt
+002242fc  mov      r1, r0                         
+00224300  mov      r2, #0                         
+00224304  mov      r0, r7                         
+00224308  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022430c  ldr      r1, [pc, #-0xff0]              0x26c3a1 
+00224310  b        #0x2237ac                      
+00224314  bl       #0x88bb4                       lv_disp_get_default@plt
+00224318  bl       #0x87a38                       lv_disp_get_ver_res@plt
+0022431c  cmp      r0, #0x1e0                     
+00224320  bne      #0x223b7c                      
+00224324  ldr      r1, [pc, #0x24]                0x296c84 lv_font_montserrat_24
+00224328  mov      r2, #0                         
+0022432c  b        #0x223b84                      
+00224330  bl       #0x88bb4                       lv_disp_get_default@plt
+00224334  bl       #0x87a38                       lv_disp_get_ver_res@plt
+00224338  cmp      r0, #0x1e0                     
+0022433c  bne      #0x223bb8                      
+00224340  ldr      r1, [pc, #0xc]                 0x26c48d 
+00224344  b        #0x223bbc                      
+00224348  add      sp, sp, #0xc                   
+0022434c  pop      {r4, r5, r6, r7, r8, sb, pc}   
+00224350  eoreq    r6, sb, r4, lsl #25            
+00224354  eoreq    ip, r6, sp, lsl #9             

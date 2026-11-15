@@ -1,0 +1,8 @@
+{
+  "scope": "Host shell test using a temporary SD path and artificial app/version fixtures; real H13 not connected. Host /proc/sys metadata may be read by script but outputs are discarded.",
+  "syntax": "sh -n passed",
+  "unexpected_arguments": "refused with exit 2, no output directory",
+  "capture": "passed; app and version copied; source app unchanged",
+  "repeat": "existing capture preserved",
+  "firmware_write": "none in supplied script; reference caller remounts / rw before invocation"
+}

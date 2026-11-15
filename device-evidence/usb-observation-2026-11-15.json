@@ -1,0 +1,10 @@
+{
+  "source": "User report in this conversation",
+  "date": "2026-11-15",
+  "connection": "USB-C to Windows computer",
+  "observation": "No new device appeared in Windows Device Manager; local Codex obtained no access this way.",
+  "vid_pid": null,
+  "does_not_establish": ["Power-only USB wiring", "Defective port", "Successful ADB or loader entry"],
+  "device_firmware_readout": "not obtained",
+  "sd_readout_attempt": "not yet performed or reported"
+}

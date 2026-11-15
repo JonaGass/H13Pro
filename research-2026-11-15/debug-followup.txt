@@ -1,0 +1,208 @@
+
+FUNCTION 0x8b914  size 416
+0008b914  push     {r4, lr}                       
+0008b918  mov      r1, #0                         
+0008b91c  ldr      r0, [pc, #0x74]                0x241bc7 '/oem/qckj_debug_all_file'
+0008b920  bl       #0x87ce4                       access@plt
+0008b924  cmp      r0, #0                         
+0008b928  bne      #0x8b940                       
+0008b92c  ldr      r1, [pc, #0x68]                0x241a10 'debug_mode_enable'
+0008b930  ldr      r0, [pc, #0x68]                0x241be0 '%s: /oem/qckj_debug_all_file\n'
+0008b934  bl       #0x872b8                       printf@plt
+0008b938  mov      r0, #1                         
+0008b93c  pop      {r4, pc}                       
+0008b940  ldr      r0, [pc, #0x5c]                0x241bfe '/mnt/sdcard/qckj_debug_all_file'
+0008b944  mov      r1, #0                         
+0008b948  bl       #0x87ce4                       access@plt
+0008b94c  cmp      r0, #0                         
+0008b950  ldreq    r1, [pc, #0x44]                0x241a10 'debug_mode_enable'
+0008b954  ldreq    r0, [pc, #0x4c]                0x241c1e '%s: /mnt/sdcard/qckj_debug_all_file\n'
+0008b958  beq      #0x8b934                       
+0008b95c  ldr      r0, [pc, #0x48]                0x241c43 '/oem/qckj_isptunner_file'
+0008b960  mov      r1, #0                         
+0008b964  bl       #0x87ce4                       access@plt
+0008b968  cmp      r0, #0                         
+0008b96c  bne      #0x8b990                       
+0008b970  ldr      r1, [pc, #0x24]                0x241a10 'debug_mode_enable'
+0008b974  ldr      r0, [pc, #0x34]                0x241c5c '%s: /oem/qckj_isptunner_file, set Isp Debug!\n'
+0008b978  bl       #0x872b8                       printf@plt
+0008b97c  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008b980  mov      r3, #1                         
+0008b984  strb     r3, [r0, #0xd]                 
+0008b988  mov      r0, #2                         
+0008b98c  pop      {r4, pc}                       
+0008b990  mov      r0, #0                         
+0008b994  pop      {r4, pc}                       
+0008b998  eoreq    r1, r4, r7, asr #23            
+0008b99c  eoreq    r1, r4, r0, lsl sl             
+0008b9a0  eoreq    r1, r4, r0, ror #23            
+0008b9a4  [undecodable bytes] fe1b2400
+0008b9a8  eoreq    r1, r4, lr, lsl ip             
+0008b9ac  eoreq    r1, r4, r3, asr #24            
+0008b9b0  eoreq    r1, r4, ip, asr ip             
+0008b9b4  add      r3, r0, #8                     
+0008b9b8  push     {r0, r1, r4, r5, r6, lr}       
+0008b9bc  mov      r4, r0                         
+0008b9c0  str      r3, [r0]                       
+0008b9c4  mov      r0, r1                         
+0008b9c8  mov      r5, r1                         
+0008b9cc  bl       #0x88278                       strlen@plt
+0008b9d0  add      r6, r5, r0                     
+0008b9d4  cmp      r0, #0xf                       
+0008b9d8  str      r0, [sp, #4]                   
+0008b9dc  bls      #0x8b9fc                       
+0008b9e0  mov      r2, #0                         
+0008b9e4  add      r1, sp, #4                     
+0008b9e8  mov      r0, r4                         
+0008b9ec  bl       #0x873f0                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERjj@plt
+0008b9f0  ldr      r3, [sp, #4]                   
+0008b9f4  str      r0, [r4]                       
+0008b9f8  str      r3, [r4, #8]                   
+0008b9fc  ldr      r0, [r4]                       
+0008ba00  mov      r2, r6                         
+0008ba04  mov      r1, r5                         
+0008ba08  bl       #0x875c4                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_@plt
+0008ba0c  ldr      r3, [sp, #4]                   
+0008ba10  mov      r1, #0                         
+0008ba14  ldr      r2, [r4]                       
+0008ba18  mov      r0, r4                         
+0008ba1c  str      r3, [r4, #4]                   
+0008ba20  strb     r1, [r2, r3]                   
+0008ba24  add      sp, sp, #8                     
+0008ba28  pop      {r4, r5, r6, pc}               
+0008ba2c  mov      r0, #1                         
+0008ba30  b        #0x92bbc                       _ZN9WavPlayer4PlayEi
+0008ba34  push     {r4, r5, r6, lr}               
+0008ba38  ldr      r0, [pc, #0x30]                0x241c8a 'setusbconfig none'
+0008ba3c  bl       #0x9f9c4                       _Z9qc_systemPKc
+0008ba40  bl       #0x8c3f8                       _ZN6Lylink11GetInstanceEv
+0008ba44  mov      r4, r0                         
+0008ba48  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008ba4c  bl       #0x9a768                       _ZN12SystemConfig18GetCaplayDispWidthEv
+0008ba50  mov      r5, r0                         
+0008ba54  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008ba58  bl       #0x9a770                       _ZN12SystemConfig19GetCaplayDispHeightEv
+0008ba5c  mov      r2, r0                         
+0008ba60  mov      r1, r5                         
+0008ba64  mov      r0, r4                         
+0008ba68  pop      {r4, r5, r6, lr}               
+0008ba6c  b        #0x212a88                      _ZN6Lylink4InitEii
+0008ba70  eoreq    r1, r4, sl, lsl #25            
+0008ba74  push     {r4, r5, r6, lr}               
+0008ba78  ldr      r0, [pc, #0x30]                0x241c8a 'setusbconfig none'
+0008ba7c  bl       #0x8808c                       system@plt
+0008ba80  bl       #0x8c3f8                       _ZN6Lylink11GetInstanceEv
+0008ba84  mov      r4, r0                         
+0008ba88  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008ba8c  bl       #0x9a768                       _ZN12SystemConfig18GetCaplayDispWidthEv
+0008ba90  mov      r5, r0                         
+0008ba94  bl       #0x992f0                       _ZN12SystemConfig11GetInstanceEv
+0008ba98  bl       #0x9a770                       _ZN12SystemConfig19GetCaplayDispHeightEv
+0008ba9c  mov      r2, r0                         
+0008baa0  mov      r1, r5                         
+0008baa4  mov      r0, r4                         
+0008baa8  pop      {r4, r5, r6, lr}               
+0008baac  b        #0x212a88                      _ZN6Lylink4InitEii
+0008bab0  eoreq    r1, r4, sl, lsl #25            
+
+FUNCTION 0xb39a8 getLog2DebugInfo size 96
+000b39a8  push     {r4, lr}                       
+000b39ac  ldr      r0, [pc, #0x44]                0x24d941 'CVR_APP_DEBUG_ENABLE'
+000b39b0  bl       #0x88890                       getenv@plt
+000b39b4  mov      r4, r0                         
+000b39b8  mov      r1, r0                         
+000b39bc  ldr      r0, [pc, #0x38]                0x24d956 'CVR_APP_DEBUG_ENABLE=%s\n'
+000b39c0  bl       #0x872b8                       printf@plt
+000b39c4  cmp      r4, #0                         
+000b39c8  moveq    r1, r4                         
+000b39cc  beq      #0xb39e4                       
+000b39d0  mov      r0, r4                         
+000b39d4  bl       #0x87f00                       atoi@plt
+000b39d8  sub      r1, r0, #1                     
+000b39dc  clz      r1, r1                         
+000b39e0  lsr      r1, r1, #5                     
+000b39e4  ldr      r3, [pc, #0x14]                0x29b194 
+000b39e8  ldr      r0, [pc, #0x14]                0x24d96f 'g_setLog2Debug=%d\n'
+000b39ec  pop      {r4, lr}                       
+000b39f0  str      r1, [r3]                       
+000b39f4  b        #0x872b8                       printf@plt
+000b39f8  eoreq    sp, r4, r1, asr #18            
+000b39fc  eoreq    sp, r4, r6, asr sb             
+000b3a00  mlaeq    sb, r4, r1, fp                 
+000b3a04  eoreq    sp, r4, pc, ror #18            
+
+FUNCTION 0x225068 _Z10ConnetWifiv size 296
+00225068  push     {r4, lr}                       
+0022506c  sub      sp, sp, #0xc0                  
+00225070  ldr      r4, [pc, #0xf4]                0x296d70 __stack_chk_guard
+00225074  mov      r2, #0x3d                      
+00225078  ldr      r0, [pc, #0xf0]                0x26bc03 '/mnt/sdcard/rk_pcba_test_res/bt/config.ini'
+0022507c  mov      r1, #0x23                      
+00225080  ldr      r3, [r4]                       
+00225084  str      r3, [sp, #0xbc]                
+00225088  mov      r3, #0                         
+0022508c  str      r3, [sp, #8]                   
+00225090  bl       #0xb2340                       _Z15cnf_read_configPKccc
+00225094  ldr      r2, [pc, #0xd8]                0x26c5ef 'ssid'
+00225098  ldr      r1, [pc, #0xd8]                0x26c5f4 'WIFI'
+0022509c  str      r0, [sp, #8]                   
+002250a0  bl       #0xb2af4                       _Z19get_config_strvalueP6ConfigPKcS2_
+002250a4  mov      r1, r0                         
+002250a8  add      r0, sp, #0xc                   
+002250ac  bl       #0x221230                      
+002250b0  ldr      r2, [pc, #0xc4]                0x26c5f9 'password'
+002250b4  ldr      r1, [pc, #0xbc]                0x26c5f4 'WIFI'
+002250b8  ldr      r0, [sp, #8]                   
+002250bc  bl       #0xb2af4                       _Z19get_config_strvalueP6ConfigPKcS2_
+002250c0  mov      r1, r0                         
+002250c4  add      r0, sp, #0x24                  
+002250c8  bl       #0x221230                      
+002250cc  ldr      r0, [pc, #0xac]                0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+002250d0  bl       #0x88d10                       __xpg_basename@plt
+002250d4  ldr      r3, [sp, #0x24]                
+002250d8  movw     r1, #0xbdc                     
+002250dc  ldr      r2, [pc, #0xa0]                0x26b153 'ConnetWifi'
+002250e0  str      r3, [sp, #4]                   
+002250e4  ldr      r3, [sp, #0xc]                 
+002250e8  str      r3, [sp]                       
+002250ec  ldr      r3, [pc, #0x94]                0x26c602 '======%s=====%s===\n'
+002250f0  bl       #0xb3968                       C_LJQ_LOG2
+002250f4  mov      r2, #0x80                      
+002250f8  mov      r1, #0                         
+002250fc  add      r0, sp, #0x3c                  
+00225100  bl       #0x88848                       memset@plt
+00225104  ldr      r3, [sp, #0x24]                
+00225108  add      r0, sp, #0x3c                  
+0022510c  ldr      r2, [sp, #0xc]                 
+00225110  ldr      r1, [pc, #0x74]                0x26c616 '/etc/wireless/sta_ctrl.sh rtl8821cs load %s %s'
+00225114  bl       #0x88590                       sprintf@plt
+00225118  add      r0, sp, #0x3c                  
+0022511c  bl       #0x8808c                       system@plt
+00225120  add      r0, sp, #8                     
+00225124  bl       #0xb28d4                       _Z14destroy_configPP6Config
+00225128  add      r0, sp, #0x24                  
+0022512c  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00225130  add      r0, sp, #0xc                   
+00225134  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00225138  ldr      r2, [sp, #0xbc]                
+0022513c  ldr      r3, [r4]                       
+00225140  cmp      r2, r3                         
+00225144  beq      #0x225164                      
+00225148  bl       #0x874e0                       __stack_chk_fail@plt
+0022514c  add      r0, sp, #0x24                  
+00225150  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00225154  add      r0, sp, #0xc                   
+00225158  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+0022515c  bl       #0x880d4                       __cxa_end_cleanup@plt
+00225160  b        #0x225154                      
+00225164  add      sp, sp, #0xc0                  
+00225168  pop      {r4, pc}                       
+0022516c  eoreq    r6, sb, r0, ror sp             
+00225170  eoreq    fp, r6, r3, lsl #24            
+00225174  eoreq    ip, r6, pc, ror #11            
+00225178  [undecodable bytes] f4c52600
+0022517c  [undecodable bytes] f9c52600
+00225180  [undecodable bytes] d7b12600
+00225184  eoreq    fp, r6, r3, asr r1             
+00225188  eoreq    ip, r6, r2, lsl #12            
+0022518c  eoreq    ip, r6, r6, lsl r6             

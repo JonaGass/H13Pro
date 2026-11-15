@@ -1,0 +1,299 @@
+
+FUNCTION 0x220448 _Z10ddr_ThreadPv size 508
+00220448  push     {r4, r5, r6, lr}               
+0022044c  ldr      r0, [pc, #0x1ac]               0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00220450  bl       #0x88d10                       __xpg_basename@plt
+00220454  ldr      r3, [pc, #0x1a8]               0x26b6d7 '-----------ddr_Thread------'
+00220458  movw     r1, #0x36f                     
+0022045c  ldr      r2, [pc, #0x1a4]               0x26ae69 'ddr_Thread'
+00220460  bl       #0xb3968                       C_LJQ_LOG2
+00220464  ldr      r0, [pc, #0x1a0]               0x248fb6 'mount -o remount,rw /'
+00220468  bl       #0x8808c                       system@plt
+0022046c  mov      r0, #5                         
+00220470  bl       #0x87204                       sleep@plt
+00220474  bl       #0x21d3f8                      _Z13pcba_ddr_testv
+00220478  mov      r4, r0                         
+0022047c  ldr      r0, [pc, #0x18c]               0x26b6f3 'chmod 777 /mnt/sdcard/rk_pcba_test_res/memtester_smd'
+00220480  bl       #0x8808c                       system@plt
+00220484  ldr      r0, [pc, #0x188]               0x26b728 '/mnt/sdcard/rk_pcba_test_res/memtester_smd 128m 1'
+00220488  bl       #0x8808c                       system@plt
+0022048c  cmn      r0, #1                         
+00220490  bne      #0x2204fc                      
+00220494  ldr      r0, [pc, #0x17c]               0x26b75a 'system'
+00220498  bl       #0x88644                       perror@plt
+0022049c  sub      r3, r4, #0x1c0                 
+002204a0  sub      r3, r3, #3                     
+002204a4  cmp      r3, #0x3d                      
+002204a8  bhi      #0x22050c                      
+002204ac  ldr      r0, [pc, #0x168]               0x26b787 '/mnt/sdcard/ddrtest_success'
+002204b0  mov      r1, #0                         
+002204b4  bl       #0x87ce4                       access@plt
+002204b8  subs     r6, r0, #0                     
+002204bc  bne      #0x2205ac                      
+002204c0  ldr      r4, [pc, #0x158]               0x2a9074 wlan_obj
+002204c4  mov      r0, #9                         
+002204c8  ldr      r5, [r4, #0x50]                
+002204cc  bl       #0x88794                       lv_palette_main@plt
+002204d0  mov      r1, r0                         
+002204d4  mov      r2, r6                         
+002204d8  mov      r0, r5                         
+002204dc  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002204e0  ldr      r3, [pc, #0x13c]               0x2479d4 'success'
+002204e4  mov      r2, #0x200                     
+002204e8  ldr      r0, [r4, #0x54]                
+002204ec  ldr      r1, [pc, #0x134]               0x26b777 'DDR:\n%dMB/%s'
+002204f0  bl       #0x87534                       lv_label_set_text_fmt@plt
+002204f4  ldr      r0, [pc, #0x130]               0x26b784 'rm /mnt/sdcard/ddrtest_success'
+002204f8  b        #0x2205f4                      
+002204fc  ubfx     r1, r0, #8, #8                 
+00220500  ldr      r0, [pc, #0x128]               0x26b761 'Command returned: %d\n'
+00220504  bl       #0x872b8                       printf@plt
+00220508  b        #0x22049c                      
+0022050c  sub      r0, r4, #0x320                 
+00220510  sub      r0, r0, #1                     
+00220514  cmp      r0, #0xdf                      
+00220518  bhi      #0x2205f8                      
+0022051c  ldr      r0, [pc, #0x110]               0x26b7a6 '/mnt/sdcard/ddrtest_fail'
+00220520  mov      r1, #0                         
+00220524  ldr      r4, [pc, #0xf4]                0x2a9074 wlan_obj
+00220528  bl       #0x87ce4                       access@plt
+0022052c  subs     r6, r0, #0                     
+00220530  bne      #0x220558                      
+00220534  ldr      r5, [r4, #0x50]                
+00220538  bl       #0x88794                       lv_palette_main@plt
+0022053c  mov      r1, r0                         
+00220540  mov      r2, r6                         
+00220544  mov      r0, r5                         
+00220548  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+0022054c  ldr      r3, [pc, #0xe4]                0x2432a1 'failed'
+00220550  mov      r2, #0x400                     
+00220554  b        #0x2205e4                      
+00220558  ldr      r0, [pc, #0xbc]                0x26b787 '/mnt/sdcard/ddrtest_success'
+0022055c  mov      r1, #0                         
+00220560  bl       #0x87ce4                       access@plt
+00220564  subs     r5, r0, #0                     
+00220568  bne      #0x2205f8                      
+0022056c  ldr      r0, [pc, #0x8c]                0x26b1d7 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/pcba_test.cpp'
+00220570  bl       #0x88d10                       __xpg_basename@plt
+00220574  ldr      r3, [pc, #0xc0]                0x26b7bf '102410241024102410241024102410241024102410241024'
+00220578  mov      r1, #0x388                     
+0022057c  ldr      r2, [pc, #0x84]                0x26ae69 'ddr_Thread'
+00220580  bl       #0xb3968                       C_LJQ_LOG2
+00220584  ldr      r6, [r4, #0x50]                
+00220588  mov      r0, #9                         
+0022058c  bl       #0x88794                       lv_palette_main@plt
+00220590  mov      r1, r0                         
+00220594  mov      r2, r5                         
+00220598  mov      r0, r6                         
+0022059c  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002205a0  ldr      r3, [pc, #0x7c]                0x2479d4 'success'
+002205a4  mov      r2, #0x400                     
+002205a8  b        #0x2204e8                      
+002205ac  ldr      r0, [pc, #0x80]                0x26b7a6 '/mnt/sdcard/ddrtest_fail'
+002205b0  mov      r1, #0                         
+002205b4  bl       #0x87ce4                       access@plt
+002205b8  subs     r5, r0, #0                     
+002205bc  bne      #0x2205f8                      
+002205c0  ldr      r4, [pc, #0x58]                0x2a9074 wlan_obj
+002205c4  ldr      r6, [r4, #0x50]                
+002205c8  bl       #0x88794                       lv_palette_main@plt
+002205cc  mov      r1, r0                         
+002205d0  mov      r2, r5                         
+002205d4  mov      r0, r6                         
+002205d8  bl       #0x87048                       lv_obj_set_style_bg_color@plt
+002205dc  ldr      r3, [pc, #0x54]                0x2432a1 'failed'
+002205e0  mov      r2, #0x200                     
+002205e4  ldr      r0, [r4, #0x54]                
+002205e8  ldr      r1, [pc, #0x38]                0x26b777 'DDR:\n%dMB/%s'
+002205ec  bl       #0x87534                       lv_label_set_text_fmt@plt
+002205f0  ldr      r0, [pc, #0x48]                0x26b7a3 'rm /mnt/sdcard/ddrtest_fail'
+002205f4  bl       #0x8808c                       system@plt
+002205f8  mov      r0, #0                         
+002205fc  bl       #0x89250                       pthread_exit@plt
+
+FUNCTION 0x21d478 _Z14pcba_emmc_testv size 568
+0021d478  push     {r4, r5, r6, lr}               
+0021d47c  sub      sp, sp, #0xe8                  
+0021d480  ldr      r6, [pc, #0x1f8]               0x296d70 __stack_chk_guard
+0021d484  ldr      r4, [pc, #0x1f8]               0x269d20 'emmc_test'
+0021d488  ldr      r3, [r6]                       
+0021d48c  ldr      r0, [r4]                       
+0021d490  ldr      r1, [r4, #4]                   
+0021d494  ldrh     r2, [r4, #8]                   
+0021d498  str      r3, [sp, #0xe4]                
+0021d49c  add      r3, sp, #0x1c                  
+0021d4a0  stm      r3!, {r0, r1}                  
+0021d4a4  strh     r2, [r3]                       
+0021d4a8  mov      r1, #0                         
+0021d4ac  mov      r2, #0x5a                      
+0021d4b0  add      r0, sp, #0x26                  
+0021d4b4  bl       #0x88848                       memset@plt
+0021d4b8  ldr      r0, [r4, #0x64]!               
+0021d4bc  mov      r2, #0x5f                      
+0021d4c0  mov      r1, #0                         
+0021d4c4  ldrb     r3, [r4, #4]                   
+0021d4c8  str      r0, [sp, #0x80]                
+0021d4cc  add      r0, sp, #0x85                  
+0021d4d0  strb     r3, [sp, #0x84]                
+0021d4d4  bl       #0x88848                       memset@plt
+0021d4d8  ldr      r0, [pc, #0x1a8]               0x269de8 '=======  emmc test starting   ========'
+0021d4dc  bl       #0x87720                       puts@plt
+0021d4e0  vmov.i32 q8, #0                         
+0021d4e4  ldr      r0, [pc, #0x1a0]               0x269e0f '/sys/bus/mmc/devices/mmc0:0001/block/mmcblk0/size'
+0021d4e8  add      r3, sp, #8                     
+0021d4ec  mov      r2, #0                         
+0021d4f0  mov      r1, #0x900                     
+0021d4f4  vst1.8   {d16, d17}, [r3:0x40]          
+0021d4f8  vstr     d16, [sp, #0x14]               
+0021d4fc  bl       #0x891c0                       open64@plt
+0021d500  cmn      r0, #1                         
+0021d504  mov      r5, r0                         
+0021d508  bne      #0x21d5a8                      
+0021d50c  ldr      r1, [pc, #0x178]               0x269e0f '/sys/bus/mmc/devices/mmc0:0001/block/mmcblk0/size'
+0021d510  ldr      r0, [pc, #0x178]               0x269e41 "open '%s' failed!\n"
+0021d514  bl       #0x872b8                       printf@plt
+0021d518  ldr      r0, [pc, #0x174]               0x269e54 'readFromFile effective bytes is %d \n'
+0021d51c  mov      r1, r5                         
+0021d520  bl       #0x872b8                       printf@plt
+0021d524  cmp      r5, #0                         
+0021d528  blt      #0x21d61c                      
+0021d52c  add      r0, sp, #8                     
+0021d530  bl       #0x87f00                       atoi@plt
+0021d534  vmov     d16, r0, r0                    
+0021d538  vcvt.f64.s32 d16, d16, #1                   
+0021d53c  vldr     d17, [pc, #0x134]              
+0021d540  vmul.f64 d16, d16, d17                  
+0021d544  vmul.f64 d16, d16, d17                  
+0021d548  vcmpe.f64 d16, #0                        
+0021d54c  vmrs     apsr_nzcv, fpscr               
+0021d550  ble      #0x21d564                      
+0021d554  vmov.f64 d17, #1.000000e+00             
+0021d558  vcmpe.f64 d16, d17                       
+0021d55c  vmrs     apsr_nzcv, fpscr               
+0021d560  bls      #0x21d600                      
+0021d564  mov      r3, #9                         
+0021d568  mov      r4, #1                         
+0021d56c  vmov     s15, r4                        
+0021d570  lsl      r4, r4, #1                     
+0021d574  vcvt.f64.s32 d17, s15                       
+0021d578  vcmpe.f64 d16, d17                       
+0021d57c  vmrs     apsr_nzcv, fpscr               
+0021d580  ble      #0x21d598                      
+0021d584  vmov     s15, r4                        
+0021d588  vcvt.f64.s32 d17, s15                       
+0021d58c  vcmpe.f64 d16, d17                       
+0021d590  vmrs     apsr_nzcv, fpscr               
+0021d594  bls      #0x21d604                      
+0021d598  subs     r3, r3, #1                     
+0021d59c  bne      #0x21d56c                      
+0021d5a0  mvn      r5, #0                         
+0021d5a4  b        #0x21d61c                      
+0021d5a8  mov      r2, #0x14                      
+0021d5ac  add      r1, sp, #8                     
+0021d5b0  bl       #0x88fe0                       read@plt
+0021d5b4  subs     r4, r0, #0                     
+0021d5b8  movle    r3, #0                         
+0021d5bc  strble   r3, [sp, #8]                   
+0021d5c0  ble      #0x21d5f0                      
+0021d5c4  add      r3, sp, #8                     
+0021d5c8  add      r3, r3, r4                     
+0021d5cc  ldrb     r2, [r3, #-1]!                 
+0021d5d0  cmp      r2, #0xa                       
+0021d5d4  bne      #0x21d5e0                      
+0021d5d8  subs     r4, r4, #1                     
+0021d5dc  bne      #0x21d5cc                      
+0021d5e0  add      r3, sp, #0xe8                  
+0021d5e4  mov      r2, #0                         
+0021d5e8  add      r3, r3, r4                     
+0021d5ec  strb     r2, [r3, #-0xe0]               
+0021d5f0  mov      r0, r5                         
+0021d5f4  mov      r5, r4                         
+0021d5f8  bl       #0x87b34                       close@plt
+0021d5fc  b        #0x21d518                      
+0021d600  mov      r4, #1                         
+0021d604  ldr      r0, [pc, #0x8c]                0x269e79 '=======  emmc_size is: %d GB ========\n'
+0021d608  mov      r1, r4                         
+0021d60c  bl       #0x872b8                       printf@plt
+0021d610  cmp      r4, #8                         
+0021d614  ldreq    r0, [pc, #0x80]                0x269ea0 '=======  emmc_test success  ========'
+0021d618  beq      #0x21d620                      
+0021d61c  ldr      r0, [pc, #0x7c]                0x269ec5 '=======  emmc_test failed  ========'
+0021d620  bl       #0x87720                       puts@plt
+0021d624  cmp      r5, #0                         
+0021d628  movge    r3, #0                         
+0021d62c  bge      #0x21d640                      
+0021d630  ldr      r1, [pc, #0x6c]                0x26a16d 'FAIL'
+0021d634  add      r0, sp, #0x80                  
+0021d638  bl       #0x87e88                       strcpy@plt
+0021d63c  mvn      r3, #0x6d                      
+0021d640  str      r3, [sp]                       
+0021d644  add      r2, sp, #0x1c                  
+0021d648  ldr      r1, [pc, #0x58]                0x267fc6 '[R8]'
+0021d64c  add      r3, sp, #0x80                  
+0021d650  ldr      r0, [pc, #0x54]                0x267fcb '%s<%s>,<%s>,<%d>\n'
+0021d654  bl       #0x872b8                       printf@plt
+0021d658  ldr      r2, [sp, #0xe4]                
+0021d65c  mov      r0, #0                         
+0021d660  ldr      r3, [r6]                       
+0021d664  cmp      r2, r3                         
+0021d668  beq      #0x21d670                      
+0021d66c  bl       #0x874e0                       __stack_chk_fail@plt
+0021d670  add      sp, sp, #0xe8                  
+0021d674  pop      {r4, r5, r6, pc}               
+0021d678  andeq    r0, r0, r0                     
+0021d67c  svclo    #0x500000                      
+0021d680  eoreq    r6, sb, r0, ror sp             
+0021d684  eoreq    sb, r6, r0, lsr #26            
+0021d688  eoreq    sb, r6, r8, ror #27            
+0021d68c  eoreq    sb, r6, pc, lsl #28            
+0021d690  eoreq    sb, r6, r1, asr #28            
+0021d694  eoreq    sb, r6, r4, asr lr             
+0021d698  eoreq    sb, r6, sb, ror lr             
+0021d69c  eoreq    sb, r6, r0, lsr #29            
+0021d6a0  eoreq    sb, r6, r5, asr #29            
+0021d6a4  eoreq    sl, r6, sp, ror #2             
+0021d6a8  eoreq    r7, r6, r6, asr #31            
+0021d6ac  eoreq    r7, r6, fp, asr #31            
+
+FUNCTION 0x21fbc8 _Z18pcba_norflash_testv size 192
+0021fbc8  push     {r0, r1, r4, lr}               
+0021fbcc  mov      r1, #0                         
+0021fbd0  ldr      r0, [pc, #0x94]                0x269bdd '/dev/mmcblk0'
+0021fbd4  bl       #0x87ce4                       access@plt
+0021fbd8  cmp      r0, #0                         
+0021fbdc  bne      #0x21fc10                      
+0021fbe0  bl       #0x21f80c                      _Z13GetEmmcMemoryv
+0021fbe4  mov      r4, r0                         
+0021fbe8  ldr      r0, [pc, #0x80]                0x26ac06 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/norflash_test.cpp'
+0021fbec  bl       #0x88d10                       __xpg_basename@plt
+0021fbf0  ldr      r3, [pc, #0x7c]                0x26ad2e '=========11========%d============='
+0021fbf4  mov      r1, #0xb6                      
+0021fbf8  ldr      r2, [pc, #0x78]                0x26abcd 'pcba_norflash_test'
+0021fbfc  str      r4, [sp]                       
+0021fc00  bl       #0xb3968                       C_LJQ_LOG2
+0021fc04  mov      r0, r4                         
+0021fc08  add      sp, sp, #8                     
+0021fc0c  pop      {r4, pc}                       
+0021fc10  ldr      r0, [pc, #0x64]                0x241dd8 '/dev/mtd9ro'
+0021fc14  mov      r1, #0                         
+0021fc18  bl       #0x87ce4                       access@plt
+0021fc1c  cmp      r0, #0                         
+0021fc20  bne      #0x21fc48                      
+0021fc24  bl       #0x21f91c                      _Z16GetSpinandMemoryv
+0021fc28  mov      r4, r0                         
+0021fc2c  ldr      r0, [pc, #0x3c]                0x26ac06 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/norflash_test.cpp'
+0021fc30  bl       #0x88d10                       __xpg_basename@plt
+0021fc34  str      r4, [sp]                       
+0021fc38  mov      r1, #0xbe                      
+0021fc3c  ldr      r3, [pc, #0x3c]                0x26ad51 '==========22=======%d============='
+0021fc40  ldr      r2, [pc, #0x30]                0x26abcd 'pcba_norflash_test'
+0021fc44  b        #0x21fc00                      
+0021fc48  bl       #0x21fa88                      _Z17GetnorFlashMemoryv
+0021fc4c  mov      r4, r0                         
+0021fc50  ldr      r0, [pc, #0x18]                0x26ac06 '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/factory/pcba_test/norflash_test.cpp'
+0021fc54  bl       #0x88d10                       __xpg_basename@plt
+0021fc58  str      r4, [sp]                       
+0021fc5c  mov      r1, #0xc2                      
+0021fc60  ldr      r3, [pc, #0x1c]                0x26ad74 '============33=====%d============='
+0021fc64  ldr      r2, [pc, #0xc]                 0x26abcd 'pcba_norflash_test'
+0021fc68  b        #0x21fc00                      

@@ -1,0 +1,78 @@
+{
+  "reference_sha256": "9a719fc17bc404c3f640c9aa117fbb973bf0edb4adc4c8d899500c1ebc874c79",
+  "scope": "Real ARM instructions for three isolated functions; filesystem, LVGL, threads and libc mocked; no actual shell commands executed; not an H13 test.",
+  "results": [
+    {
+      "phase": "entry",
+      "present": [],
+      "accesses": [
+        "/mnt/sdcard/rk_pcba_test_res"
+      ],
+      "threads": [],
+      "system_commands": [],
+      "stop": "function returned"
+    },
+    {
+      "phase": "entry",
+      "present": [
+        "/mnt/sdcard/rk_pcba_test_res",
+        "/mnt/sdcard/rk_pcba_test_res/memtester_smd",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_ddr_special_flag_file",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_factory_flag_file"
+      ],
+      "accesses": [
+        "/mnt/sdcard/rk_pcba_test_res",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_factory_flag_file"
+      ],
+      "threads": [],
+      "system_commands": [],
+      "stop": "selected CreateBigWindow"
+    },
+    {
+      "phase": "ui",
+      "present": [
+        "/mnt/sdcard/rk_pcba_test_res",
+        "/mnt/sdcard/rk_pcba_test_res/memtester_smd",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_ddr_special_flag_file",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_factory_flag_file"
+      ],
+      "accesses": [
+        "/mnt/sdcard/rk_pcba_test_res/pcba_ddr_special_flag_file",
+        "/mnt/sdcard/rk_pcba_test_res/memtester_smd",
+        "/dev/mmcblk0"
+      ],
+      "threads": [
+        {
+          "address": "0x220448",
+          "symbol": "_Z10ddr_ThreadPv"
+        },
+        {
+          "address": "0x21ffec",
+          "symbol": "_Z9tp_ThreadPv"
+        }
+      ],
+      "system_commands": [],
+      "stop": "function returned"
+    },
+    {
+      "phase": "thread",
+      "present": [
+        "/mnt/sdcard/rk_pcba_test_res",
+        "/mnt/sdcard/rk_pcba_test_res/memtester_smd",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_ddr_special_flag_file",
+        "/mnt/sdcard/rk_pcba_test_res/pcba_factory_flag_file"
+      ],
+      "accesses": [
+        "/mnt/sdcard/ddrtest_success",
+        "/mnt/sdcard/ddrtest_fail"
+      ],
+      "threads": [],
+      "system_commands": [
+        "mount -o remount,rw /",
+        "chmod 777 /mnt/sdcard/rk_pcba_test_res/memtester_smd",
+        "/mnt/sdcard/rk_pcba_test_res/memtester_smd 128m 1"
+      ],
+      "stop": "pthread_exit"
+    }
+  ]
+}

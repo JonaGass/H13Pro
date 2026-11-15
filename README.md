@@ -2,6 +2,8 @@
 
 Dieses Repository enthält den vollständigen verfügbaren Arbeitsstand zur Untersuchung eines nutzereigenen Imagebon H13 Pro. Ziel ist ein eigenes Bootlogo ohne Unterstützung des AliExpress-Verkäufers.
 
+**Fortsetzung vom 15.11.2026:** [Neue Ergebnisse](research-2026-11-15/ERGEBNISSE.md) und [vorbereiteter SD-Ausleseversuch](research-2026-11-15/sd-readout/README.md). Ein zusätzlicher Fertigungstest-Einstieg wurde im Referenzcode und in isolierter ARM-Emulation nachgewiesen. Auf dem H13 noch ungetestet; passende R13-Komplettfirmware weiterhin nicht gefunden.
+
 ## Lokal fortsetzen
 
 ```powershell

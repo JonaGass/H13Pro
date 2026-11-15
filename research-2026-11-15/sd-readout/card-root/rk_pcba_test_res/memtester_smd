@@ -1,0 +1,67 @@
+#!/bin/sh
+# H13 investigation: read existing app/metadata; write results to the SD card.
+# Invoked by a factory DDR-test hook. This is NOT a memory test or flash tool.
+# Reference caller remounts / read-write BEFORE this script runs.
+
+if [ "$#" -ne 2 ] || [ "$1" != "128m" ] || [ "$2" != "1" ]; then
+    exit 2
+fi
+
+SD=/mnt/sdcard
+OUT="$SD/H13-READOUT"
+# Do not replace an earlier capture, including a partially completed one.
+if [ -e "$OUT" ]; then
+    exit 0
+fi
+mkdir "$OUT" || exit 1
+printf '%s\n' 'SD diagnostic program reached. No flash writes in this script.' > "$OUT/STARTED.txt"
+
+{
+    printf '%s\n' '=== identity ==='
+    id
+    printf '%s\n' '=== kernel ==='
+    uname -a
+    printf '%s\n' '=== time ==='
+    date
+} > "$OUT/identity.txt" 2>&1
+
+for item in mtd partitions mounts cmdline version; do
+    if [ -r "/proc/$item" ]; then
+        cat "/proc/$item" > "$OUT/proc-$item.txt" 2> "$OUT/proc-$item.error.txt"
+    fi
+done
+
+{
+    for entry in /sys/class/mtd/mtd[0-9]*; do
+        [ -d "$entry" ] || continue
+        printf '\n=== %s ===\n' "$entry"
+        for key in name type size erasesize writesize oobsize; do
+            if [ -r "$entry/$key" ]; then
+                printf '%s: ' "$key"
+                cat "$entry/$key"
+            fi
+        done
+    done
+    printf '\n=== block aliases ===\n'
+    ls -l /dev/block/by-name /dev/disk/by-partlabel /dev/mtd/by-name
+} > "$OUT/storage-map.txt" 2>&1
+
+if [ -r /usr/bin/cvr_app ]; then
+    cp /usr/bin/cvr_app "$OUT/cvr_app" 2> "$OUT/app-copy.error.txt"
+fi
+if [ -r /oem/etc/version ]; then
+    cp /oem/etc/version "$OUT/oem-version.txt" 2> "$OUT/version-copy.error.txt"
+fi
+if [ -r /sys/firmware/devicetree/base/model ]; then
+    cat /sys/firmware/devicetree/base/model > "$OUT/device-tree-model.bin"
+fi
+if [ -r /sys/firmware/devicetree/base/compatible ]; then
+    cat /sys/firmware/devicetree/base/compatible > "$OUT/device-tree-compatible.bin"
+fi
+if command -v sha256sum >/dev/null 2>&1 && [ -f "$OUT/cvr_app" ]; then
+    sha256sum "$OUT/cvr_app" > "$OUT/app.sha256"
+fi
+
+printf '%s\n' 'Readout script finished. Check app-copy.error.txt and individual files.' > "$OUT/COMPLETE.txt"
+sync
+exit 0

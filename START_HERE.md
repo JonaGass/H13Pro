@@ -2,6 +2,8 @@
 
 Stand: 11. November 2026. Dieses Verzeichnis enthält den gesamten verfügbaren Forschungsstand einschließlich heruntergeladener Referenzfirmware, extrahierter Dateien und Disassemblierungen. Es ist kein fertiges Flashpaket.
 
+**Neuer Stand vom 15.11.2026:** [Vertiefung und SD-Ausleseversuch](research-2026-11-15/ERGEBNISSE.md). Diese Fortsetzung vor den älteren Detailberichten lesen. Ein kleines SD-Paket ist vorbereitet; der Einstieg wurde nur am Referenzcode und im isolierten Emulator geprüft, nicht am H13.
+
 ## Direkt weiterarbeiten
 
 Öffne dieses entpackte Verzeichnis als Arbeitsverzeichnis in der lokalen Codex-Instanz. Übergib folgenden Auftrag:
