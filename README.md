@@ -4,6 +4,8 @@ Dieses Repository enthält den vollständigen verfügbaren Arbeitsstand zur Unte
 
 **Fortsetzung vom 15.11.2026:** [Neue Ergebnisse](research-2026-11-15/ERGEBNISSE.md) und [vorbereiteter SD-Ausleseversuch](research-2026-11-15/sd-readout/README.md). Ein zusätzlicher Fertigungstest-Einstieg wurde im Referenzcode und in isolierter ARM-Emulation nachgewiesen. Auf dem H13 noch ungetestet; passende R13-Komplettfirmware weiterhin nicht gefunden.
 
+**Zieltest vom 16.11.2026:** Der Fertigungsbildschirm erscheint auf dem H13; v1 erzeugte jedoch keine Auslesedateien. [SD-Diagnose v2](research-2026-11-16/sd-probe-v2/README.md) protokolliert den Einstieg vor allen weiteren Schritten und übernimmt keine festen Aufrufargumente/SD-Mountpfade. Noch kein bestätigter Skript-/Rootzugang.
+
 ## Lokal fortsetzen
 
 ```powershell

@@ -1,0 +1,12 @@
+{
+  "source": "User-supplied photograph and report in this conversation",
+  "date": "2026-11-16",
+  "reported_action": "Booted the H13 with the prepared SD card inserted",
+  "observed_ui": "Broad Chinese factory-test screen with camera preview",
+  "displayed_values": {"DDR": "1024MB", "norflash_label": "128MB", "gps": "testing", "bluetooth": "fail", "sd_card": "pass", "wifi": "pass", "uuid": "pass"},
+  "gps_module": "User reports external GPS module is currently unavailable",
+  "establishes": ["SD-triggered factory-test UI is reachable on the actual H13"],
+  "does_not_establish": ["memtester_smd executed", "H13-READOUT exists", "Root access", "Actual flash technology", "Successful firmware or application readout", "Bluetooth hardware defect"],
+  "difference_from_reference": "Photo shows broad factory tests including GPS, whereas the emulated H70 DDR-special branch starts only DDR and touch threads within CreateBigWindow; cause not yet established",
+  "next_step": "After the wait described in the guide, power off, remove card and inspect for H13-READOUT; no GPS completion is needed to inspect card results"
+}

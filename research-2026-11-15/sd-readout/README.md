@@ -1,5 +1,7 @@
 # SD-Ausleseversuch über den Fertigungstest
 
+**Historisches Paket v1:** Am 16.11.2026 wurde damit auf dem echten H13 der Fertigungsbildschirm erreicht, aber kein `H13-READOUT` erzeugt. Für den begrenzten Folgeversuch die [Diagnose v2](../../research-2026-11-16/sd-probe-v2/README.md) verwenden. Der nachfolgende Text dokumentiert den Plan vor dem ersten Zieltest.
+
 **Neuer, im H70-R33-Referenzcode nachgewiesener Einstieg. Auf deinem H13-R13 noch nicht getestet.** Kein H70-Image verwenden. Das enthaltene `memtester_smd` ist ein lesbares Shellskript, kein echtes RAM-Testprogramm.
 
 ## Nachweis und Grenzen

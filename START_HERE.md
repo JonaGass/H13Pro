@@ -4,6 +4,8 @@ Stand: 11. November 2026. Dieses Verzeichnis enthält den gesamten verfügbaren 
 
 **Neuer Stand vom 15.11.2026:** [Vertiefung und SD-Ausleseversuch](research-2026-11-15/ERGEBNISSE.md). Diese Fortsetzung vor den älteren Detailberichten lesen. Ein kleines SD-Paket ist vorbereitet; der Einstieg wurde nur am Referenzcode und im isolierten Emulator geprüft, nicht am H13.
 
+**Zieltest vom 16.11.2026:** Fertigungsoberfläche erreicht, aber kein Ausleseordner. [Begrenzte Diagnose v2](research-2026-11-16/sd-probe-v2/README.md) entfernt zwei unbestätigte Annahmen aus dem ersten Skript. Aufruf/Root/Flash-Auslesung weiterhin offen; HANDOFF.md enthält den aktuellen Befund.
+
 ## Direkt weiterarbeiten
 
 Öffne dieses entpackte Verzeichnis als Arbeitsverzeichnis in der lokalen Codex-Instanz. Übergib folgenden Auftrag:

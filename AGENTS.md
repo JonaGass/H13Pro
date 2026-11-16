@@ -5,7 +5,7 @@ Dieses Verzeichnis setzt eine laufende Untersuchung eines nutzereigenen Imagebon
 - Ziel: eigenes Bootlogo. Der AliExpress-Verkäufer hat auf mehrere Anfragen nicht reagiert; die Lösung soll ohne ihn funktionieren.
 - Windows ist die bevorzugte lokale Umgebung, Linux ist möglich. Das Gehäuse nur öffnen, wenn ein Zugang ohne Öffnen nicht ausreicht.
 - Recherchen, Offline-Analyse und lesende Diagnosezugriffe selbstständig fortsetzen. Routinemäßige Schritte nicht durch erneute allgemeine Erlaubnisfragen blockieren.
-- Nur der HTTP-GET mit `cmd=2001` wurde am H13 erfolgreich getestet. Kein Root-/ADB-/BootROM-Zugang und kein Flash-Dump sind bestätigt. Das gilt auch dann, wenn die lokale Umgebung später passende Werkzeuge anbietet: Verbindung und tatsächliche Gerätebeobachtungen prüfen.
+- Am H13 sind der HTTP-GET mit `cmd=2001` und seit 16.11.2026 die SD-ausgelöste Fertigungstest-Oberfläche bestätigt. Eine Ausführung von `memtester_smd`, Root-/ADB-/BootROM-Zugang und ein Flash-Dump sind noch nicht bestätigt. Verbindung und tatsächliche Gerätebeobachtungen prüfen; GUI-Erfolg nicht mit Skript-/Ausleseerfolg gleichsetzen.
 - Alle mitgelieferten binären Firmwarekomponenten stammen aus einer H70-R33-Referenz. Niemals als H13-kompatibel behandeln oder auf das H13 flashen. R33-Adressen, MTD-Nummern und Symbole sind keine Zielgeräteparameter.
 - Die R8-V2.0/qckj-Antwort identifiziert eine gemeinsame API-/Softwarefamilie, nicht dieselbe Hardware oder Firmwareversion.
 - Vor einem Schreibvorgang an der Zielhardware erst Speicherart, tatsächliche Partitionierung, Originaldaten und Rückweg prüfen. Keine pauschalen Komplettflashes oder Löschbefehle für ein Bootlogo.

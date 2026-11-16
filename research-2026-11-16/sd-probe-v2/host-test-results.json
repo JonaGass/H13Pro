@@ -1,0 +1,25 @@
+{
+  "scope": "Host shell with artificial source files and temporary card paths; not a real H13 run. Host /proc/sys metadata outputs discarded.",
+  "results": [
+    {
+      "case": "no arguments",
+      "result": "passed; marker, arguments, capture, unchanged source, earlier capture preservation"
+    },
+    {
+      "case": "reference arguments",
+      "result": "passed; marker, arguments, capture, unchanged source, earlier capture preservation"
+    },
+    {
+      "case": "different arguments",
+      "result": "passed; marker, arguments, capture, unchanged source, earlier capture preservation"
+    },
+    {
+      "case": "relative script path",
+      "result": "passed; marker, arguments, capture, unchanged source, earlier capture preservation"
+    },
+    {
+      "case": "bare filename from script directory",
+      "result": "passed; marker, arguments, capture, unchanged source, earlier capture preservation"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Aktueller Arbeitsstand
 
+**Ergebnis des ersten SD-Versuchs, 16.11.2026:** Kein `H13-READOUT`, nur leere Videoordner. Alle drei Testdateien blieben laut Nutzer unter den exakten Namen vorhanden. Skriptstart/Root/Flashdump sind damit weiterhin unbestätigt. Das v1-Skript konnte vor der ersten Ausgabe bei anderen Argumenten als `128m 1` aussteigen und nahm `/mnt/sdcard` fest an. Ein begrenzter v2-Versuch entfernt diese Annahmen und schreibt zuerst `rk_pcba_test_res/H13-PROBE-STARTED.txt`; siehe `research-2026-11-16/sd-probe-v2/README.md`. Noch kein v2-Test am H13. Bei erneut fehlendem Marker den externen SD-Programmpfad nicht als funktionierend behandeln und keine beliebigen weiteren Flags versuchen.
+
+**Zielgerätebefund vom 16.11.2026:** Nutzerfoto bestätigt den SD-ausgelösten Fertigungstest am echten H13. Sichtbar ist der breite Test mit GPS `testing` (Modul fehlt), DDR-Anzeige `1024MB`, `norflash: 128MB`. Das ist noch kein Beleg, dass `memtester_smd` lief oder die tatsächliche Flashart feststeht. Der breite Test weicht vom emulierten H70-DDR-Sonderzweig ab. Als Nächstes nach Ausschalten die Karte auf `H13-READOUT` prüfen; keine zusätzlichen Testtasten/Flags versuchen. Details: `device-evidence/sd-factory-screen-2026-11-16.json`.
+
 **Fortsetzung vom 15.11.2026:** Zuerst [research-2026-11-15/ERGEBNISSE.md](research-2026-11-15/ERGEBNISSE.md) lesen. USB-C zeigte laut Nutzer kein neues Windows-Gerät. Neuer, isoliert ARM-emulierter SD-Fertigungstestpfad und ein vorbereitetes App-Auslesepaket liegen in `research-2026-11-15/sd-readout/`. Noch kein H13-Test, keine Root-/Flash-Erfolgsmeldung. Der Referenz-Aufrufer remountet `/` schreibbar. Die nachfolgenden Abschnitte dokumentieren den ursprünglichen Stand vom 11.11.; offene H13-HTTP-Abfrage und fehlender Zieldump sind weiterhin aktuell.
 
 ## Nutzerauftrag

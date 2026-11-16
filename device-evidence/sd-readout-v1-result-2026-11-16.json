@@ -1,0 +1,12 @@
+{
+  "source": "User reports in this conversation",
+  "date": "2026-11-16",
+  "test": "First SD readout package",
+  "factory_ui": "reached; photo documented separately",
+  "H13-READOUT": "not present",
+  "new_card_content": "Only empty dashcam video directories, as reported by user",
+  "original_files": "User confirms memtester_smd, pcba_factory_flag_file, pcba_ddr_special_flag_file remain present with exactly those names",
+  "script_execution": "not established; v1 could exit before output if argument assumptions differ, among other possible causes",
+  "root_or_firmware_dump": "not obtained",
+  "v2_test": "prepared, not yet performed or reported"
+}

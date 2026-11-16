@@ -1,0 +1,81 @@
+#!/bin/sh
+# Version 2: no argument restriction and no assumed SD mount point.
+# All output stays beside this script or in its parent's H13-READOUT directory.
+# The reference factory caller remounts / read-write before invoking this file.
+
+case "$0" in
+    */*) BASE=${0%/*} ;;
+    *) BASE=. ;;
+esac
+cd "$BASE" || exit 1
+BASE=$(pwd -P) || exit 1
+MARKER="$BASE/H13-PROBE-STARTED.txt"
+printf '%s\n' 'H13 readout probe v2 entered' >> "$MARKER" || exit 1
+{
+    printf 'program: %s\nargument count: %s\n' "$0" "$#"
+    for argument do
+        printf 'argument: <%s>\n' "$argument"
+    done
+    printf 'script directory: %s\n' "$BASE"
+    id
+    date
+} >> "$MARKER" 2>&1
+
+OUT="$BASE/../H13-READOUT"
+if [ -e "$OUT" ]; then
+    printf '%s\n' 'Existing H13-READOUT preserved; no new capture made.' >> "$MARKER"
+    exit 0
+fi
+mkdir "$OUT" 2>> "$MARKER" || exit 1
+cp "$MARKER" "$OUT/STARTED.txt"
+exec > "$OUT/probe.log" 2>&1
+
+{
+    printf '%s\n' '=== identity ==='
+    id
+    printf '%s\n' '=== kernel ==='
+    uname -a
+    printf '%s\n' '=== time ==='
+    date
+} > "$OUT/identity.txt" 2>&1
+
+for item in mtd partitions mounts cmdline version; do
+    if [ -r "/proc/$item" ]; then
+        cat "/proc/$item" > "$OUT/proc-$item.txt" 2> "$OUT/proc-$item.error.txt"
+    fi
+done
+
+{
+    for entry in /sys/class/mtd/mtd[0-9]*; do
+        [ -d "$entry" ] || continue
+        printf '\n=== %s ===\n' "$entry"
+        for key in name type size erasesize writesize oobsize; do
+            if [ -r "$entry/$key" ]; then
+                printf '%s: ' "$key"
+                cat "$entry/$key"
+            fi
+        done
+    done
+    printf '\n=== block aliases ===\n'
+    ls -l /dev/block/by-name /dev/disk/by-partlabel /dev/mtd/by-name
+} > "$OUT/storage-map.txt" 2>&1
+
+if [ -r /usr/bin/cvr_app ]; then
+    cp /usr/bin/cvr_app "$OUT/cvr_app" 2> "$OUT/app-copy.error.txt"
+fi
+if [ -r /oem/etc/version ]; then
+    cp /oem/etc/version "$OUT/oem-version.txt" 2> "$OUT/version-copy.error.txt"
+fi
+if [ -r /sys/firmware/devicetree/base/model ]; then
+    cat /sys/firmware/devicetree/base/model > "$OUT/device-tree-model.bin"
+fi
+if [ -r /sys/firmware/devicetree/base/compatible ]; then
+    cat /sys/firmware/devicetree/base/compatible > "$OUT/device-tree-compatible.bin"
+fi
+if command -v sha256sum >/dev/null 2>&1 && [ -f "$OUT/cvr_app" ]; then
+    sha256sum "$OUT/cvr_app" > "$OUT/app.sha256"
+fi
+
+printf '%s\n' 'Readout v2 finished. Check copy errors and captured files.' > "$OUT/COMPLETE.txt"
+sync
+exit 0
