@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-16",
+  "scope": "Loopback HTTP fixture only; no H13 test and no binary execution",
+  "command": "python research-2026-11-16/http-followup/test_http_readout.py",
+  "tests_passed": 4,
+  "checks": ["Only fixed GET paths requested; directory links not followed", "Complete artificial ARM ELF saved locally", "HTML at app path not treated as app", "Truncated file not saved as app", "Redirect not followed", "Unknown path rejected", "Empty HTTP-200 response recorded with zero body bytes"]
+}

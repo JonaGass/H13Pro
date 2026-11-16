@@ -1,0 +1,13 @@
+{
+  "source": "User-uploaded h13-network-20261116-154850.json; raw report kept outside repository",
+  "utc": "2026-11-16T15:48:50.306209+00:00",
+  "target_ipv4": "192.168.10.1",
+  "http_status": {"2001": 200, "2002": 200},
+  "api_identity": {"product": "R8-V2.0", "sp": "qckj", "device_id": "RV1126", "device_name": "R8"},
+  "open_tcp_ports": [8082, 9999],
+  "timeout_tcp_ports": [22, 23, 80, 443, 554, 5555, 8080, 8081],
+  "timeout_limit_seconds": 0.8,
+  "interpretation": "HTTP confirmed. Port 9999 matches the reference app control/heartbeat service; no protocol equivalence or shell access established. Timeout is not proof of a closed port.",
+  "followup_user_report": "GET cmd=8567 displayed an empty white page; no raw status/body available yet",
+  "root_or_firmware_dump": "not obtained"
+}

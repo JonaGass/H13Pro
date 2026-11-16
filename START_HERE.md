@@ -1,5 +1,7 @@
 # H13 Pro – Übergabe an eine lokale Codex-Instanz
 
+**Neuester Einstieg:** [Netzbericht und HTTP-Leseversuch](research-2026-11-16/http-followup/README.md). Portbefunde liegen vor, 8567 zeigt laut Nutzer eine weiße Seite. Feste GET-Dateipfade sind der nächste lokale Versuch; kein Shell-/Dump-Erfolg behaupten.
+
 **Aktueller Einstieg nach zwei SD-Tests:** [Netzwerkdiagnose](research-2026-11-16/NETZWERK.md). Auch v2 erzeugte laut Nutzer keine neuen Dateien. Kein belegter Skriptstart; vorerst keine weiteren SD-Varianten.
 
 HTTP `cmd=2002` ist inzwischen beantwortet: API meldet `RV1126` / `R8`. Als Nächstes fehlt der gezielte TCP-Portbefund. Die neue Diagnose wiederholt die beiden GETs zur Verbindungskontrolle.

@@ -1,5 +1,7 @@
 # Imagebon H13 Pro – Bootlogo-Recherche und Codex-Übergabe
 
+**Aktueller Netzbefund:** 8082/9999 erreichbar; kein Shellzugang belegt. [Auswertung und gezielter HTTP-Leseversuch](research-2026-11-16/http-followup/README.md) prüfen als Nächstes, ob der echte Server Versionsdatei oder Ziel-App direkt ausliefert.
+
 **Aktuell nach beiden Zieltests:** Kein SD-Skriptstart nachgewiesen. [Netzwerkdiagnose und nächste Schritte](research-2026-11-16/NETZWERK.md); weitere SD-Varianten werden vorerst beendet.
 
 Dieses Repository enthält den vollständigen verfügbaren Arbeitsstand zur Untersuchung eines nutzereigenen Imagebon H13 Pro. Ziel ist ein eigenes Bootlogo ohne Unterstützung des AliExpress-Verkäufers.

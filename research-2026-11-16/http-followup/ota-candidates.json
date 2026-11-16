@@ -1,0 +1,23 @@
+{
+  "scope": "Three bounded read-only queries; derived reference/model candidates, all-zero MAC; no actual H13 OTA fingerprint obtained. Not proof of hardware compatibility or absence of all firmware.",
+  "results": [
+    {
+      "label": "reference_R33_derived_not_target",
+      "deviceInfo": "SW;RV1126;QC01;08;00;R33.08151;R33.10.03.22_1.2.1025.4_;V3.08151.50_20250702.1543;00:00:00:00:00:00",
+      "http_status": 200,
+      "body": "{\"ret\":0,\"message\":\"OK\",\"data\":null,\"timestamp\":1794844495979,\"traceId\":\"95a8a2ffb56d4a99b44ef5e43d898b09\"}"
+    },
+    {
+      "label": "R13_candidate_from_menu_inserting_V_not_device_reported",
+      "deviceInfo": "SW;RV1126;QC01;77;00;R13.77;R13.10.01.22_1.1.1026.0_;V2.77.3f_20231013.1841;00:00:00:00:00:00",
+      "http_status": 200,
+      "body": "{\"ret\":0,\"message\":\"OK\",\"data\":null,\"timestamp\":1794844496854,\"traceId\":\"f692de1335ee42e390b0c6883da21177\"}"
+    },
+    {
+      "label": "R13_candidate_original_version_spelling_not_device_reported",
+      "deviceInfo": "SW;RV1126;QC01;77;00;R13.77;R13.10.01.22_1.1.1026.0_;2.77.3f_20231013.1841;00:00:00:00:00:00",
+      "http_status": 200,
+      "body": "{\"ret\":0,\"message\":\"OK\",\"data\":null,\"timestamp\":1794844497755,\"traceId\":\"10f7daedfbab4cd493854016622ce1f2\"}"
+    }
+  ]
+}

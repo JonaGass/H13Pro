@@ -1,0 +1,69 @@
+
+FUNCTION 0x995cc _ZN12SystemConfig16GetSystemVersionB5cxx11Ev size 268
+000995cc  push     {r4, r5, lr}                   
+000995d0  sub      sp, sp, #0x144                 
+000995d4  ldr      r4, [pc, #0xe4]                0x296d70 __stack_chk_guard
+000995d8  mov      r5, r0                         
+000995dc  ldr      r1, [pc, #0xe0]                0x2458a4 '/oem/etc/version'
+000995e0  mov      r2, #8                         
+000995e4  ldr      r3, [r4]                       
+000995e8  add      r0, sp, #0x24                  
+000995ec  str      r3, [sp, #0x13c]               
+000995f0  bl       #0x88c44                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode@plt
+000995f4  add      r3, sp, #0x14                  
+000995f8  str      r3, [sp, #0xc]                 
+000995fc  mov      r3, #0                         
+00099600  str      r3, [sp, #0x10]                
+00099604  strb     r3, [sp, #0x14]                
+00099608  ldr      r3, [sp, #0xc8]                
+0009960c  tst      r3, #5                         
+00099610  beq      #0x9963c                       
+00099614  ldr      r0, [pc, #0xac]                0x24580a '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/SystemConfig.cpp'
+00099618  bl       #0x88d10                       __xpg_basename@plt
+0009961c  ldr      r3, [pc, #0xa8]                0x2458b5 'open mount.txt error\n'
+00099620  movw     r1, #0x2d6                     
+00099624  ldr      r2, [pc, #0xa4]                0x245651 'GetSystemVersion'
+00099628  bl       #0xb3968                       C_LJQ_LOG2
+0009962c  mov      r1, #0                         
+00099630  mov      r0, r5                         
+00099634  bl       #0x98f08                       
+00099638  b        #0x9967c                       
+0009963c  add      r1, sp, #0xc                   
+00099640  add      r0, sp, #0x24                  
+00099644  bl       #0x87834                       _ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE@plt
+00099648  ldr      r0, [pc, #0x78]                0x24580a '/home/zengxiangyu/R60-11.26/buildroot/output/rockchip_rv1126_rv1109_cvr_qc_spinand_r8/build/cvr_app/src/system/SystemConfig.cpp'
+0009964c  bl       #0x88d10                       __xpg_basename@plt
+00099650  ldr      r3, [sp, #0xc]                 
+00099654  movw     r1, #0x2da                     
+00099658  ldr      r2, [pc, #0x70]                0x245651 'GetSystemVersion'
+0009965c  str      r3, [sp]                       
+00099660  ldr      r3, [pc, #0x6c]                0x2458cb '========%s========='
+00099664  bl       #0xb3968                       C_LJQ_LOG2
+00099668  add      r0, sp, #0x24                  
+0009966c  bl       #0x88494                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEE5closeEv@plt
+00099670  add      r1, sp, #0xc                   
+00099674  mov      r0, r5                         
+00099678  bl       #0x87618                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_@plt
+0009967c  add      r0, sp, #0xc                   
+00099680  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+00099684  add      r0, sp, #0x24                  
+00099688  bl       #0x87b58                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@plt
+0009968c  ldr      r2, [sp, #0x13c]               
+00099690  mov      r0, r5                         
+00099694  ldr      r3, [r4]                       
+00099698  cmp      r2, r3                         
+0009969c  beq      #0x996b8                       
+000996a0  bl       #0x874e0                       __stack_chk_fail@plt
+000996a4  add      r0, sp, #0xc                   
+000996a8  bl       #0x87210                       _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt
+000996ac  add      r0, sp, #0x24                  
+000996b0  bl       #0x87b58                       _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@plt
+000996b4  bl       #0x880d4                       __cxa_end_cleanup@plt
+000996b8  add      sp, sp, #0x144                 
+000996bc  pop      {r4, r5, pc}                   
+000996c0  eoreq    r6, sb, r0, ror sp             
+000996c4  eoreq    r5, r4, r4, lsr #17            
+000996c8  eoreq    r5, r4, sl, lsl #16            
+000996cc  [undecodable bytes] b5582400
+000996d0  eoreq    r5, r4, r1, asr r6             
+000996d4  eoreq    r5, r4, fp, asr #17            
