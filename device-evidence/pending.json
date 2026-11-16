@@ -1,7 +1,7 @@
 {
   "firmware_as_reported": "R13.10.01.22_1.1.1026.0_2.77.3f_20231013.1841..",
   "pending_http_request": "http://192.168.10.1:8082/api/getdeviceinfo?cmd=2002",
-  "pending_http_status": "Requested from user; no response received yet",
+  "pending_http_status": "Answered 2026-11-16: device_id RV1126, device_name R8; full response in http-cmd-2002-2026-11-16.json",
   "usb_hardware_ids": null,
   "adb_access": "not tested on the physical device",
   "root_access": "not established",

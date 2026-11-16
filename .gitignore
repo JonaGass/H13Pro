@@ -2,3 +2,4 @@
 __pycache__/
 h13-diagnose-*/
 target-backups/
+h13-network-*.json

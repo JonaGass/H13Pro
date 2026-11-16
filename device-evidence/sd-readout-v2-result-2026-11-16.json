@@ -1,0 +1,11 @@
+{
+  "source": "User report in this conversation",
+  "date": "2026-11-16",
+  "test": "Second SD readout package with early marker",
+  "observation": "Still no new files appeared on the SD card, according to user",
+  "H13-READOUT": "not observed",
+  "H13-PROBE-STARTED.txt": "not observed",
+  "script_execution": "not established",
+  "root_or_target_firmware_dump": "not obtained",
+  "next_step": "Stop SD execution variants; obtain HTTP cmd=2002 response and targeted single-device TCP port results"
+}

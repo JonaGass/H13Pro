@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-16",
+  "test_command": "python research-2026-11-16/test_network_probe.py",
+  "scope": "Local loopback HTTP/TCP fixtures only; no real H13 connection",
+  "tests_passed": 6,
+  "checks": ["Only fixed info GET commands accepted", "Explicit proxy bypass", "MAC redaction", "HTTP redirects not followed", "Response body bounded", "TCP open/refused distinguished without sending application data", "Local IPv4 input validation"],
+  "target_device_result": "not yet supplied"
+}

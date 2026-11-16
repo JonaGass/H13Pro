@@ -1,5 +1,9 @@
 # H13 Pro – Übergabe an eine lokale Codex-Instanz
 
+**Aktueller Einstieg nach zwei SD-Tests:** [Netzwerkdiagnose](research-2026-11-16/NETZWERK.md). Auch v2 erzeugte laut Nutzer keine neuen Dateien. Kein belegter Skriptstart; vorerst keine weiteren SD-Varianten.
+
+HTTP `cmd=2002` ist inzwischen beantwortet: API meldet `RV1126` / `R8`. Als Nächstes fehlt der gezielte TCP-Portbefund. Die neue Diagnose wiederholt die beiden GETs zur Verbindungskontrolle.
+
 Stand: 11. November 2026. Dieses Verzeichnis enthält den gesamten verfügbaren Forschungsstand einschließlich heruntergeladener Referenzfirmware, extrahierter Dateien und Disassemblierungen. Es ist kein fertiges Flashpaket.
 
 **Neuer Stand vom 15.11.2026:** [Vertiefung und SD-Ausleseversuch](research-2026-11-15/ERGEBNISSE.md). Diese Fortsetzung vor den älteren Detailberichten lesen. Ein kleines SD-Paket ist vorbereitet; der Einstieg wurde nur am Referenzcode und im isolierten Emulator geprüft, nicht am H13.

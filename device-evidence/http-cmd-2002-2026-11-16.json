@@ -1,0 +1,22 @@
+{
+  "source": "User-reported response from the actual H13 in this conversation",
+  "date": "2026-11-16",
+  "method": "GET",
+  "url": "http://192.168.10.1:8082/api/getdeviceinfo?cmd=2002",
+  "response": {
+    "device_id": "RV1126",
+    "device_name": "R8",
+    "info": [
+      {"cmd": 1002, "status": 2},
+      {"cmd": 1006, "status": 0},
+      {"cmd": 1007, "status": 3},
+      {"cmd": 1008, "status": 2},
+      {"cmd": 1009, "status": 0},
+      {"cmd": 1013, "status": -1},
+      {"cmd": 3028, "status": -1}
+    ],
+    "software": "V1.0"
+  },
+  "establishes": ["cmd=2002 is reachable on the actual H13", "Device API reports RV1126/R8"],
+  "limits": ["Reference code hardcodes some identity fields; this is not physical chip inspection or proof of binary equivalence", "V1.0 is the short API response, not a replacement for the user-reported R13 build", "Info entries are not commands to experiment with", "No shell/root access or firmware readout established"]
+}
